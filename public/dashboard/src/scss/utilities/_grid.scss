@@ -1,0 +1,16 @@
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+// @include media-breakpoint-up(xl) {
+//   .container {
+//     max-width: 1340px;
+//   }
+// }
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}
+

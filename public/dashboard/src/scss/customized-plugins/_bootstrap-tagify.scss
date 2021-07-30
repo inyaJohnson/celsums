@@ -1,0 +1,36 @@
+:root {
+  --tagify-dd-color-primary: #{$primary};
+  --tagify-dd-bg-color: #{$card-bg};
+}
+
+.tagify-item{
+  span.bmd-form-group.is-filled{
+    input{
+      display: none;
+      
+    }
+  }
+}
+
+.tagify{
+ border:none;
+ border-bottom: 1px solid $border-color;
+  
+}
+
+.tagify.tagify--focus{
+ border-color: $primary !important;
+}
+
+.tagify__dropdown.tagify__dropdown--all {
+  @include shadow-6dp();
+  .tagify__dropdown__wrapper {
+    border: none !important;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+.tagify__dropdown.tagify__dropdown--all:hover{
+  background-color: $gray-300 !important;
+}

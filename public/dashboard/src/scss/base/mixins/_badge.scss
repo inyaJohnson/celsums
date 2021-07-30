@@ -1,0 +1,201 @@
+@mixin badge-variant($bg) {
+  &[href] {
+    color: $white;
+    @include hover-focus {
+      background-color: darken($bg, 10%);
+    }
+  }
+}
+
+@mixin rectangle-variant($size, $font-size) {
+    width: $size;
+    min-width: $size;
+    height: $size;
+    min-height: $size;
+    line-height: $size;
+    font-size: $font-size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px !important;
+}
+
+@mixin badge-colors() {
+  @each $color, $value in $theme-colors {
+    .badge-#{$color} {
+      @include badge-variant($value);
+    }
+  }
+}
+
+@mixin badge-circles() {
+  &.rounded-circle,
+  &.badge-rectangle {
+    @include rectangle-variant(40px, 1.2rem)
+  }
+}
+@mixin opacity-variant() {
+    white-space: pre-wrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // align-self: center;
+  i {
+    font-size: 20px;
+  }
+}
+@mixin opacity-color-variant($color) {
+  background-color: rgba($color, .17);
+  color: $color;
+}
+
+@mixin badge-opacity(){
+  .badge-opacity {
+    @include opacity-variant();
+  }
+  @each $color, $value in $theme-colors{
+    .badge-opacity.badge-#{$color}{
+      @include opacity-color-variant($value);
+    }
+  }
+}
+
+//brand
+@mixin badge-brand-variant($size, $bg){
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px !important;
+  background-color: $bg;
+  img {
+    height: 20px;
+    width: auto;
+  }
+}
+
+@mixin badge-brand(){
+  .badge-brand{
+    @include badge-brand-variant(46px, rgba(24,42,136,.08));
+  }
+}
+
+
+
+// avatar 
+@mixin avatar-variant(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+@mixin badge-avatar(){
+  @each $color, $value in $theme-colors{
+    .badge-avatar-#{$color}{
+      color: $white;
+      background-color: $value;
+      @include avatar-variant();
+    }
+  }
+}
+
+
+@mixin badge-sizes {
+  &.rounded-circle,
+  &.badge-rectangle
+  {
+    &.badge-xxs {
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      min-height: 16px;
+      line-height: 16px;
+      font-size: 10px;
+      i{
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  
+    &.badge-xs{
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      min-height: 24px;
+      line-height: 24px;
+      font-size: 13px;
+      i{
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+    &.badge-sm{
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      min-height: 32px;
+      line-height: 32px;
+      font-size: 14px;
+      i{
+        font-size: 14px;
+        line-height: 32px;
+
+      }
+    }
+    &.badge-lg{
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      min-height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+      i{
+        font-size: 20px;
+        line-height: 48px;
+
+      }
+    }
+    &.badge-xl{
+      width: 56px;
+      min-width: 56px;
+      height: 56px;
+      min-height: 56px;
+      line-height: 56px;
+      font-size: 22px;
+      i{
+        font-size: 24px;
+        line-height: 56px;
+      }
+    }
+  }
+
+  &.badge-rounded,
+  &.badge-opacity, 
+  &.badge-opacity {
+    padding: .5rem 1rem;
+    &.badge-xxs {
+      padding: .07rem .15rem;
+      font-size: 10px;
+      i{
+        font-size: 10px;
+      }
+    }
+    &.badge-xs{
+      padding: .125rem .25rem;
+      i{
+        font-size: 13px;
+      }
+    }
+    &.badge-sm{
+      padding: .25rem .5rem;
+      i{
+        font-size: 14px;
+      }
+    }
+  }
+}

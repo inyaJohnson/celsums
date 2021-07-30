@@ -1,0 +1,159 @@
+.sidebar-theme-slate {
+  $slate: map-get($solid-colors, slate);
+  $contrast-color: $white;
+  $contrast-color-light: #666f88;
+  $active-bg: rgba(0,0,0, .1);
+
+  .sidebar-panel {
+    background-color: $slate;
+    .brand {
+      .app-logo-text {
+        color: $white !important;
+        font-weight: $font-weight-semi;
+      }
+    }
+    .app-user {
+      .app-user-photo img {
+        border-color: $active-bg;
+      }
+      .app-user-info::after {
+        background-color: $active-bg;
+      }
+      .app-user-name {
+        color: $contrast-color !important;
+      }
+      .app-user-control{
+        .control-item {
+          color: $contrast-color !important;
+          &:hover {
+            // color: $active-500;
+            background: $active-bg;
+          }
+        }
+      }
+    }
+    .sidebar-nav{
+      ul.metismenu{
+        span.main-menu-title{
+          color: $contrast-color-light !important;
+        }
+        li{
+          a{
+            color: #989eb3;
+            .nav-icon, &.has-arrow:after {
+              color: $contrast-color-light;
+            }
+            .bullet-icon {
+              background-color: $contrast-color-light;
+            }
+            &:hover{
+              background-color: $active-bg;
+              .nav-icon, &.has-arrow:after{
+                color: $contrast-color;
+              }
+              .bullet-icon {
+                background-color: $contrast-color;
+              }
+            }
+          }
+          &.mm-active > a {
+            background-color: $active-bg;
+            .nav-icon, &.has-arrow:after {
+              color: $contrast-color;
+            }
+            .bullet-icon {
+              background-color: $contrast-color;
+            }
+            color: $contrast-color;              
+            
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-theme-white {
+
+  $light-active-color: 'blue';
+  $active-200: get-color-opacity($light-active-color, 200);
+  $active-300: get-color-opacity($light-active-color, 300);
+  $active-400: get-color-opacity($light-active-color, 400);
+  $active-500: get-color-opacity($light-active-color, 500);
+
+  .brand{
+    .app-logo-text{
+      color: $gray-900 !important;
+      font-weight: $font-weight-semi;
+    }
+  }
+  .app-user-photo img {
+    border-color: $border-color-light !important;
+  }
+  .border-top-divider {
+    border-color: $border-color-light !important;
+  }
+  .app-user-info::after {
+    background-color: $border-color-light;
+  }
+  .sidebar-panel{
+    background-color: $white;
+    .sidebar-compact-switch::before, 
+    .sidebar-compact-switch::after, 
+    .sidebar-compact-switch div {
+      background-color: $gray-600;
+    }
+    .app-user .app-user-name,
+    .sidebar-nav ul.metismenu span.main-menu-title,
+    ul.metismenu li a {
+      color: $body-color;
+    }
+    .app-user-control a {
+      color: $gray-500;
+      &:hover {
+        color: $active-500;
+        background: $active-200;
+      }
+    }
+    .sidebar-nav{
+      ul.metismenu{
+        span.main-menu-title{
+          color: $gray-500 !important;
+        }
+        li{
+          a{
+            // color: #989eb3;
+            .nav-icon, &.has-arrow:after {
+              color: $gray-500;
+            }
+            .bullet-icon {
+              background-color: $active-300;
+            }
+            &:hover{
+              // color: $active-500;
+              background-color: $hover-background;
+              .nav-icon, &.has-arrow:after{
+                color: $active-500;
+              }
+              .bullet-icon {
+                background-color: $active-500;
+              }
+            }
+          }
+          &.mm-active > a {
+            // color: $active-500;
+            background-color: $hover-background;
+            .nav-icon, &.has-arrow:after {
+              color: $active-500;
+            }
+            .bullet-icon {
+              background-color: $active-500;
+            }
+            // color: $body-color;              
+            
+          }
+        }
+      }
+    }
+  }
+}

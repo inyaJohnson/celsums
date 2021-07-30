@@ -1,0 +1,21 @@
+.metismenu .has-arrow:after {
+  border-width: 1px 0 0 1px;
+  width: 6px;
+  height: 6px;
+}
+.app-admin-wrap-layout-1.sidebar-full {
+  .metismenu .has-arrow:after {
+    right: 1.5rem !important;
+  }
+}
+.app-admin-wrap-layout-3.sidebar-full {
+  .metismenu .has-arrow:after {
+    right: 1rem !important;
+  }
+}
+
+*[dir="rtl"] .metismenu .has-arrow::after {
+  left: auto;
+  right: 1em;
+  transform: rotate(135deg) translate(0, -50%);
+}

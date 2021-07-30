@@ -1,0 +1,107 @@
+.ul-icon-box-1 {
+  width: 12rem;
+  height: 12rem;
+  background-image: url(../images/illustrations/backgrounds/icon-bg-1.svg);
+  background-position: 50% 70%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ul-icon-box-animate-onhover {
+  .bg-group {
+      img {
+        opacity: 0;
+        transition: opacity .15s ease-in;
+      }
+    }
+  &:hover {
+    .bg-group {
+       img {
+        opacity: 1;
+      }
+    }
+  }
+}
+.ul-icon-box {
+  position: relative;
+  // width: 12rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bg-group {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .22;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: $z-index-default;
+    &.ul-animate {
+      &.fallingLeaves {
+        img {
+          animation: fallingLeaves 4s infinite linear;
+        }
+      }
+      &.fallingClouds img {
+        animation: fallingClouds 2s infinite linear;
+      }
+      img {
+        top: -10% !important;
+        &:nth-child(n) {
+          animation-delay: 0s
+        }
+        &:nth-child(2n) {
+          animation-delay: .6s;
+        }
+        &:nth-child(3n) {
+          animation-delay: 1.2s;
+        }
+        &:nth-child(4n) {
+          animation-delay: 1.8s
+        }
+        &:nth-child(5n) {
+          animation-delay: 2.4s
+        }
+        &:nth-child(6n) {
+          animation-delay: 3s
+        }
+      }
+    }
+    img {
+      position: absolute;
+      width: auto;
+      
+      &:nth-child(1) {
+        top: 30%;
+        right: 20%;
+      }
+      &:nth-child(2) {
+        top: 6%;
+        left: 45%;
+      }
+      &:nth-child(3) {
+        top: 43%;
+        right: 70%;
+      }
+      &:nth-child(4) {
+        top: 60%;
+        right: 40%;
+      }
+      &:nth-child(5) {
+        top: 65%;
+        right: 20%;
+      }
+      &:nth-child(6) {
+        bottom: 15%;
+        right: 50%;
+      }
+    }
+    i {
+      z-index: $z-index-anchor;
+    }
+  }
+}

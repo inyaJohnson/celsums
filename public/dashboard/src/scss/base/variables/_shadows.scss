@@ -1,0 +1,140 @@
+$shadow-black-color: rgb(47, 60, 74) !default;
+$shadow-button-color: $shadow-black-color;
+
+// @return 0px 2px 1px -1px rgba($color, 0.06),0px 1px 1px 0px rgba($color, 0.042),0px 1px 3px 0px rgba($color, 0.036);
+
+@function shadow-1dp($color) {
+  @return 0px 2px 1px -1px rgba($color, 0.12),
+    0px 1px 1px 0px rgba($color, 0.08), 0px 1px 3px 0px rgba($color, 0.06);
+}
+@function shadow-2dp($color) {
+  @return 0px 3px 1px -2px rgba($color, 0.12),
+    0px 2px 2px 0px rgba($color, 0.08), 0px 1px 5px 0px rgba($color, 0.06);
+}
+
+@function shadow-3dp($color) {
+  @return 0 10px 30px 0 rgba($color, 0.08)
+}
+
+@function shadow-4dp($color) {
+  @return 0px 2px 4px -1px rgba($color, 0.12),
+    0px 4px 5px 0px rgba($color, 0.08), 0px 1px 10px 0px rgba($color, 0.06);
+}
+@function shadow-5dp($color) {
+  @return 0px 3px 5px -1px rgba($color, 0.12),
+    0px 5px 8px 0px rgba($color, 0.08), 0px 1px 14px 0px rgba($color, 0.06);
+}
+
+@function shadow-6dp($color) {
+  @return 0px 8px 32px rgba($color, 0.1),
+    0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-7dp($color) {
+  @return 0px 8px 32px rgba($color, 0.12),
+    0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-8dp($color) {
+  @return 0px 8px 32px rgba($color, 0.13),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-9dp($color) {
+  @return 0px 8px 32px rgba($color, 0.14),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-10dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-11dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-12dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-13dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-14dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-15dp($color) {
+  @return 0px 8px 32px rgba($color, 0.15),
+  0px 8px 16px rgba($color, 0.05);
+}
+@function shadow-16dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+@function shadow-17dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+@function shadow-18dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+@function shadow-19dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+@function shadow-20dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+@function shadow-24dp($color) {
+  @return 0px 0px 50px rgba($color, 0.15),
+  0px 12px 24px rgba($color, 0.05);
+}
+
+@function shadow-card($color) {
+  @return 0px 8px 32px rgba($color, 0.01),
+    0px 8px 16px rgba($color, 0.02);
+}
+
+@function shadow-button($color) {
+  @return 0 5px 15px rgba($color, 0.15), 0 15px 40px rgba($color, 0.2);
+}
+
+@function shadow-button-hover($color) {
+  @return 0 14px 26px -12px rgba($color, 0.42),
+    0 4px 23px 0px rgba($color, 0.12), 0 8px 10px -5px rgba($color, 0.2);
+}
+
+@function shadow-1dp-inset($color) {
+  @return inset 0 1px 4px 0 rgba($color, 0.2);
+}
+
+$shadow-focus: 0 0 8px rgba($shadow-black-color, 0.18),
+  0 8px 16px rgba($shadow-black-color, 0.36);
+
+$shadow-1dp: shadow-1dp($shadow-black-color);
+
+$shadow-2dp: shadow-2dp($shadow-black-color);
+
+$shadow-3dp: shadow-3dp($shadow-black-color);
+
+$shadow-4dp: shadow-4dp($shadow-black-color);
+$shadow-5dp: shadow-5dp($shadow-black-color);
+
+$shadow-6dp: shadow-6dp($shadow-black-color);
+$shadow-7dp: shadow-7dp($shadow-black-color);
+
+$shadow-8dp: shadow-8dp($shadow-black-color);
+$shadow-9dp: shadow-9dp($shadow-black-color);
+$shadow-10dp: shadow-10dp($shadow-black-color);
+$shadow-11dp: shadow-11dp($shadow-black-color);
+$shadow-12dp: shadow-12dp($shadow-black-color);
+$shadow-13dp: shadow-13dp($shadow-black-color);
+$shadow-14dp: shadow-14dp($shadow-black-color);
+$shadow-15dp: shadow-15dp($shadow-black-color);
+$shadow-16dp: shadow-16dp($shadow-black-color);
+$shadow-17dp: shadow-17dp($shadow-black-color);
+$shadow-18dp: shadow-18dp($shadow-black-color);
+$shadow-19dp: shadow-19dp($shadow-black-color);
+$shadow-20dp: shadow-20dp($shadow-black-color);
+$shadow-24dp: shadow-24dp($shadow-black-color);
+$shadow-card: shadow-card($shadow-black-color);

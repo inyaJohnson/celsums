@@ -1,0 +1,28 @@
+.tooltip.show {
+  opacity: 1;
+}
+.tooltip-inner {
+  color: $body-color;
+  background: $card-bg !important;
+  @include shadow-16dp();
+}
+
+.bs-tooltip-top .arrow::before, 
+.bs-tooltip-auto[x-placement^="top"] .arrow::before{
+  border-top-color: $card-bg;
+}
+.bs-tooltip-right .arrow::before, 
+.bs-tooltip-auto[x-placement^="right"] .arrow::before{
+  border-right-color: $card-bg;
+}
+.bs-tooltip-bottom .arrow::before, 
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before{
+  border-bottom-color: $card-bg;
+}
+.bs-tooltip-left .arrow::before, 
+.bs-tooltip-auto[x-placement^="left"] .arrow::before{
+  border-left-color: $card-bg;
+}
+
+// .bs-tooltip-bottom .arrow::before, 
+// .bs-tooltip-auto[x-placement^="bottom"] .arrow::before

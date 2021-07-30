@@ -1,0 +1,62 @@
+.daterangepicker {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  border: 0;
+  margin: 0;
+  background-color: $card-bg;
+  @include shadow-6dp();
+  &::after,&::before {
+    display: none;
+  }
+  th.month {
+    color: $text-muted-color;
+  }
+  .calendar-table {
+    background-color: $card-bg;
+    border-color: transparent;
+  }
+  .calendar-table .next span,
+  .calendar-table .prev span {
+    border-color: $border-color-black !important;
+    border-width: 0 1px 1px 0;
+  }
+  .drp-calendar {
+    padding-bottom: 19px !important;
+  }
+  .drp-calendar, .drp-buttons {
+    border-color: $border-color !important;
+  }
+  .ranges li.active, td.active, td.active:hover {
+    background: $primary !important;
+    color: $white !important;
+  }
+  td.in-range {
+    background-color: $gray-200;
+    color: $body-color;
+  }
+  .ranges li:hover {
+    background-color: $gray-200;
+  }
+
+  td.off, 
+  td.off.in-range, 
+  td.off.start-date, 
+  td.off.end-date {
+    background-color: $gray-300;
+    color: $text-muted-color;
+  }
+   td.available:hover, 
+   th.available:hover {
+     background-color: $gray-200;
+   }
+
+  @media only screen and (max-width: 767px) {
+    .ranges {
+      width: 100%;
+      ul {
+        width: 100%;
+      }
+    }
+  }
+}

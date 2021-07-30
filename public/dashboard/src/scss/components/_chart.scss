@@ -1,0 +1,45 @@
+.apexcharts-legend.position-bottom .apexcharts-legend-series, 
+.apexcharts-legend.position-top .apexcharts-legend-series {
+  display: flex !important;
+}
+.apexcharts-legend-text {
+  color: $text-muted-color !important;
+}
+.apexcharts-yaxis-label,
+.apexcharts-xaxis-label {
+  fill: $text-muted-color
+}
+
+.apexcharts-tooltip, 
+.apexcharts-tooltip-title, 
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+  color: $body-color !important;
+  background-color: $card-bg !important;
+  border-color: $border-color !important;
+}
+.apexcharts-tooltip,
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+  box-shadow: $shadow-2dp !important;
+}
+.apexcharts-gridlines-horizontal {
+  line {
+    stroke: $gray-400 !important;
+  }
+}
+.apexcharts-series-markers {
+  .apexcharts-marker {
+    stroke: $card-bg !important;
+    fill: $primary !important;
+  }
+}
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: $card-bg !important;
+}
+
+// pie
+.apexcharts-pie-series .apexcharts-pie-area {
+  stroke: transparent !important;
+}

@@ -1,0 +1,38 @@
+.badge {
+  padding: .3em .4em;
+  font-weight: 500;
+  font-size: 11px;
+  &.badge-solid {
+    display: unset;
+    padding: rem(5.5px) rem(15px);
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .96px;
+  }
+  &.badge-white {
+    background: $white;
+    color: $gray-900;
+  }
+  &.badge-rounded{
+    border-radius: 20px;
+  }
+
+  @include badge-circles();
+  @include badge-sizes();
+}
+
+
+.btn-badge {
+  position: relative;
+  .badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+}
+
+@include badge-colors();
+
+@include badge-opacity();
+@include badge-avatar();
+@include badge-brand();

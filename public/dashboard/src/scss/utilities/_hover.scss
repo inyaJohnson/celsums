@@ -1,0 +1,6 @@
+.hover-gray {
+  transition: $transition-base;
+  &:hover {
+    background-color: $hover-background;
+  }
+}

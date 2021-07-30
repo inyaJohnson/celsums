@@ -1,0 +1,149 @@
+/*
+  Color Inventory
+*/
+$solid-colors: (
+    "blue": #5d78ff,
+    "indigo": #5e5ce6,
+    "purple": #7367F0,
+    "pink": #ff375f,
+    "red": #ff453a,
+    "orange": #ff9f0a,
+    "yellow": #ffcc00,
+    "green": #30d158,
+    "slate": #222b45,
+    "white": #ffffff
+);
+
+$gradient-colors: (
+  gradient-purple-indigo: (
+    "start-color": #663399,
+    "end-color": #33214b
+  ),
+  gradient-black-blue: (
+    'start-color' : #004e92,
+      'end-color' : #000428
+  ),
+  gradient-black-gray: (
+    'start-color' : #404040,
+      'end-color' : #000000
+  ),
+  gradient-steel-gray: (
+    'start-color' : #616d86,
+      'end-color' : #1F1C2C
+  )
+);
+
+$blue:    map-get($solid-colors, 'blue') !default;
+$dark-blue:    map-get($solid-colors, 'dark-blue') !default;
+$indigo:  map-get($solid-colors, 'indigo') !default;
+$purple:  map-get($solid-colors, 'purple') !default;
+$pink:    map-get($solid-colors, 'pink') !default;
+$red:     map-get($solid-colors, 'red') !default;
+$orange:  map-get($solid-colors, 'orange') !default;
+$yellow:  map-get($solid-colors, 'yellow') !default;
+$green:   map-get($solid-colors, 'green') !default;
+$slate:   map-get($solid-colors, 'slate') !default;
+
+// Generate gray base form purple
+$gray-base: saturate($blue, 90);
+
+$white:    #fff !default;
+$gray-100: rgba(255, 255, 255, 0.1) !default;
+$gray-200: rgba(255, 255, 255, 0.2) !default;
+$gray-300: rgba(255, 255, 255, 0.3) !default;
+$gray-400: rgba(255, 255, 255, 0.4)  !default;
+$gray-500: rgba(255, 255, 255, 0.5) !default;
+$gray-600: rgba(255, 255, 255, 0.6)  !default;
+$gray-700: rgba(255, 255, 255, 0.7) !default;
+$gray-800: rgba(255, 255, 255, 0.8) !default;
+$gray-900: rgba(255, 255, 255, 0.9) !default;
+
+$black:    rgba(11, 19, 41, 1) !default;
+
+
+$primary:       $blue !default;
+$secondary:     darken($white, 30) !default;
+$success:       $green !default;
+$info:          $indigo !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+
+$light:         darken($white, 20) !default;
+$dark:          $white !default;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark
+) !default;
+
+
+$social-colors: (
+  facebook: rgb(55, 101, 201),
+  google: rgb(236, 65, 44),
+  twitter: rgb(3, 159, 245)
+);
+
+$facebook: map-get($social-colors, 'facebook');
+$google: map-get($social-colors, 'google');
+$twitter: map-get($social-colors, 'twitter');
+
+
+
+/* 
+  Color Design Tokens 
+*/
+$body-bg: #1a2038;
+$card-bg: #222a45;
+
+$body-color: $white !default;
+$heading-color: $white;
+$heading-semi-dark-color: $white;
+
+$text-muted-color: darken($white, 20);
+$text-muted: $text-muted-color;
+
+$primary-active: darken($primary, 10);
+$primary-dark: darken($primary, 15);
+
+// Acive colors
+$component-active-color: $white !default;
+$component-active-bg: $primary-active !default;
+
+
+// Background
+$background-light: $gray-200;
+
+// Border
+$border-color: rgba($gray-900, .1);
+$border-color-light: rgba($gray-900, .06);
+$border-color-dark: rgba($gray-900, .3);
+$border-color-black: rgba($gray-900, .5);
+
+// Shadow 
+$shadow-black-color: rgba(0,0,0, .8);
+
+
+
+// Breadcrumb
+// $breadcrumb-bg:                     $gray-200 !default;
+// $breadcrumb-divider-color:          $gray-600 !default;
+$breadcrumb-active-color:           $text-muted;
+
+
+// form
+$input-color: $body-color;
+$label-color: $text-muted-color;
+$input-color-placeholder: $text-muted-color;
+
+
+
+// hover focus active
+$hover-background: $gray-200;
+$active-background: $gray-400;

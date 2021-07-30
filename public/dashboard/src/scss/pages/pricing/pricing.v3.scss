@@ -1,0 +1,14 @@
+@import '../../base/base';
+
+.ul-pricing-v3{
+  .table-responsive {
+    table {
+      min-width: 800px;
+    }
+  }
+  caption{
+    caption-side: top;
+    color: $body-color;
+    font-weight: $font-weight-semi;
+  }
+}

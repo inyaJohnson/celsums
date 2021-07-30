@@ -1,0 +1,57 @@
+.sidebar-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  .sidebar-overlay {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .4);
+    display: none;
+    z-index: 1;
+    &.open {
+      display: block;
+    }
+  }
+  .sidebar-content {
+      position: relative;
+      height: 100%;
+      transition: all .3s ease-in;
+      &:after {
+          position: absolute;
+          // content: "";
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+      }
+  }
+  .sidebar {
+      position: absolute;
+      top: 0;
+      transition: all .3s ease-in;
+      z-index: 2;
+      .sidebar-close {
+          display: none;
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          cursor: pointer;
+          z-index: 999;
+      }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar-container {
+      .sidebar {
+          background: $body-bg;
+          .sidebar-close {
+              display: block;
+          }
+      }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../base/base';
+
+.welcome-card-image img {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.borderless td,
+.borderless th {
+  border: none;
+}
+
+.welcome-card {
+  padding: 36px 50px !important;
+
+  .welcome-card-image {
+    margin-top: -75px;
+  }
+}
+
+.grid-button {
+  button {
+    i {
+      font-size: $font-size-button-semi-md;
+    }
+  }
+}
