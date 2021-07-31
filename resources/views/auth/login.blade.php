@@ -33,7 +33,7 @@
                 <div class="input-group-prepend">
                     <i class="input-group-text material-icons">perm_identity</i>
                 </div>
-                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                <input type="email"  name="email" class="form-control @error('email') is-invalid @enderror"
                        placeholder="Email Address" value="{{ old('email') }}" aria-label="email" required
                        autocomplete="email" autofocus aria-describedby="basic-addon1">
                 @error('email')
