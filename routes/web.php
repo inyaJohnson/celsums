@@ -34,10 +34,6 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
-
-
-
 
 Route::get('/setup', [SetupController::class, 'index'])->name('setup');
 Route::get('/legal', [PagesController::class, 'legal'])->name('legal');

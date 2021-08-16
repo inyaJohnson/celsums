@@ -45,6 +45,10 @@ class User extends Authenticatable
         return auth()->user()->first_name.' '. auth()->user()->last_name;
     }
 
+    public function initials(){
+        return substr(auth()->user()->first_name, 0, 1) .' '. substr(auth()->user()->last_name, 0, 1);
+    }
+
     public  function role(){
         return $this->belongsTo(Role::class);
     }
