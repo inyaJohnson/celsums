@@ -40,12 +40,12 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingLeaves"><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/>
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/>
                                                     </div>
                                                     <i class="flaticon-business-and-trade text-white text-72"></i>
                                                 </div>
@@ -55,10 +55,10 @@
                                                     <h1 class="font-weight-bold text-gray-200 display-1 mr-1">775 </h1>
                                                     <div class="text-gray-300 ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-primary text-white border-white btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -69,17 +69,17 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingClouds"><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 20px"/><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 10px"/><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 18px"/><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 10px"/><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 10px"/><img
-                                                                src="assets/images/illustrations/backgrounds/cloud-1.svg"
+                                                                src="/dashboard/dist/assets/images/illustrations/backgrounds/cloud-1.svg"
                                                                 style="width: 14px"/></div>
                                                     <i class="flaticon-rocket text-primary text-72"></i>
                                                 </div>
@@ -89,10 +89,10 @@
                                                     <h1 class="font-weight-bold text-gray-700 display-1 mr-1">75 </h1>
                                                     <div class="text-muted ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-primary btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -103,12 +103,12 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingLeaves"><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/>
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/>
                                                     </div>
                                                     <i class="flaticon-business-and-trade text-white text-72"></i>
                                                 </div>
@@ -118,10 +118,10 @@
                                                     <h1 class="font-weight-bold text-gray-200 display-1 mr-1">775 </h1>
                                                     <div class="text-gray-300 ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-primary text-white border-white btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -136,12 +136,12 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingLeaves"><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/>
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/>
                                                     </div>
                                                     <i class="flaticon-business-and-trade text-white text-72"></i>
                                                 </div>
@@ -151,10 +151,10 @@
                                                     <h1 class="font-weight-bold text-gray-200 display-1 mr-1">775 </h1>
                                                     <div class="text-gray-300 ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-success text-white border-white btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -165,12 +165,12 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingLeaves"><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1.svg"/></div>
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1.svg"/></div>
                                                     <i class="flaticon-rocket text-primary text-72"></i>
                                                 </div>
                                                 <h4 class="card-title font-weight-normal">Startup</h4>
@@ -179,10 +179,10 @@
                                                     <h1 class="font-weight-bold text-gray-700 display-1 mr-1">75 </h1>
                                                     <div class="text-muted ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-warning btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -193,12 +193,12 @@
                                             <div class="ul-pricing-v2 text-center">
                                                 <div class="ul-icon-box mx-auto mb-xl">
                                                     <div class="bg-group ul-animate fallingLeaves"><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/><img
-                                                                src="assets/images/illustrations/leaf-1-white.svg"/>
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/><img
+                                                                src="/dashboard/dist/assets/images/illustrations/leaf-1-white.svg"/>
                                                     </div>
                                                     <i class="flaticon-business-and-trade text-white text-72"></i>
                                                 </div>
@@ -208,10 +208,10 @@
                                                     <h1 class="font-weight-bold text-gray-200 display-1 mr-1">775 </h1>
                                                     <div class="text-gray-300 ul-pricing-v2-month">/month</div>
                                                 </div>
-                                                <button type="button"
+                                                <a href="{{route('invoice')}}" type="button"
                                                         class="btn btn-outline btn-outline-success text-white border-white btn-rounded btn-lg">
                                                     Purchase
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

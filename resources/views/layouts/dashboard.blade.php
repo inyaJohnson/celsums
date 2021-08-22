@@ -217,9 +217,9 @@
         <div class="main-content-body">
             <!-- Start:: content (Your custom content)-->
 
-            @yield('custom_content')
+        @yield('custom_content')
 
-            <!-- Start:: Footer-->
+        <!-- Start:: Footer-->
             <div class="flex-grow-1"></div>
             <div class="bg-card px-lg py-md d-flex justify-content-center align-items-center flex-wrap shadow-6dp">
                 <p class="text-muted m-0">All rights reserved &copy; UI Lib 2020</p>
@@ -235,6 +235,7 @@
 <script src="/dashboard/dist/assets/js/main.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 <script src="/dashboard/dist/assets/js//dashboard/dist/pages/doc.script.min.js"></script>
+@yield('script')
 </body>
 
 </html>

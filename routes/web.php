@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => ['auth', 'user']], function () {
+    Route::get('/deposit/invoice', [DepositController::class, 'invoice'])->name('invoice');
     Route::get('/deposit', [DepositController::class, 'index'])->name('deposit');
     Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
     Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
