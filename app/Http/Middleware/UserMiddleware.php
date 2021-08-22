@@ -18,7 +18,7 @@ class UserMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Gate::denies('user')){
-            return response()->view('401');
+            return response()->view('layouts.401');
         }
         return $next($request);
     }

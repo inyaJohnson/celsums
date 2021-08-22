@@ -18,7 +18,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Gate::denies('admin')){
-            return response()->view('401');
+            return response()->view('layouts.401');
         }
         return $next($request);
     }

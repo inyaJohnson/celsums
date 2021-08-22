@@ -68,8 +68,8 @@
                                 </ul>
                             </li>
                             <span class="main-menu-title">PLANS</span>
-                            <li><a href="/dashboard/dist/system-utilities/utilities.shadow.html"><i
-                                            class="material-icons nav-icon text-16">flip_to_front</i>Shadows</a></li>
+                            <li><a href="{{route('deposit')}}"><i
+                                            class="material-icons nav-icon text-16">input</i>Deposit</a></li>
                             <li><a href="/dashboard/dist/system-utilities/utilities.spacing.html"><i
                                             class="material-icons nav-icon text-16">space_bar</i>Spacings</a></li>
                             </li><span class="main-menu-title">STOCK</span>
@@ -216,22 +216,9 @@
         <!-- Start:: content body-->
         <div class="main-content-body">
             <!-- Start:: content (Your custom content)-->
-            <div class="subheader px-lg">
-                <div class="subheader-container">
-                    <div class="subheader-main">
-                        <h3 class="subheader-title">Blank</h3>
-                        <nav class="ul-breadcrumb" aria-label="breadcrumb">
-                            <ol class="ul-breadcrumb-items">
-                                <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blank</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div class="mx-lg"></div>
-            <!-- Start:: content (Your custom content)-->
+
+            @yield('custom_content')
+
             <!-- Start:: Footer-->
             <div class="flex-grow-1"></div>
             <div class="bg-card px-lg py-md d-flex justify-content-center align-items-center flex-wrap shadow-6dp">

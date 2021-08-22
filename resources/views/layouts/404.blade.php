@@ -21,8 +21,8 @@
             </div>
         </div>
         <div class="error-action d-flex justify-content-around mt-xxl">
-            <button type="button" class="btn btn-opacity btn-primary btn-sm mr-0"> Back to Dashboard </button>
-            <button type="button" class="btn btn-opacity btn-danger btn-sm"> Report the problem</button>
+            <a href="{{route('home')}}" type="button" class="btn btn-opacity btn-primary btn-sm mr-0"> Back to Dashboard </a>
+            <a href="{{route('contact')}}" type="button" class="btn btn-opacity btn-danger btn-sm"> Report the problem</a>
         </div>
     </div>
 </div>
