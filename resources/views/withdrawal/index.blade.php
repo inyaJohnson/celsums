@@ -1,64 +1,77 @@
 @extends('layouts.dashboard')
-@section('current_page')
-    Withdrawal
-@endsection
-@section('content')
-<section>
-    <div class="section__content section__content--p30">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <p class="title-3">Fill the form below to request a Withdrawal</p>
-                        </div>
-                        <div class="card-body card-block col-lg-8 withdrawal">
-                            @include('layouts.message')
-                            <div class="text-center text-success">Your Balance is ${{number_format(auth()->user()->finance->current_balance)}}
-                            </div>
-                            <div class="clearfix">&nbsp;</div>
-                            <form action="{{route('withdrawal.request')}}" method="post">
-                                @csrf
-                                <div id="withdrawal-message"></div>
-                                <div class="form-group ">
-                                    <label class="control-label" for="name">Full Name <span
-                                            class="help"> e.g. "James Brown"</span></label>
-                                    <input  class="form-control" name="name" id="name" required/>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="control-label" for="amount">Amount to Withdraw</label>
-                                    <input type="number" class="form-control" name="amount"
-                                           required id="amount"/>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label" for="details">Please enter your Bitcoin Wallet address or <span
-                                            class="help"> Bank account details</span></label>
-                                    <textarea class="form-control" name="details" id="details"
-                                              required rows="5"></textarea>
-                                </div>
-
-                                <div class="form-group col-lg-6" style="margin:auto;">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-dot-circle-o"></i> Submit
-                                    </button>
-                                    <button type="reset" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-ban"></i> Reset
-                                    </button>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="card-footer">
-                            Withdrawal will be process within 24hrs.
-                        </div>
-                    </div>
-                </div>
+@section('custom_content')
+    <!-- Start:: content (Your custom content)-->
+    <div class="subheader px-lg">
+        <div class="subheader-container">
+            <div class="subheader-main">
+                <h3 class="subheader-title">Spacing</h3>
+                <nav class="ul-breadcrumb" aria-label="breadcrumb">
+                    <ol class="ul-breadcrumb-items">
+                        <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
+                        <li class="breadcrumb-item"><a href="#">System Utilities</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Spacing</li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>
-</section>
-<!-- END MAIN CONTENT-->
+    <div class="container my-lg d-flex flex-column">
+        <div class="doc-section-title d-flex justify-content-center">
+            <h2 class="doc-section-title">Fill the form below to request a Withdrawal</h2>
+        </div>
+        <div class="doc-example d-flex justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center text-success">Your Balance is $1,400
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <form action="{{route('withdrawal.request')}}" method="POST">
+                    @csrf
+                    <div id="withdrawal-message"></div>
+                    <div class="form-group ">
+                        <label class="control-label" for="name">Full Name <span
+                                    class="help"> e.g. "James Brown"</span></label>
+                        <input class="form-control" name="name" id="name" required/>
+                        @if($errors->has('name'))
+                            <div class="text-danger"> {{$errors->first('name')}}</div>
+                        @endif
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label" for="amount">Amount to Withdraw</label>
+                        <input type="number" class="form-control" name="amount"
+                               required id="amount"/>
+                        @if($errors->has('amount'))
+                            <div class="text-danger"> {{$errors->first('amount')}}</div>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="details">Please enter your Bitcoin Wallet address or <span
+                                    class="help"> Bank account details</span></label>
+                        <textarea class="form-control" name="details" id="details"
+                                  required rows="5"></textarea>
+                        @if($errors->has('details'))
+                            <div class="text-danger"> {{$errors->first('details')}}</div>
+                        @endif
+                    </div>
+
+                    <div class="form-group col-lg-6" style="margin:auto;">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            Withdrawal will be process within 24hrs.
+        </div>
+    </div>
+    <!-- Start:: content (Your custom content)-->
 @endsection

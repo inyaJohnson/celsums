@@ -20,10 +20,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $view = 'admin.home';
+        $view = view('admin.home');
         if(!auth()->user()->hasRole('admin')){
-            $view = 'home';
+            $transactions = auth()->user()->Transactions()->get();
+            $view = view('home', compact('transactions'));
         }
-        return view($view);
+        return $view;
     }
 }

@@ -51,27 +51,13 @@
                 <div class="main-menu">
                     <nav class="sidebar-nav">
                         <ul class="metismenu show-on-load" id="ul-menu">
-                            <li><a class="has-arrow" href="#"><i class="material-icons nav-icon">dashboard</i>Dashboards</a>
-                                <ul class="mm-collapse">
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.learningManagement.html"><i
-                                                    class="bullet-icon"></i>Learning Management</a></li>
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.jobManagement.html"><i
-                                                    class="bullet-icon"></i>Job Management</a></li>
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.analytic-2.html"><i
-                                                    class="bullet-icon"></i>Analytic</a></li>
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.cryptoCurrency.html"><i
-                                                    class="bullet-icon"></i>Cryptocurrency</a></li>
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.sales2.html"><i
-                                                    class="bullet-icon"></i>Sales</a></li>
-                                    <li><a href="/dashboard/dist/dashboards/dashboard.subscription.html"><i
-                                                    class="bullet-icon"></i>Subscription</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{route('home')}}"><i
+                                            class="material-icons nav-icon text-16">home</i>Home</a></li>
                             <span class="main-menu-title">PLANS</span>
                             <li><a href="{{route('deposit')}}"><i
                                             class="material-icons nav-icon text-16">input</i>Deposit</a></li>
-                            <li><a href="/dashboard/dist/system-utilities/utilities.spacing.html"><i
-                                            class="material-icons nav-icon text-16">space_bar</i>Spacings</a></li>
+                            <li><a href="{{route('withdrawal')}}"><i
+                                            class="material-icons nav-icon text-16">account_balance_wallet</i>Withdraw</a></li>
                             </li><span class="main-menu-title">STOCK</span>
                             <li><a href="/dashboard/dist/system-utilities/sass.variable.html"><i
                                             class="material-icons nav-icon text-16">style</i>Sass Variables</a></li>

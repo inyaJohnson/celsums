@@ -14,7 +14,7 @@ class WithdrawalRequest extends FormRequest
      */
     public function authorize()
     {
-        return Gate::allows('client');
+        return Gate::allows('user');
     }
 
     /**
