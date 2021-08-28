@@ -57,20 +57,20 @@ Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
     Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
 // stock
-    Route::get('stock', [StockController::class, 'index'])->name('stock.index');
+    Route::get('stock', [StockController::class, 'index'])->name('stocks.index');
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {
     Route::get('/email-create/{id}', [EmailController::class, 'createEmail'])->name('email.create');
     Route::post('/email-send', [EmailController::class, 'sendEmail'])->name('email.send');
-    Route::get('/payment', [ProductTransactionController::class, 'index'])->name('payment.index');
-    Route::get('/payment-create/{id}', [ProductTransactionController::class, 'create'])->name('payment.create');
-    Route::post('/payment-store', [ProductTransactionController::class, 'store'])->name('payment.store');
-    Route::get('/payment-edit/{id}', [ProductTransactionController::class,'edit'])->name('payment.edit');
-    Route::post('/payment-update/{id}', [ProductTransactionController::class,'update'])->name('payment.update');
+    Route::get('/transactions', [ProductTransactionController::class, 'index'])->name('transactions.index');
+    Route::get('/transactions/create/{id}', [ProductTransactionController::class, 'create'])->name('transactions.create');
+    Route::post('/transactions/store', [ProductTransactionController::class, 'store'])->name('transactions.store');
+    Route::get('/transactions/edit/{id}', [ProductTransactionController::class,'edit'])->name('transactions.edit');
+    Route::post('/transactions/update/{id}', [ProductTransactionController::class,'update'])->name('transactions.update');
 
-    Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('user.verify');
-    Route::get('/user-delete/{id}', [AdminUserController::class,'destroy'])->name('user.delete');
+    Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
+    Route::delete('/users/{id}', [AdminUserController::class,'destroy'])->name('users.delete');
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
 
 
@@ -82,10 +82,10 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     Route::get('manage-stock', [AdminStockController::class, 'index'])->name('stock.manage');
     Route::post('store-stock', [AdminStockController::class, 'store'])->name('stock.store');
 
-    Route::get('/stock-payment', [StockTransactionController::class, 'index'])->name('stock-payment.index');
-    Route::get('/stock-payment/create/{id}', [StockTransactionController::class, 'create'])->name('stock-payment.create');
-    Route::post('/stock-payment/store', [StockTransactionController::class,'store'])->name('stock-payment.store');
-    Route::get('/stock-payment/edit/{id}', [StockTransactionController::class, 'edit'])->name('stock-payment.edit');
-    Route::post('/stock-payment/update/{id}', [StockTransactionController::class, 'update'])->name('stock-payment.update');
+    Route::get('/stocks/transactions', [StockTransactionController::class, 'index'])->name('stock.transactions.index');
+    Route::get('/stocks/transactions/create/{id}', [StockTransactionController::class, 'create'])->name('stock.transactions.create');
+    Route::post('/stocks/transactions/store', [StockTransactionController::class,'store'])->name('stock.transactions.store');
+    Route::get('/stocks/transactions/edit/{id}', [StockTransactionController::class, 'edit'])->name('stock.transactions.edit');
+    Route::post('/stocks/transactions/update/{id}', [StockTransactionController::class, 'update'])->name('stock.transactions.update');
 
 });

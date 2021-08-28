@@ -53,16 +53,38 @@
                         <ul class="metismenu show-on-load" id="ul-menu">
                             <li><a href="{{route('home')}}"><i
                                             class="material-icons nav-icon text-16">home</i>Home</a></li>
-                            <span class="main-menu-title">PLANS</span>
-                            <li><a href="{{route('deposit')}}"><i
-                                            class="material-icons nav-icon text-16">input</i>Deposit</a></li>
-                            <li><a href="{{route('withdrawal')}}"><i
-                                            class="material-icons nav-icon text-16">account_balance_wallet</i>Withdraw</a></li>
-                            </li><span class="main-menu-title">STOCK</span>
-                            <li><a href="/dashboard/dist/system-utilities/sass.variable.html"><i
-                                            class="material-icons nav-icon text-16">style</i>Sass Variables</a></li>
-                            <li><a href="/dashboard/dist/system-utilities/utilities.background.html"><i
-                                            class="material-icons nav-icon text-16">style</i>Backgrounds</a></li>
+                            @can('user')
+                                <span class="main-menu-title">PLANS</span>
+                                <li><a href="{{route('deposit')}}"><i
+                                                class="material-icons nav-icon text-16">input</i>Deposit</a></li>
+                                <li><a href="{{route('withdrawal')}}"><i
+                                                class="material-icons nav-icon text-16">account_balance_wallet</i>Withdraw</a>
+                                </li>
+                                </li><span class="main-menu-title">STOCK</span>
+                                <li><a href="{{route('stock.index')}}"><i
+                                                class="material-icons nav-icon text-16">style</i>Stocks</a></li>
+                                <li><a href="/dashboard/dist/system-utilities/utilities.background.html"><i
+                                                class="material-icons nav-icon text-16">style</i>Backgrounds</a></li>
+                            @endcan
+
+                            @can('admin')
+                                <li><a href="{{route('transactions.index')}}"><i
+                                                class="material-icons nav-icon text-16">input</i>Transactions</a></li>
+                                <li><a class="has-arrow" href="#"><i class="material-icons nav-icon">monetization_on</i>Stock</a>
+                                    <ul class="mm-collapse">
+                                        <li><a href="{{route('stock.manage')}}"><i
+                                                        class="bullet-icon"></i>Stock List</a></li>
+                                        <li><a href="{{route('stock.transactions.index')}}"><i
+                                                        class="bullet-icon"></i>Transactions</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="{{route('reviews.index')}}"><i
+                                                class="material-icons nav-icon text-16">comment</i>Review</a></li>
+                                <li><a href="{{route('users.index')}}"><i
+                                                class="material-icons nav-icon text-16">people</i>Users</a></li>
+
+                            @endcan
                         </ul>
                     </nav>
                 </div>

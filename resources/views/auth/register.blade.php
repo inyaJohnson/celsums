@@ -77,7 +77,7 @@
 
                 <div class="col-md-12 mb-sm">
                     <div class="input-group  input-light mb-3">
-                        <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password"
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password"
                                required autocomplete="new-password" autofocus>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
