@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Database\Schema\Builder;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Builder::defaultStringLength(191);
-
-
+        View::composer(['admin.*'], 'App\Http\View\Composers\AdminData');
+        View::composer(['admin.stock.index'], 'App\Http\View\Composers\AdminStock');
     }
 }

@@ -1,8 +1,5 @@
 @extends('layouts.dashboard')
-@section('current_page')
-    Edit Review
-@endsection
-@section('content')
+@section('custom_content')
     <section>
         <div class="section__content section__content--p30">
             <div class="container-fluid admin-div">

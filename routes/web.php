@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PagesController;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\SetupController;
-//use \App\Http\Controllers\ReviewController;
+use \App\Http\Controllers\ReviewController;
 use \App\Http\Controllers\DepositController;
 use \App\Http\Controllers\WithdrawalController;
 use \App\Http\Controllers\StockController;
@@ -37,7 +37,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/setup', [SetupController::class, 'index'])->name('setup');
 Route::get('/legal', [PagesController::class, 'legal'])->name('legal');
-Route::resource('/reviews', 'ReviewController');
+Route::resource('/reviews', ReviewController::class);
 Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 
 

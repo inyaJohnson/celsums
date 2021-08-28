@@ -1,9 +1,5 @@
 @extends('layouts.dashboard')
-@section('current_page')
-    Reviews
-@endsection
-@section('content')
-
+@section('custom_content')
     <section class="small-padding">
         @include('layouts.message')
         <div class="section__content section__content--p30">
@@ -20,7 +16,7 @@
                                         </div>
                                         <div class="col-2 text-right">
                                             <a href="{{route('reviews.edit', $hashIds->encode($review->id))}}"
-                                               title="Edit Review"><i class="fa fa-pencil-square-o"></i></a>
+                                               title="Edit Review"><i class="fa fa-pencil-square-o"></i>edit</a>
                                         </div>
                                     </div>
                                 </div>
