@@ -57,7 +57,7 @@ Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
     Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
 // stock
-    Route::get('stock', [StockController::class, 'index'])->name('stocks.index');
+    Route::get('stock', [StockController::class, 'index'])->name('stock.index');
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {
