@@ -57,5 +57,4 @@
     </div>
 
     <!-- Start:: content (Your custom content)-->
-
 @endsection

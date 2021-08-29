@@ -69,7 +69,7 @@ class RegisterController extends Controller
     {
         $role = Role::where('name', 'user')->first();
 
-        return User::create([
+        $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
@@ -77,5 +77,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'role_id' => $role->id
         ]);
+
+        $user->finance()->create();
+
+        return $user;
     }
 }

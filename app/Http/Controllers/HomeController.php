@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+
 class HomeController extends Controller
 {
     /**
@@ -20,7 +22,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $view = view('admin.home');
+        $users = User::with('finance')->where('role_id', '!=', 1)->get();
+        $view = view('admin.home', compact('users'));
         if(!auth()->user()->hasRole('admin')){
             $transactions = auth()->user()->Transactions()->get();
             $view = view('home', compact('transactions'));

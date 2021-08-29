@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" for="amount">Amount to Withdraw</label>
+                        <label class="control-label" for="amount">Amount to Paid</label>
                         <input type="number" class="form-control" id="amount" name="amount" value="{{$transaction->amount}}" />
                     </div>
 

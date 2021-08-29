@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css"/>
     <link rel="stylesheet" href="/dashboard/dist/assets/css/main.bundle.min.css"/>
     <link rel="stylesheet" href="/dashboard/dist/assets/css/custom.css"/>
+    @yield('css')
 </head>
 
 <body>

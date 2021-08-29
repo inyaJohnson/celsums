@@ -63,10 +63,10 @@ class ProductTransactionController extends Controller
     public function update(TransactionUpdateRequest $request, $id){
         $transaction = Transaction::find($this->decode($id));
         $transaction->update($request->all());
-        $user = User::find($request->user_id);
+        $user = $transaction->user;
         $newBalance = $user->finance->current_balance + $request->amount;
-        $user->finance->update(['current_balance' => $newBalance]);
-        return redirect()->route('payment.index')->with('success', 'Payment updated successfully');
+        $user->finance()->update(['current_balance' => $newBalance]);
+        return redirect()->route('transactions.index')->with('success', 'Payment updated successfully');
     }
 
 }
