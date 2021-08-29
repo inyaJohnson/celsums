@@ -24,8 +24,8 @@
                     @foreach($users as $user)
                         <div class="card mb-md cursor-pointer col-md-6 col-xs-12">
                             <div class="card-body d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
-                                <div class="initials top">
-                                    <h3 style="padding-left: 10px;">{{strtoupper(substr($user->first_name, 0, 1)).' '.strtoupper(substr($user->last_name, 0, 1))}}</h3>
+                                <div class="initials top admin">
+                                    <h3>{{strtoupper(substr($user->first_name, 0, 1)).' '.strtoupper(substr($user->last_name, 0, 1))}}</h3>
                                 </div>
                                 <div class="flex-grow-1 text-sm-left text-center">
                                     <h6 class="m-0">{!!  ($user->verified)?"<span class='text-success'>Verified</span>":"<span class='text-danger'>Unverified</span>"!!}

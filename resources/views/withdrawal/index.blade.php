@@ -21,6 +21,7 @@
         </div>
         <div class="doc-example d-flex justify-content-center">
             <div class="col-lg-8">
+                @include('layouts.message')
                 <div class="text-center text-success">Your Balance is $1,400
                 </div>
                 <div class="clearfix">&nbsp;</div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TransactionRequest;
+use App\Http\Requests\TransactionUpdateRequest;
 use App\Models\Transaction;
 use App\Traits\HashIds;
 use App\Models\User;
@@ -54,16 +55,16 @@ class ProductTransactionController extends Controller
 
 
     /**
-     * @param TransactionRequest $request
+     * @param TransactionUpdateRequest $request
      * @param $id
      * @return $this
      */
 
-    public function update(TransactionRequest $request, $id){
+    public function update(TransactionUpdateRequest $request, $id){
         $transaction = Transaction::find($this->decode($id));
         $transaction->update($request->all());
         $user = User::find($request->user_id);
-        $newBalance = ($user->finance->current_balance - $request->prev_amount) + $request->amount;
+        $newBalance = $user->finance->current_balance + $request->amount;
         $user->finance->update(['current_balance' => $newBalance]);
         return redirect()->route('payment.index')->with('success', 'Payment updated successfully');
     }

@@ -1,76 +1,84 @@
 @extends('layouts.dashboard')
-@section('current_page')
-    Edit Payment
-@endsection
-@section('content')
-    <section>
-        <div class="section__content section__content--p30">
-            <div class="container-fluid admin-div">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="title-3">Record client's payment</p>
-                            </div>
-                            <div class="card-body card-block col-lg-8 withdrawal">
-                                @include('layouts.message')
-                                <div class="text-center text-success">Edit ${{number_format($payment->amount)}} made by {{$payment->name}} </div>
-                                <div class="clearfix">&nbsp;</div>
-                                <form action="{{route('payment.update', $hashIds->encode($payment->id))}}" method="post">
-                                    @csrf
-                                    <div class="form-group ">
-                                        <label class="control-label" for="name">Sender Name</label>
-                                        <input class="form-control" id="name" name="name" value="{{$payment->name}}"/>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label class="control-label" for="amount">Amount to Withdraw</label>
-                                        <input type="number" class="form-control" id="amount" name="amount" value="{{$payment->amount}}" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label" for="method">Payment Method</label>
-                                        <select class="form-control" name="method" id="method">
-                                            <option value="Bitcoin" @php echo ($payment->method === "Bitcoin")? 'selected':''; @endphp>Bitcoin</option>
-                                            <option value="Bank Wire" @php echo ($payment->method === "Bank Wire")? 'selected':''; @endphp>Bank Wire</option>
-                                            <option value="Western Union" @php echo ($payment->method === "Western Union")? 'selected':''; @endphp>Western Union</option>
-                                            <option value="Money Gram" @php echo ($payment->method === "Money Gram")? 'selected':''; @endphp>Money Gram</option>
-                                            <option value="Others" @php echo ($payment->method === "Others")? 'selected':''; @endphp>Others</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label" for="status">Payment Status</label>
-                                        <select class="form-control" name="status" id="status">
-                                            <option value="Confirmed" @php echo ($payment->method === "Confirmed")? 'selected':''; @endphp>Confirmed</option>
-                                            <option value="Pending" @php echo ($payment->method === "Pending")? 'selected':''; @endphp>Pending</option>
-                                        </select>
-                                    </div>
-
-                                    <input type="hidden" name="user_id" value="{{$payment->user->id}}"/>
-                                    <input type="hidden" name="prev_amount" value="{{$payment->amount}}"/>
-
-
-                                    <div class="form-group col-lg-6" style="margin:auto;">
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Submit
-                                        </button>
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Reset
-                                        </button>
-                                    </div>
-
-                                </form>
-                            </div>
-                            <div class="card-footer">
-                                Payment will be recorded and reflected on user dashboard.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+@section('custom_content')
+    <!-- Start:: content (Your custom content)-->
+    <div class="subheader px-lg">
+        <div class="subheader-container">
+            <div class="subheader-main">
+                <h3 class="subheader-title">Spacing</h3>
+                <nav class="ul-breadcrumb" aria-label="breadcrumb">
+                    <ol class="ul-breadcrumb-items">
+                        <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
+                        <li class="breadcrumb-item"><a href="#">System Utilities</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Spacing</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
-    <!-- END MAIN CONTENT-->
+    </div>
+    <div class="container my-lg d-flex flex-column">
+        <div class="doc-section-title d-flex justify-content-center">
+            <h2 class="doc-section-title">Record client's transaction</h2>
+        </div>
+        <div class="doc-example d-flex justify-content-center">
+            <div class="col-lg-8">
+                @include('layouts.message')
+                <div class="text-center text-success">
+                    Edit ${{number_format($transaction->amount)}} made by {{$transaction->user->first_name .' '. $transaction->user->last_name}}
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <form action="{{route('transactions.update', $hashIds->encode($transaction->id))}}" method="post">
+                    @csrf
+                    <div class="form-group ">
+                        <label class="control-label" for="name">Sender Name</label>
+                        <input class="form-control" id="name" name="name" value="{{$transaction->user->first_name .' '. $transaction->user->last_name}}"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="units">Units</label>
+                        <input type="number" class="form-control" id="units" name="units" value="{{$transaction->units}}" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="amount">Amount to Withdraw</label>
+                        <input type="number" class="form-control" id="amount" name="amount" value="{{$transaction->amount}}" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="method_of_payment">Transaction Method</label>
+                        <select class="form-control" name="method_of_payment" id="method_of_payment">
+                            <option value="Bitcoin" @php echo ($transaction->method_of_payment === "Coin")? 'selected':''; @endphp>Coin</option>
+                            <option value="Bank Wire" @php echo ($transaction->method_of_payment === "Bank Wire")? 'selected':''; @endphp>Bank Wire</option>
+                            <option value="Western Union" @php echo ($transaction->method_of_payment === "Western Union")? 'selected':''; @endphp>Western Union</option>
+                            <option value="Money Gram" @php echo ($transaction->method_of_payment === "Money Gram")? 'selected':''; @endphp>Money Gram</option>
+                            <option value="Others" @php echo ($transaction->method_of_payment === "Others")? 'selected':''; @endphp>Others</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="status">Transaction Status</label>
+                        <select class="form-control" name="status" id="status">
+                            <option value=0 @php echo ($transaction->status == 0)? 'selected':''; @endphp>Pending</option>
+                            <option value=1 @php echo ($transaction->status == 1)? 'selected':''; @endphp>Confirmed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-lg-6" style="margin:auto;">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            Transaction will be recorded and reflected on user dashboard.
+        </div>
+    </div>
+    <!-- Start:: content (Your custom content)-->
+
 @endsection
