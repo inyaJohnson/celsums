@@ -113,61 +113,7 @@
                     <div class="ul-header-menu">
                         <ul class="ul-header-nav">
                             <li class="ul-menu-item ul-menu-item--active"><a class="ul-menu-link"
-                                                                             href="#">Dashboards</a></li>
-                            <li class="ul-menu-item ul-menu-item-submenu"><a class="ul-menu-link"
-                                                                             href="#">Components</a>
-                                <div class="ul-menu-submenu">
-                                    <ul class="ul-menu-subnav">
-                                        <li class="ul-menu-item ul-menu-item-submenu"><a class="ul-menu-link" href="#">
-                                                <i class="material-icons ul-menu-item-icon">home</i>UI Kits</a>
-                                            <div class="ul-menu-submenu">
-                                                <ul class="ul-menu-subnav">
-                                                    <li class="ul-menu-item ul-menu-item-submenu"><a
-                                                                class="ul-menu-link" href="#"> <i
-                                                                    class="material-icons ul-menu-item-icon">remove</i>Buttons</a>
-                                                        <div class="ul-menu-submenu">
-                                                            <ul class="ul-menu-subnav">
-                                                                <li class="ul-menu-item"><a class="ul-menu-link"
-                                                                                            href="#"> <i
-                                                                                class="material-icons ul-menu-item-icon">done</i>Child
-                                                                        1</a></li>
-                                                                <li class="ul-menu-item"><a class="ul-menu-link"
-                                                                                            href="#"> <i
-                                                                                class="material-icons ul-menu-item-icon">done</i>Child
-                                                                        2</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                    <li class="ul-menu-item"><a class="ul-menu-link" href="#"> <i
-                                                                    class="material-icons ul-menu-item-icon">remove</i>Badges</a>
-                                                    </li>
-                                                    <li class="ul-menu-item ul-menu-item-submenu"><a
-                                                                class="ul-menu-link" href="#"> <i
-                                                                    class="material-icons ul-menu-item-icon">remove</i>Alerts</a>
-                                                        <div class="ul-menu-submenu">
-                                                            <ul class="ul-menu-subnav">
-                                                                <li class="ul-menu-item"><a class="ul-menu-link"
-                                                                                            href="#">Child 3</a></li>
-                                                                <li class="ul-menu-item"><a class="ul-menu-link"
-                                                                                            href="#">Child 4</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="ul-menu-item"><a class="ul-menu-link" href="#"> <i
-                                                        class="material-icons ul-menu-item-icon">dashboard</i>Apps</a>
-                                        </li>
-                                        <li class="ul-menu-item"><a class="ul-menu-link" href="#"> <i
-                                                        class="material-icons ul-menu-item-icon">settings</i>Pages</a>
-                                        </li>
-                                        <li class="ul-menu-item"><a class="ul-menu-link" href="#"> <i
-                                                        class="material-icons ul-menu-item-icon">reply_all</i>Plugins</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                                                                             href="{{route('home')}}">Dashboards</a></li>
                         </ul>
                     </div>
                 </div>

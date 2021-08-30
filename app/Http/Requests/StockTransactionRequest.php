@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Gate;
 
-class TransactionRequest extends FormRequest
+class StockTransactionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +13,7 @@ class TransactionRequest extends FormRequest
      */
     public function authorize()
     {
-        return Gate::allows('user');
+        return true;
     }
 
     /**
@@ -25,7 +24,8 @@ class TransactionRequest extends FormRequest
     public function rules()
     {
         return [
-            'product_id' => 'required|string',
+            'stock_name' => 'required|string',
+            'status_name' => 'required|string',
             'units' => 'required|numeric',
             'method_of_payment' => 'required|string',
             'amount' => 'required|integer',

@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BalanceRequest;
-use App\Traits\Encrypt;
-use App\User;
-use Illuminate\Http\Request;
+use App\Models\User;
+use App\Traits\HashIds;
 
 class BalanceController extends Controller
 {
-    use Encrypt;
+    use HashIds;
 
     /**
      * @param $id

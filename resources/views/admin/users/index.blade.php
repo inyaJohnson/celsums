@@ -37,7 +37,7 @@
                                     </h6>
                                     <p class="text-muted m-0">{{$user->first_name}} {{$user->last_name}}</p>
                                 </div>
-                                <a class="btn btn-raised-primary btn-sm"
+                                <a class="btn btn-opacity btn-primary btn-sm my-sm mr-sm"
                                    href="{{route('users.verify', $user->id)}}">Verify
                                 </a>
                             </div>

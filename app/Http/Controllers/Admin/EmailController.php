@@ -5,14 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EmailRequest;
 use App\Mail\Email;
-use App\Traits\Encrypt;
-use App\User;
-use Illuminate\Http\Request;
+use App\Models\User;
+use App\Traits\HashIds;
 use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    use Encrypt;
+    use HashIds;
 
     public function createEmail($id){
         $user = User::find($this->decode($id));
