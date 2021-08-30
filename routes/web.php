@@ -11,9 +11,8 @@ use \App\Http\Controllers\StockController;
 use \App\Http\Controllers\ValidationController;
 use \App\Http\Controllers\Admin\BalanceController;
 use \App\Http\Controllers\Admin\EmailController;
-use \App\Http\Controllers\Admin\ProductTransactionController;
+use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
-use \App\Http\Controllers\Admin\StockTransactionController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
 
 /*
@@ -63,11 +62,11 @@ Route::group(['middleware' => ['auth', 'user']], function () {
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {
     Route::get('/email-create/{id}', [EmailController::class, 'createEmail'])->name('email.create');
     Route::post('/email-send', [EmailController::class, 'sendEmail'])->name('email.send');
-    Route::get('/transactions', [ProductTransactionController::class, 'index'])->name('transactions.index');
-    Route::get('/transactions/create/{id}', [ProductTransactionController::class, 'create'])->name('transactions.create');
-    Route::post('/transactions/store', [ProductTransactionController::class, 'store'])->name('transactions.store');
-    Route::get('/transactions/edit/{id}', [ProductTransactionController::class,'edit'])->name('transactions.edit');
-    Route::post('/transactions/update/{id}', [ProductTransactionController::class,'update'])->name('transactions.update');
+    Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+    Route::get('/transactions/create/{id}', [TransactionController::class, 'create'])->name('transactions.create');
+    Route::post('/transactions/store', [TransactionController::class, 'store'])->name('transactions.store');
+    Route::get('/transactions/edit/{id}', [TransactionController::class,'edit'])->name('transactions.edit');
+    Route::post('/transactions/update/{id}', [TransactionController::class,'update'])->name('transactions.update');
 
     Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
     Route::delete('/users/{id}', [AdminUserController::class,'destroy'])->name('users.delete');
@@ -81,11 +80,5 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
 //    stock
     Route::get('manage-stock', [AdminStockController::class, 'index'])->name('stock.manage');
     Route::post('store-stock', [AdminStockController::class, 'store'])->name('stock.store');
-
-    Route::get('/stocks/transactions', [StockTransactionController::class, 'index'])->name('stock.transactions.index');
-    Route::get('/stocks/transactions/create/{id}', [StockTransactionController::class, 'create'])->name('stock.transactions.create');
-    Route::post('/stocks/transactions/store', [StockTransactionController::class,'store'])->name('stock.transactions.store');
-    Route::get('/stocks/transactions/edit/{id}', [StockTransactionController::class, 'edit'])->name('stock.transactions.edit');
-    Route::post('/stocks/transactions/update/{id}', [StockTransactionController::class, 'update'])->name('stock.transactions.update');
 
 });

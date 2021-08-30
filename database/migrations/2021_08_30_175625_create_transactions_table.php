@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('type');
             $table->unsignedInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
@@ -26,6 +26,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('status');
             $table->string('method_of_payment');
             $table->string('coin_type')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

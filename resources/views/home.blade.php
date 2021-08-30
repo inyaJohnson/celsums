@@ -122,6 +122,7 @@
                             <tr>
                                 <th>Date</th>
                                 <th>Sender</th>
+                                <th>Type</th>
                                 <th>Payment Method</th>
                                 <th>Status</th>
                                 <th>Amount</th>
@@ -130,10 +131,11 @@
                             <tbody>
                             @foreach($transactions as $transaction)
                                 <tr>
-                                    <td>{{$transaction->created_at}}</td>
-                                    <td>{{$transaction->name}}</td>
-                                    <td>{{$transaction->method}}</td>
-                                    <td class="@php echo ($transaction->status === "Confirmed")? 'text-success':'text-warning'; @endphp">{{$transaction->status}}</td>
+                                    <td>{{$transaction->created_at->format('M d Y')}}</td>
+                                    <td>{{$transaction->user->name()}}</td>
+                                    <td>{{ucfirst($transaction->type)}}</td>
+                                    <td>{{$transaction->method_of_payment}}</td>
+                                    <td>{!!($transaction->status)? "<span class='badge badge-success'>Completed</span>":"<span class='badge badge-warning>Pending</span>"!!}</td>
                                     <td>${{number_format($transaction->amount)}}</td>
                                 </tr>
                             @endforeach

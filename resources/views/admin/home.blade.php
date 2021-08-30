@@ -48,8 +48,6 @@
                                                    href="{{route('balance.edit', $hashIds->encode($user->id))}}"><i
                                                             class="material-icons icon icon-sm">create</i>Edit
                                                     Balance</a>
-                                                <a class="dropdown-item" href="{{route('stock.transactions.edit', $hashIds->encode($user->id))}}"><i
-                                                class="material-icons icon icon-sm">monetization_on</i>Edit Stock</a>
                                             </div>
                                         </div>
                                     </div>

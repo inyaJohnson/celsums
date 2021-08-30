@@ -17,9 +17,9 @@ class StockController extends Controller
         $stocks = $availableStockRecord->json();
 
 //        stocks invested in
-        $userStockPayment = auth()->user()->stockPayment;
+        $userStockPayment = auth()->user()->transactions()->where('type', 'stock');
         $numberOfStocks = $userStockPayment->count();
-        $userStockSymbols = implode(',', $userStockPayment->pluck('stock')->unique()->toArray());
+        $userStockSymbols = implode(',', $userStockPayment->pluck('stock_name')->unique()->toArray());
         $userStocks = Http::get('https://mboum.com/api/v1/qu/quote/?symbol='.$userStockSymbols.'&apikey=mhHxdqTkLwqMLbuElqRdnTbUE1UTgjzhr8S1fbphNTLMGi2XM7q11xDSdW6d');
         $dayChange = array_sum(Arr::pluck($userStocks->json(), 'regularMarketChange'));
         $dayChangePercent = array_sum(Arr::pluck($userStocks->json(), 'regularMarketChangePercent'));

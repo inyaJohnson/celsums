@@ -1,50 +1,56 @@
 @extends('layouts.dashboard')
-@section('current_page')
-    Payment
-@endsection
-@section('content')
-    <section>
-        <div class="section__content section__content--p30">
-            <div class="container-fluid admin-div">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="title-3">Available stock options</p>
-                            </div>
-                            <div class="card-body card-block col-lg-8 withdrawal">
-                                @include('layouts.message')
-                                <div class="text-center text-success">Select stocks to be displayed</div>
-                                <div class="clearfix">&nbsp;</div>
-                                <form action="{{route('stock.store')}}" method="post">
-                                    @csrf
-                                    <div class="row">
-                                        @foreach($stocks as $stock)
-                                            <div class="stock-option">
-                                                <input type="checkbox" id="{{$stock}}" name="selected_stocks[]"
-                                                       value="{{$stock}}">
-                                                <label class="control-label" for="{{$stock}}">{{$stock}}</label>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="form-group col-lg-6" style="margin:auto;">
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Submit
-                                        </button>
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Reset
-                                        </button>
-                                    </div>
-
-                                </form>
-                            </div>
-                            <div class="card-footer">
-                                Selected stocks will be reflected on user dashboard.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+@section('custom_content')
+    <!-- Start:: content (Your custom content)-->
+    <div class="subheader px-lg">
+        <div class="subheader-container">
+            <div class="subheader-main">
+                <h3 class="subheader-title">Spacing</h3>
+                <nav class="ul-breadcrumb" aria-label="breadcrumb">
+                    <ol class="ul-breadcrumb-items">
+                        <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
+                        <li class="breadcrumb-item"><a href="#">System Utilities</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Spacing</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="container my-lg d-flex flex-column">
+        <div class="doc-section-title d-flex justify-content-center">
+            <h2 class="doc-section-title">Available stock options</h2>
+        </div>
+        <div class="doc-example d-flex justify-content-center">
+            <div class="col-lg-8">
+                @include('layouts.message')
+                <div class="text-center text-success">Select stocks to be displayed</div>
+                <div class="clearfix">&nbsp;</div>
+                <form action="{{route('stock.store')}}" method="post">
+                    @csrf
+                    <div class="row">
+                        @foreach($stocks as $stock)
+                            <div class="col-xs-3" >
+                                <input type="checkbox" id="{{$stock}}" name="selected_stocks[]"
+                                       value="{{$stock}}">
+                                <label class="control-label" for="{{$stock}}">{{$stock}}</label>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="form-group col-lg-6" style="margin:auto;">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            Selected stocks will be reflected on user dashboard.
+        </div>
+    </div>
+    <!-- Start:: content (Your custom content)-->
 @endsection

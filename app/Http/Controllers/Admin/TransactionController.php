@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TransactionRequest;
 use App\Http\Requests\TransactionUpdateRequest;
 use App\Models\Transaction;
-use App\Traits\HashIds;
 use App\Models\User;
+use App\Traits\HashIds;
+use Illuminate\Http\Request;
 
-class ProductTransactionController extends Controller
+class TransactionController extends Controller
 {
     use HashIds;
 
@@ -17,8 +18,8 @@ class ProductTransactionController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
-        $transactions = Transaction::latest()->where('type', 'product')->get();
-        return view('admin.product.index', compact('transactions'));
+        $transactions = Transaction::latest()->get();
+        return view('admin.transactions.index', compact('transactions'));
     }
 
     /**
@@ -27,7 +28,7 @@ class ProductTransactionController extends Controller
      */
     public function create($id){
         $user = User::find($this->decode($id));
-        return view('admin.product.create', compact('user'));
+        return view('admin.transactions.create', compact('user'));
     }
 
     /**
@@ -41,7 +42,7 @@ class ProductTransactionController extends Controller
         $prevBalance =  $user->finance->current_balance;
         $newBalance = $prevBalance + $request->amount;
         $user->finance->update(['current_balance' => $newBalance, 'previous_balance' => $prevBalance]);
-        return redirect()->route('payment.index')->with('success', 'Payment created successfully');
+        return redirect()->route('transactions.index')->with('success', 'Payment created successfully');
     }
 
     /**
@@ -50,7 +51,7 @@ class ProductTransactionController extends Controller
      */
     public function edit($id){
         $transaction = Transaction::find($this->decode($id));
-        return view('admin.product.edit', compact('transaction'));
+        return view('admin.transactions.edit', compact('transaction'));
     }
 
 
@@ -68,5 +69,4 @@ class ProductTransactionController extends Controller
         $user->finance()->update(['current_balance' => $newBalance]);
         return redirect()->route('transactions.index')->with('success', 'Payment updated successfully');
     }
-
 }

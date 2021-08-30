@@ -28,8 +28,15 @@
                 <form action="{{route('balance.update', $hashIds->encode($user->id))}}" method="post">
                     @csrf
                     <div class="form-group">
+                        <label class="control-label" for="type">Type</label>
+                        <select class="form-control" name="type" id="type" required>
+                            <option value="product">Investment Plan</option>
+                            <option value="stock">Stock</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label" for="amount">Amount</label>
-                        <input type="number" class="form-control" id="amount" name="amount"/>
+                        <input type="number" class="form-control" id="amount" name="amount" required/>
                     </div>
                     <div class="form-group col-lg-6" style="margin:auto;">
                         <button type="submit" class="btn btn-primary btn-sm">

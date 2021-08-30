@@ -25,7 +25,8 @@ class BalanceRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount' => 'required:integer'
+            'amount' => 'required:integer',
+            'type' => 'required|string',
         ];
     }
 }

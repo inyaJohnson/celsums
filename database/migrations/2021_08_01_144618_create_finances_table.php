@@ -19,6 +19,8 @@ class CreateFinancesTable extends Migration
             $table->integer('previous_balance')->default(0);
             $table->integer('stock')->default(0);
             $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

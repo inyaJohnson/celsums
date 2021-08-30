@@ -30,7 +30,7 @@
                                 </div>                                <div class="ul-list-row-wrapper d-flex flex-1 align-items-center flex-wrap">
                                     <div class="ul-list-row-label flex-grow-1">
                                         <p class="font-weight-semi m-0">{{$transaction->user->first_name .' '. $transaction->user->last_name}}</p>
-                                        <span class="text-muted">{{$transaction->method_of_payment .' ('.$transaction->coin_type.')'}}</span>
+                                        <span class="text-muted">{{$transaction->method_of_payment .' ('.$transaction->coin_type.')'}} - {{($transaction->type =='stock')?'Stock':'I.Plan'}} </span>
                                     </div>
                                     <div class="flex-grow-1 my-md mr-lg">
                                         <h4>${{number_format($transaction->amount)}}</h4>
