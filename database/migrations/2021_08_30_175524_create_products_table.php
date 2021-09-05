@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('duration');
             $table->integer('commission');
             $table->integer('guarantee');
+            $table->string('type');
             $table->timestamps();
         });
     }

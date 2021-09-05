@@ -46,8 +46,8 @@
                 <div class="input-group-prepend">
                     <i class="input-group-text material-icons">lock</i>
                 </div>
-                <input type="password"  name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" value="With icon"
-                       aria-label="Username" aria-describedby="basic-addon1" required autocomplete="current-password">
+                <input type="password"  name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" value="{{old('password')}}"
+                       aria-label="Password" aria-describedby="basic-addon1" required autocomplete="current-password">
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">

@@ -34,8 +34,14 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="py-md gray-200">
                         <div class="w-80 mx-auto">
+                            <form id="deposit-form" action="{{route('deposit.store', $product->id)}}" method="POST">
+                                @csrf
+                                <input class="form-control" style="border:solid thin" type="number" name="units" id="units" placeholder="Enter Units"/>
+                            </form>
                             <div class="table-responsive mb-xxxl">
                                 <table class="table">
                                     <thead>
@@ -43,15 +49,15 @@
                                         <th class="pl-0" scope="col">DESCRIPTION</th>
                                         <th scope="col">UNITS</th>
                                         <th scope="col">RATE</th>
-                                        <th class="text-right pr-0" scope="col">AMOUNT</th>
+                                        <th class="text-right pr-0" scope="col">TOTAL AMOUNT</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td class="font-weight-bold pl-0">UI/UX for Mobile App</td>
-                                        <td class="font-weight-bold">50</td>
-                                        <td class="font-weight-bold">$50.00</td>
-                                        <td class="font-weight-bold text-primary text-right pr-0">$2500.00</td>
+                                        <td class="font-weight-bold pl-0">{{ucfirst($product->name)}} Plan</td>
+                                        <td class="font-weight-bold" id="deposit-units">1</td>
+                                        <td class="font-weight-bold">${{number_format($product->amount, 2)}}</td>
+                                        <td class="font-weight-bold text-primary text-right pr-0" id="deposit-total">${{number_format($product->amount, 2)}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -123,7 +129,9 @@
                         <div class="w-80 mx-auto">
                             <div class="d-flex justify-content-between">
                                 <span></span>
-                                <button class="btn btn-raised btn-raised-primary" type="button">Print invoice</button>
+                                <button class="btn btn-raised btn-raised-primary" type="submit" form="deposit-form">
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -138,6 +146,20 @@
     <!--SCRIPT TO COPY WALLET NUMBER-->
     <script>
         $(document).ready(function () {
+
+            function addCommas(x) {
+                var parts = x.toString().split(".");
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return parts.join(".");
+            }
+
+            $('input[name=units]').change(function () {
+                $('td[id=deposit-units]').html($(this).val());
+                var total = $(this).val() * {{$product->amount}};
+                $('td[id=deposit-total]').html('$' + addCommas(total) + '.00')
+            })
+
+
             $('#copy-bitcoin-wallet').on('click', function () {
                 var copyText = document.getElementById('bitcoin-wallet');
                 copyText.select();
