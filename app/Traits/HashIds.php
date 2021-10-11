@@ -8,11 +8,22 @@
 
 namespace App\Traits;
 
+use Hashids\Hashids as HashidsHashids;
 
 trait HashIds
 {
+    private function key(){
+        return new HashidsHashids('capinvestmentfund', 62);
+    }
+
+
     public function decode($id){
-        $hashIds = new \Hashids\Hashids('capinvestmentfund', 32);
-        return $hashIds->decode($id)[0];
+        return $this->key()->decode($id)[0];
+    }
+
+    public function encrypt($id){
+        if(is_numeric($id)){
+            return $this->key()->encode($id);
+        }
     }
 }

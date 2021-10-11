@@ -38,9 +38,14 @@
 
                     <div class="py-md gray-200">
                         <div class="w-80 mx-auto">
-                            <form id="deposit-form" action="{{route('deposit.store', $product->id)}}" method="POST">
+                            <form id="deposit-form" action="{{route('deposit.store', $token)}}" method="POST">
                                 @csrf
                                 <input class="form-control" style="border:solid thin" type="number" name="units" id="units" placeholder="Enter Units"/>
+                                {{-- <select name="coin_type" class="form-control" required style="border:solid thin; margin-top:5px;">
+                                    <option value='Bitcoin' {{ old('coin_type') === 'Bitcoin' ? 'Selected' : '' }}>Bitcoin</option>
+                                    <option value='Ethereum' {{ old('coin_type') === 'Ethereum' ? 'Selected' : '' }}>Ethereum</option>
+                                    <option value='Doge' {{ old('coin_type') === 'Doge' ? 'Selected' : '' }}>Doge</option>
+                                </select> --}}
                             </form>
                             <div class="table-responsive mb-xxxl">
                                 <table class="table">

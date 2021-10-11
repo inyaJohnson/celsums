@@ -14,6 +14,7 @@ use \App\Http\Controllers\Admin\EmailController;
 use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------

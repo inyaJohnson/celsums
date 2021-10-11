@@ -24,7 +24,7 @@
     </div>
     <div class="container mt-lg">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="row">
                     <div class="col-lg-12 mb-md">
                         <div class="row">
@@ -72,32 +72,21 @@
                     <div class="col-lg-12 mb-xl">
                         <div class="card">
                             <div class="card-body pb-sm pl-0">
-                                <div class="card-title mx-lg">Coin Price Last 30 Days</div>
-                                <div id="cryptoCurrencyOne"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mb-xl">
-                        <div class="card">
-                            <div class="card-body px-0 pb-sm">
-                                <div class="card-title mx-lg">Market Depth</div>
-                                <div id="cryptoCurrencyTwo"></div>
+                                <input class="form-control" name="stock" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-md">
+            <div class="col-lg-5 mb-md">
                 <div class="ul-cryptocurrency-tab">
                     <div class="nav-pills-primary">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item mb-2"><a class="nav-link active" id="pills-home-tab" data-toggle="pill"
-                                                         href="#pills-home" role="tab" aria-controls="pills-home"
-                                                         aria-selected="true">USDT</a></li>
-                            <li class="nav-item mb-2"><a class="nav-link" id="pills-profile-tab" data-toggle="pill"
-                                                         href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                                         aria-selected="false">Market Trading</a></li>
-                        </ul>
+                        <div class="card">
+                            <div class="card-body px-0 pb-sm">
+                                <div class="card-title mx-lg">Current Watch List</div>
+                                <div id="cryptoCurrencyTwo"></div>
+                            </div>
+                        </div>
                         <div class="tab-content ul-cryptocurrency-tab-scroll" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                  aria-labelledby="pills-home-tab">
@@ -119,27 +108,6 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                                 aria-labelledby="pills-profile-tab">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Time</th>
-                                            <th scope="col">Amount</th>
-                                            <th scope="col">Volume</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>13:45 PM</td>
-                                            <td class="text-danger">2000</td>
-                                            <td class="font-weight-semi">3.4789</td>
-                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>

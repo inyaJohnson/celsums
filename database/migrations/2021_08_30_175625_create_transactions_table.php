@@ -23,7 +23,7 @@ class CreateTransactionsTable extends Migration
             $table->string('stock_name')->nullable();
             $table->string('units');
             $table->integer('amount');
-            $table->integer('status');
+            $table->integer('status')->default(0);
             $table->string('method_of_payment');
             $table->string('coin_type')->nullable();
             $table->softDeletes();
