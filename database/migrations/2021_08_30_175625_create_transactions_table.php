@@ -22,7 +22,7 @@ class CreateTransactionsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->string('stock_name')->nullable();
             $table->string('units');
-            $table->integer('amount');
+            $table->decimal('amount', 12, 6 );
             $table->integer('status')->default(0);
             $table->string('method_of_payment');
             $table->string('coin_type')->nullable();

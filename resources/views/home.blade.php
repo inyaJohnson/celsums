@@ -25,6 +25,7 @@
         </div>
     </div>
     <div class="container mt-lg">
+        @include('layouts.message')
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
@@ -139,7 +140,7 @@
                                         <td>{{ ucfirst($transaction->type) }}</td>
                                         <td>{{ $transaction->method_of_payment }}</td>
                                         <td>{!! ($transaction->status)? "<span class='badge badge-success'>Completed</span>" : "<span class='badge badge-warning'>Pending</span>" !!} </td>
-                                        <td>${{ number_format($transaction->amount) }}</td>
+                                        <td>${{($transaction->amount)}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -182,7 +182,7 @@
 <script src="/dashboard/dist/assets/js/vendors.bundle.min.js"></script>
 <script src="/dashboard/dist/assets/js/main.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-<script src="/dashboard/dist/assets/js//dashboard/dist/pages/doc.script.min.js"></script>
+<script src="/dashboard/dist/assets/js/dashboard/dist/pages/doc.script.min.js"></script>
 @yield('script')
 </body>
 

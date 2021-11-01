@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Stock;
+use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 
@@ -29,5 +30,26 @@ class StockController extends Controller
             $totalGain = ($userStockPaymentTotal * $dayChangePercent)/$numberOfStocks;
         }
         return view('stock.index', compact('stocks','dayChange', 'dayChangePercent', 'totalGain'));
+    }
+
+
+    public function invoice($symbol){
+        $selectedStock = Stock::where('symbol', $symbol)->first();
+        $stockInfo = Http::get('https://mboum.com/api/v1/qu/quote/?symbol='.$selectedStock->symbol.'&apikey=mhHxdqTkLwqMLbuElqRdnTbUE1UTgjzhr8S1fbphNTLMGi2XM7q11xDSdW6d');
+        $stock = $stockInfo->json()[0];
+        return view('stock.invoice', compact('stock'));
+    }
+
+    public function store(Request $request, $stock){
+        $user = auth()->user();
+        $units = ($request->units) ?? 1;
+        $user->transactions()->create([
+            'amount' => $units * $request->price,
+            'type' => 'Stock',
+            'method_of_payment' => 'Cryptocurrency',
+            'units' => $units,
+            'stock_name' => $stock
+        ]);
+        return redirect()->route('home')->with('success', 'Deposit Successful.');
     }
 }

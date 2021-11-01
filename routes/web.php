@@ -48,7 +48,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::post('/validation/upload', [ValidationController::class, 'upload'])->name('validation.upload');
     Route::get('/validation', [ValidationController::class, 'index'])->name('validation.index');
-
 });
 
 Route::group(['middleware' => ['auth', 'user']], function () {
@@ -57,7 +56,9 @@ Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/deposit', [DepositController::class, 'index'])->name('deposit');
     Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
     Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
-// stock
+    // stock
+    Route::get('/stock-deposit/invoice/{symbol}', [StockController::class, 'invoice'])->name('stock.invoice');
+    Route::post('/stock-deposit/{symbol}', [StockController::class, 'store'])->name('stock_deposit.store');
     Route::get('stock', [StockController::class, 'index'])->name('stock.index');
 });
 
@@ -67,20 +68,19 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::get('/transactions/create/{id}', [TransactionController::class, 'create'])->name('transactions.create');
     Route::post('/transactions/store', [TransactionController::class, 'store'])->name('transactions.store');
-    Route::get('/transactions/edit/{id}', [TransactionController::class,'edit'])->name('transactions.edit');
-    Route::post('/transactions/update/{id}', [TransactionController::class,'update'])->name('transactions.update');
+    Route::get('/transactions/edit/{id}', [TransactionController::class, 'edit'])->name('transactions.edit');
+    Route::post('/transactions/update/{id}', [TransactionController::class, 'update'])->name('transactions.update');
 
     Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
-    Route::delete('/users/{id}', [AdminUserController::class,'destroy'])->name('users.delete');
+    Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.delete');
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
 
 
-//Balance
+    //Balance
     Route::get('/balance/edit/{id}', [BalanceController::class, 'edit'])->name('balance.edit');
     Route::post('/balance/update/{id}', [BalanceController::class, 'update'])->name('balance.update');
 
-//    stock
+    //    stock
     Route::get('manage-stock', [AdminStockController::class, 'index'])->name('stock.manage');
     Route::post('store-stock', [AdminStockController::class, 'store'])->name('stock.store');
-
 });
