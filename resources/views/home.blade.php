@@ -1,5 +1,4 @@
 @extends('layouts.dashboard')
-
 @section('custom_content')
     <!-- Start:: content (Your custom content)-->
     <div class="subheader px-lg">
@@ -15,12 +14,22 @@
                 </nav>
             </div>
             <div class="flex-grow-1"></div>
-            <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm btn-icon mr-2"><i
-                        class="far fa-calendar-alt"></i></a><a class="btn btn-opacity-primary btn-sm btn-icon mr-2"><i
-                        class="fa fa-plus"></i></a>
-                <button class="btn btn-sm btn-opacity btn-primary" id="reportrange"><i
-                        class="fa fa-calendar mr-sm"></i><span></span>
-                </button>
+            <div class="subheader-toolbar">
+                @switch($user)
+                    @case($user->identification !== null && $user->verified == 1)
+                        <a class="btn btn-opacity-success btn-sm mr-2">Verified <i class="fa fa-check-circle"></i></a>
+                    @break
+                    @case($user->identification !== null && $user->verified == 0)
+                        <a class="btn btn-opacity-warning btn-sm mr-2">Pending Verification <i
+                                class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></a>
+                    @break
+                    @case($user->identification !== null && $user->verified == 2)
+                        <a class="btn btn-opacity-danger btn-sm mr-2" href="{{route('validation.index')}}"> Failed Verification <i
+                                class="fa fa-warning"></i></a>
+                    @break
+                    @default
+                        <a class="btn btn-opacity-danger btn-sm mr-2" href="{{route('validation.index')}}"> Unverified <i class="fa fa-times-circle"></i></a>
+                @endswitch
             </div>
         </div>
     </div>
@@ -139,8 +148,8 @@
                                         <td>{{ $transaction->user->name() }}</td>
                                         <td>{{ ucfirst($transaction->type) }}</td>
                                         <td>{{ $transaction->method_of_payment }}</td>
-                                        <td>{!! ($transaction->status)? "<span class='badge badge-success'>Completed</span>" : "<span class='badge badge-warning'>Pending</span>" !!} </td>
-                                        <td>${{($transaction->amount)}}</td>
+                                        <td>{!! $transaction->status ? "<span class='badge badge-success'>Completed</span>" : "<span class='badge badge-warning'>Pending</span>" !!} </td>
+                                        <td>${{ $transaction->amount }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

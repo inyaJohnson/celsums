@@ -24,7 +24,8 @@ class ValidationRequest extends FormRequest
     public function rules()
     {
         return [
-            'document' => 'required|file|max:2048|mimes:docx,pdf,jpg,jpeg,png,svg'
+            'front_view' => 'required|file|max:2048|mimes:docx,pdf,jpg,jpeg,png,svg',
+            'back_view' => 'required|file|max:2048|mimes:docx,pdf,jpg,jpeg,png,svg'
         ];
     }
 }

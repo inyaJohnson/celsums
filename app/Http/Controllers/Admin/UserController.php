@@ -31,4 +31,11 @@ class UserController extends Controller
         $user->update(['verified' => 1]);
         return back()->with('success', $user->first_name.' '. $user->last_name. ' is now verified.');
     }
+
+
+    public function unverify($id){
+        $user = User::find($id);
+        $user->update(['verified' => 2, 'identification' => null]);
+        return back()->with('success', $user->first_name.' '. $user->last_name. ' is now unverified.');
+    }
 }

@@ -28,6 +28,10 @@ class PagesController extends Controller
         return view('pages.legal');
     }
 
+    public function contactUs(){
+        return view('contact_us');
+    }
+
     public function contact(ContactRequest $request){
         $email = Mail::to('info@capinvestmentfund.com');
         $message = ['success' => 'Email sent successfully'];

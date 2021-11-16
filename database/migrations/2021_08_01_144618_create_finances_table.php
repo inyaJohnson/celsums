@@ -15,6 +15,9 @@ class CreateFinancesTable extends Migration
     {
         Schema::create('finances', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('annual_income');
+            $table->string('source_of_income');
+            $table->integer('asset');
             $table->integer('current_balance')->default(0);
             $table->integer('previous_balance')->default(0);
             $table->integer('stock')->default(0);

@@ -21,25 +21,50 @@
         <div class="doc-example">
             <div class="parent ex-1">
                 <div class="row">
-                    @foreach($users as $user)
+                    @foreach ($users as $user)
                         <div class="card mb-md cursor-pointer col-md-6 col-xs-12">
-                            <div class="card-body d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
+                            <div
+                                class="card-body d-flex justify-content-sm-between justify-content-center align-items-center flex-wrap">
                                 <div class="initials top admin">
-                                    <h3>{{strtoupper(substr($user->first_name, 0, 1)).' '.strtoupper(substr($user->last_name, 0, 1))}}</h3>
+                                    <h3>{{ strtoupper(substr($user->first_name, 0, 1)) . ' ' . strtoupper(substr($user->last_name, 0, 1)) }}
+                                    </h3>
                                 </div>
                                 <div class="flex-grow-1 text-sm-left text-center">
-                                    <h6 class="m-0">{!!  ($user->verified)?"<span class='text-success'>Verified</span>":"<span class='text-danger'>Unverified</span>"!!}
-                                        @if($user->identification !== null )
+                                    <h6 class="m-0">{!! $user->verified ? "<span class='text-success'>Verified</span>" : "<span class='text-danger'>Unverified</span>" !!}
+                                        @if ($user->identification !== null)
                                             |
-                                            <a href="{{url('/store/'.$user->identification)}}"
-                                               rel="noreferrer noopener" target="_blank" download>Download</a>
+                                            <a href="{{ url('/store/' . json_decode($user->identification)[0]) }}"
+                                                rel="noreferrer noopener" target="_blank" download>Front View</a>
+                                            |
+                                            <a href="{{ url('/store/' . json_decode($user->identification)[1]) }}"
+                                                rel="noreferrer noopener" target="_blank" download>Back View</a>
                                         @endif
                                     </h6>
-                                    <p class="text-muted m-0">{{$user->first_name}} {{$user->last_name}}</p>
+                                    <p class="text-muted m-0">{{ $user->first_name }} {{ $user->last_name }}</p>
                                 </div>
-                                <a class="btn btn-opacity btn-primary btn-sm my-sm mr-sm"
-                                   href="{{route('users.verify', $user->id)}}">Verify
-                                </a>
+
+                            </div>
+
+                            <div class="d-flex justify-content-sm-evenly justify-content-center align-items-center flex-wrap">
+                                @switch($user)
+                                    @case($user->identification !== null && $user->verified == 1)
+                                        <a class="btn btn-opacity btn-danger btn-sm my-sm mr-sm"
+                                            href="{{ route('users.unverify', $user->id) }}">Unverify
+                                        </a>
+                                    @break
+                                    @case($user->identification !== null && $user->verified == 0)
+                                        <a class="btn btn-opacity btn-primary btn-sm my-sm mr-sm"
+                                            href="{{ route('users.verify', $user->id) }}">Verify
+                                        </a>
+                                        <a class="btn btn-opacity btn-danger btn-sm my-sm mr-sm"
+                                            href="{{ route('users.unverify', $user->id) }}">Unverify
+                                        </a>
+                                    @break
+                                    @default
+                                        <a class="btn btn-opacity btn-primary btn-sm my-sm mr-sm"
+                                            href="{{ route('users.verify', $user->id) }}">Verify
+                                        </a>
+                                @endswitch
                             </div>
                         </div>
                     @endforeach

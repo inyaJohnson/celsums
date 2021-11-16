@@ -38,6 +38,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/setup', [SetupController::class, 'index'])->name('setup');
 Route::get('/legal', [PagesController::class, 'legal'])->name('legal');
 Route::resource('/reviews', ReviewController::class);
+Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact-us');
 Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
 
 
@@ -72,6 +73,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     Route::post('/transactions/update/{id}', [TransactionController::class, 'update'])->name('transactions.update');
 
     Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
+    Route::get('/users/{id}/unverify', [AdminUserController::class, 'unverify'])->name('users.unverify');
     Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.delete');
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
 

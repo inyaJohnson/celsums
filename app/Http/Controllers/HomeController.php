@@ -26,7 +26,8 @@ class HomeController extends Controller
         $view = view('admin.home', compact('users'));
         if(!auth()->user()->hasRole('admin')){
             $transactions = auth()->user()->Transactions()->get();
-            $view = view('home', compact('transactions'));
+            $user = auth()->user();
+            $view = view('home', compact('transactions', 'user'));
         }
         return $view;
     }

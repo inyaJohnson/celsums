@@ -5,15 +5,15 @@ Signflow CSS Design
 
 Table of contents
 
-1. Colors  [Row 30] 
-2. Custom classes [Row 226] 
-3. Layout and typography [Row 427] 
-4. Headers and menu [Row 524] 
-5. Titles [Row 724] 
-6. Footer [Row 809] 
-7. Components [Row 860] 
-8. Containers [Row 1526] 
-9. Mobile / responsive [Row 1701] 
+1. Colors  [Row 30]
+2. Custom classes [Row 226]
+3. Layout and typography [Row 427]
+4. Headers and menu [Row 524]
+5. Titles [Row 724]
+6. Footer [Row 809]
+7. Components [Row 860]
+8. Containers [Row 1526]
+9. Mobile / responsive [Row 1701]
 
 -------------------------------------------------------------------
 
@@ -320,7 +320,7 @@ CUSTOM CLASSES
         overflow: visible;
     }
 
-        .section-middle-img > .content > .middle-img {
+        /* .section-middle-img > .content > .middle-img {
             position: relative;
             z-index: 9;
         }
@@ -338,7 +338,7 @@ CUSTOM CLASSES
 
         .section-middle-img + .section-empty {
             padding-top: 130px;
-        }
+        } */
 }
 
 
@@ -1816,7 +1816,7 @@ ul li .fa-li.fa-square {
 
     .pricing-table .pricing-price.list-group-item {
         font-weight: 600;
-        font-size: 72px;
+        font-size: 62px;
         line-height: 72px;
         padding: 100px 35px 30px 35px;
     }
@@ -1845,7 +1845,7 @@ ul li .fa-li.fa-square {
 
         .pricing-table .pricing-price span:first-child {
             font-weight: 600;
-            font-size: 40px;
+            font-size: 30px;
             transform: translate3d(-2px,-2px,0);
         }
 
@@ -2623,4 +2623,15 @@ RESPONSIVE
         margin-top: 0;
         float: left;
     }
+}
+
+
+
+/* ADD CSS */
+.added-style > .content{
+    /* for section-bg-image */
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }

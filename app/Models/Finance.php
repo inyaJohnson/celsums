@@ -9,6 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Finance extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $fillable = ['current_balance', 'previous_balance', 'stock', 'user_id'];
-
+    protected $fillable = ['source_of_income', 'annual_income', 'asset', 'current_balance', 'previous_balance', 'stock', 'user_id'];
 }
