@@ -14,6 +14,7 @@ use \App\Http\Controllers\Admin\EmailController;
 use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -28,7 +29,6 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', [PagesController::class, 'welcome'])->name('welcome');
-
 
 Auth::routes();
 
@@ -61,6 +61,7 @@ Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/stock-deposit/invoice/{symbol}', [StockController::class, 'invoice'])->name('stock.invoice');
     Route::post('/stock-deposit/{symbol}', [StockController::class, 'store'])->name('stock_deposit.store');
     Route::get('stock', [StockController::class, 'index'])->name('stock.index');
+    Route::resource('messages', MessageController::class);
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {

@@ -8,16 +8,16 @@
 
 namespace App\Traits;
 
-use Hashids\Hashids as HashidsHashids;
+use Hashids\Hashids;
 
-trait HashIds
+trait HashId
 {
-    private function key(){
-        return new HashidsHashids('capinvestmentfund', 62);
+
+    public function key(){
+        return new Hashids('citigroup', 32);
     }
 
-
-    public function decode($id){
+    public function decrypt($id){
         return $this->key()->decode($id)[0];
     }
 

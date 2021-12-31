@@ -3,18 +3,17 @@
 
 namespace App\Http\View\Composers;
 
-use App\Payment;
-use App\Stock;
-use App\StockPayment;
-use App\User;
-use Hashids\Hashids;
+
+use App\Traits\HashId;
 use Illuminate\View\View;
 
 class AdminData
 {
+    use HashId;
+
     public function compose(View $view)
     {
-        $hashIds = new Hashids('capinvestmentfund', '32');
+        $hashIds = $this->key();
         $availableStock = \App\Models\Stock::all();
         return $view->with(['hashIds' => $hashIds, 'availableStock' => $availableStock]);
     }

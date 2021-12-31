@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ReviewRequest;
 use App\Http\Requests\UpdateReviewRequest;
 use App\Models\Review;
-use App\Traits\HashIds;
+use App\Traits\HashId;
 
 class ReviewController extends Controller
 {
-    use HashIds;
+    use HashId;
 
     public function __construct()
     {
@@ -63,7 +63,7 @@ class ReviewController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id){
-        $review = Review::find($this->decode($id));
+        $review = Review::find($this->decrypt($id));
         return view('admin.review.edit', compact('review'));
     }
 
@@ -74,7 +74,7 @@ class ReviewController extends Controller
      * @return $this
      */
     public function update(UpdateReviewRequest $request, $id){
-        $review = Review::find($this->decode($id));
+        $review = Review::find($this->decrypt($id));
         $review->update($request->all());
         return redirect()->route('reviews.index')->with('success', 'Review updated successfully');
     }

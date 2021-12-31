@@ -3,16 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\VerificationJob;
 use App\Models\User;
-use App\Traits\HashIds;
+use App\Traits\HashId;
 
 class UserController extends Controller
 {
-    use HashIds;
+    use HashId;
 
     public function destroy($id){
         $data = ['success' => 'User deleted successfully'];
-        $user = User::find($this->decode($id));
+        $user = User::find($this->decrypt($id));
         $result = $user->delete($id);
         if (!$result){
             $data = ['error' => 'Unable to delete user'];
@@ -29,6 +30,7 @@ class UserController extends Controller
     public function verify($id){
         $user = User::find($id);
         $user->update(['verified' => 1]);
+        VerificationJob::dispatch('Successful', $user);
         return back()->with('success', $user->first_name.' '. $user->last_name. ' is now verified.');
     }
 
@@ -36,6 +38,7 @@ class UserController extends Controller
     public function unverify($id){
         $user = User::find($id);
         $user->update(['verified' => 2, 'identification' => null]);
+        VerificationJob::dispatch('Unsuccessful', $user);
         return back()->with('success', $user->first_name.' '. $user->last_name. ' is now unverified.');
     }
 }

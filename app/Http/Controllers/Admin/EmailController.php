@@ -6,15 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\EmailRequest;
 use App\Mail\Email;
 use App\Models\User;
-use App\Traits\HashIds;
+use App\Traits\HashId;
 use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    use HashIds;
+    use HashId;
 
     public function createEmail($id){
-        $user = User::find($this->decode($id));
+        $user = User::find($this->decrypt($id));
         return view('admin.email.create', compact('user'));
     }
 

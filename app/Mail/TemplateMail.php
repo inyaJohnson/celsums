@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Withdrawal extends Mailable
+class TemplateMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,9 +16,12 @@ class Withdrawal extends Mailable
      *
      * @return void
      */
-    public $data;
-    public function __construct($data)
+    public $body, $title, $data;
+
+    public function __construct($body, $title, $data = null)
     {
+        $this->body = $body;
+        $this->title = $title;
         $this->data = $data;
     }
 
@@ -29,7 +32,7 @@ class Withdrawal extends Mailable
      */
     public function build()
     {
-        $email = $this->from('support@capinvestmentfund.com')->view('mail.withdrawal');
+        $email = $this->from('support@citigrouptrade.com', 'Citigroup Trade')->subject($this->title)->view('mail.template');
 
         if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
             $email->attach($this->data['attachment']->getRealPath(),

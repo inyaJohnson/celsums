@@ -7,12 +7,11 @@ use App\Http\Requests\TransactionRequest;
 use App\Http\Requests\TransactionUpdateRequest;
 use App\Models\Transaction;
 use App\Models\User;
-use App\Traits\HashIds;
-use Illuminate\Http\Request;
+use App\Traits\HashId;
 
 class TransactionController extends Controller
 {
-    use HashIds;
+    use HashId;
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -27,7 +26,7 @@ class TransactionController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create($id){
-        $user = User::find($this->decode($id));
+        $user = User::find($this->decrypt($id));
         return view('admin.transactions.create', compact('user'));
     }
 
@@ -50,7 +49,7 @@ class TransactionController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id){
-        $transaction = Transaction::find($this->decode($id));
+        $transaction = Transaction::find($this->decrypt($id));
         return view('admin.transactions.edit', compact('transaction'));
     }
 
@@ -62,7 +61,7 @@ class TransactionController extends Controller
      */
 
     public function update(TransactionUpdateRequest $request, $id){
-        $transaction = Transaction::find($this->decode($id));
+        $transaction = Transaction::find($this->decrypt($id));
         $transaction->update($request->all());
         $user = $transaction->user;
         $newBalance = $user->finance->current_balance + $request->amount;

@@ -41,7 +41,7 @@
                 </div>
                 <div class="app-user-info"><span class="app-user-name">{{auth()->user()->name()}}</span>
                     <div class="app-user-control"><a class="control-item" href="#"><i class="material-icons">
-                                settings</i></a><a class="control-item" href="#"><i class="material-icons">
+                                settings</i></a><a class="control-item" href="{{route('messages.index')}}"><i class="material-icons">
                                 email</i></a><a class="control-item" href="#"><i class="material-icons"> exit_to_app</i></a>
                     </div>
                 </div>

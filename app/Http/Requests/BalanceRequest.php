@@ -27,6 +27,7 @@ class BalanceRequest extends FormRequest
         return [
             'amount' => 'required:integer',
             'type' => 'required|string',
+            'action' => 'required|string'
         ];
     }
 }

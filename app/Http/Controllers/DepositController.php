@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Traits\HashIds;
+use App\Traits\HashId;
 use Illuminate\Http\Request;
 
 class DepositController extends Controller
 {
-    use HashIds;
+    use HashId;
 
     public function index(){
         $miniProducts = Product::where('type', 'mini')->get(['id', 'name', 'amount']);
@@ -22,7 +22,7 @@ class DepositController extends Controller
     }
 
     public function store(Request $request, $token){
-        $product = Product::find($this->decode($token));
+        $product = Product::find($this->decrypt($token));
         $user = auth()->user();
         $units = ($request->units) ?? 1;
         $user->transactions()->create([

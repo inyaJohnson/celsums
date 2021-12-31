@@ -33,10 +33,25 @@
                             <option value="product">Investment Plan</option>
                             <option value="stock">Stock</option>
                         </select>
+                        @if ($errors->has('type'))
+                            <div class="error">{{ $errors->first('type') }}</div>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="amount">Amount</label>
                         <input type="number" class="form-control" id="amount" name="amount" required/>
+                        @if ($errors->has('amount'))
+                            <div class="error">{{ $errors->first('amount') }}</div>
+                        @endif
+                    </div>
+                    <div class="form-group">
+                        <select name="action" class="form-control" required>
+                            <option value="add" {{ old('action') === 'add' ? 'Selected' : '' }}>Add</option>
+                            <option value="reduce" {{ old('action') === 'reduce' ? 'Selected' : '' }}>Reduce</option>
+                        </select>
+                        @if ($errors->has('action'))
+                            <div class="error">{{ $errors->first('action') }}</div>
+                        @endif
                     </div>
                     <div class="form-group col-lg-6" style="margin:auto;">
                         <button type="submit" class="btn btn-primary btn-sm">

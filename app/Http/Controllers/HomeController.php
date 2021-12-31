@@ -25,7 +25,7 @@ class HomeController extends Controller
         $users = User::with('finance')->where('role_id', '!=', 1)->get();
         $view = view('admin.home', compact('users'));
         if(!auth()->user()->hasRole('admin')){
-            $transactions = auth()->user()->Transactions()->get();
+            $transactions = auth()->user()->transactions()->get();
             $user = auth()->user();
             $view = view('home', compact('transactions', 'user'));
         }

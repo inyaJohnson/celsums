@@ -29,7 +29,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('support@capinvestmentfund.com')->view('mail.contact');
+        $email = $this->from('support@citigrouptrade.com')->view('mail.contact');
         return $email;
     }
 }
