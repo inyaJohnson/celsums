@@ -10,7 +10,7 @@ class Message extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['title','body','type','attachment','user_id'];
+    protected $fillable = ['title', 'body', 'type', 'sender', 'attachment', 'user_id'];
 
     public function user(){
         return $this->belongsTo(User::class);

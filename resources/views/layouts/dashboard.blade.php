@@ -125,7 +125,8 @@
                                 <div class="initials top">
                                     <h3>{{auth()->user()->initials()}}</h3>
                                 </div>
-                            @endif</button>
+                            @endif
+                        </button>
                         <div aria-labelledby="dropdownTopUserProfile">
                             <div class="card dropdown-menu p-0 ul-avatar-dropdown">
                                 <div class="card-header bg-primary">
