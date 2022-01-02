@@ -28,24 +28,19 @@
                         <i class="material-icons">menu</i>
                     </a>
                     <div class="d-flex align-items-center">
-
-                        {{-- <div class="initials top">
-                            <h3 style="padding-left: 8px;">{{auth()->user()->initials()}}</h3>
-                        </div> --}}
-
                         <p class="m-0 text-title font-weight-normal text-16 flex-grow-1">Messages</p>
                     </div>
                 </div>
                 <div class="chat-content perfect-scrollbar" data-suppress-scroll-x="true">
                     @foreach ($messages as $message)
-                        @if ($message->sender == 'self')
+                        @if ($message->sender == 'admin')
                             <div class="d-flex mb-4 user">
                                 <div class="initials top">
-                                    <h3 style="padding-left: 8px;">{{ $user->initials() }}</h3>
+                                    <h3 style="padding-left: 8px;">{{ auth()->user()->initials() }}</h3>
                                 </div>
                                 <div class="message flex-grow-1">
                                     <div class="d-flex">
-                                        <p class="mb-1 text-title font-weight-normal text-16 flex-grow-1">{{$user->name()}}</p>
+                                        <p class="mb-1 text-title font-weight-normal text-16 flex-grow-1">{{auth()->user()->name()}}</p>
                                         <span class="text-small text-muted">{{$message->created_at}}</span>
                                     </div>
                                     <p class="m-0">{{$message->body}}</p>
@@ -55,13 +50,13 @@
                             <div class="d-flex mb-4 user">
                                 <div class="message flex-grow-1">
                                     <div class="d-flex">
-                                        <p class="mb-1 font-weight-normal text-title text-16 flex-grow-1">Administrator</p>
+                                        <p class="mb-1 font-weight-normal text-title text-16 flex-grow-1">{{$user->first_name .' '.$user->last_name}}</p>
                                         <span class="text-small text-muted">{{$message->created_at}}</span>
                                     </div>
                                     <p class="m-0">{{$message->body}}</p>
                                 </div>
                                 <span class="initials top ml-3">
-                                    <h3 style="padding-left: 8px;">AD</h3>
+                                    <h3 style="padding-left: 8px;">{{$initials}}</h3>
                                 </span>
                             </div>
                         @endif
@@ -69,7 +64,7 @@
                 </div>
 
                 <div class="pl-3 pr-3 pt-3 pb-3 box-shadow-1 chat-input-area">
-                    <form class="inputForm" method="POST" action="{{route('messages.store')}}" enctype="multipart/form-data">
+                    <form class="inputForm" method="POST" action="{{route('users.messages.store', $hashIds->encode($user->id))}}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <textarea class="form-control form-control-rounded" placeholder="Type your message"

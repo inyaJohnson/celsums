@@ -11,6 +11,7 @@ use \App\Http\Controllers\StockController;
 use \App\Http\Controllers\ValidationController;
 use \App\Http\Controllers\Admin\BalanceController;
 use \App\Http\Controllers\Admin\EmailController;
+use App\Http\Controllers\Admin\MessageController as AdminMessageController;
 use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
@@ -73,6 +74,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     Route::get('/transactions/edit/{id}', [TransactionController::class, 'edit'])->name('transactions.edit');
     Route::post('/transactions/update/{id}', [TransactionController::class, 'update'])->name('transactions.update');
 
+    Route::get('/users/{userId}/messages', [AdminMessageController::class, 'index'])->name('users.messages.index');
+    Route::post('/users/{userId}/messages', [AdminMessageController::class, 'store'])->name('users.messages.store');
+
     Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
     Route::get('/users/{id}/unverify', [AdminUserController::class, 'unverify'])->name('users.unverify');
     Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.delete');
@@ -86,4 +90,5 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     //    stock
     Route::get('manage-stock', [AdminStockController::class, 'index'])->name('stock.manage');
     Route::post('store-stock', [AdminStockController::class, 'store'])->name('stock.store');
+
 });

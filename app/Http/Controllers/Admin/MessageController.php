@@ -1,23 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Jobs\MessageAdminJob;
-use App\Models\Message;
+use App\Http\Controllers\Controller;
+use App\Jobs\MessageJob;
 use Illuminate\Http\Request;
+use App\Models\Message;
+use App\Models\User;
+use App\Traits\HashId;
 
 class MessageController extends Controller
 {
+
+    use HashId;
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($userId)
     {
-        $user = auth()->user();
+        $user = User::findOrFail($this->decrypt($userId));
         $messages = $user->messages;
-        return view('messages.index', compact('messages','user'));
+        $initials = substr($user->first_name, 0, 1) .' '. substr($user->last_name, 0, 1);
+        return view('admin.messages.index', compact('messages','user', 'initials'));
     }
 
     /**
@@ -36,11 +43,11 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $userId)
     {
-        $user = auth()->user();
-        $user->messages()->create(['body' => $request->message, 'title' => 'chat', 'type' => 'chat', 'sender' =>'self']);
-        MessageAdminJob::dispatch($user);
+        $user = User::findOrFail($this->decrypt($userId));
+        $user->messages()->create(['body' => $request->message, 'title' => 'chat', 'type' => 'chat', 'sender' =>'admin']);
+        MessageJob::dispatch($user);
         return redirect()->back();
     }
 

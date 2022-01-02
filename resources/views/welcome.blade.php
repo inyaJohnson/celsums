@@ -8,7 +8,7 @@
             <p class="text-l">Your partner in social and business relations</p>
             <hr class="space" />
             <div>
-                <a href="#" class="circle-button btn btn-lg">Get started</a>
+                <a href="{{ route('register') }}" class="circle-button btn btn-lg">Get started</a>
             </div>
             <hr class="space s" />
             {{-- <div class="middle-img" data-anima="fade-bottom" data-anima-time="1000"><img src="/template/images/mk-4.png"
@@ -26,7 +26,7 @@
                             We trade on Cryptocurrencies to help increase our clients profit margin.
                             They include but are not limited to Bitcoin, Ethereum and Litecoin.
                         </p>
-                        <a href="#" class="circle-button btn-border btn btn-lg">See more</a>
+                        {{-- <a href="#" class="circle-button btn-border btn btn-lg">See more</a> --}}
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -37,7 +37,7 @@
                             For years, we help clients trade on Forex with an aim of using minimal
                             effort and knowledge to maximizing passive and consistent profit.
                         </p>
-                        <a href="#" class="circle-button btn-border btn btn-lg">See more</a>
+                        {{-- <a href="#" class="circle-button btn-border btn btn-lg">See more</a> --}}
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -50,7 +50,7 @@
                             We buy shares and stocks and grow them on behalf of customers for little
                             fee.
                         </p>
-                        <a href="#" class="circle-button btn-border btn btn-lg">See more</a>
+                        {{-- <a href="#" class="circle-button btn-border btn btn-lg">See more</a> --}}
                     </div>
                 </div>
             </div>

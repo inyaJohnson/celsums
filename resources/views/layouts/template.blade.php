@@ -35,12 +35,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand scroll-hide" href="index.html">
-                        <img class="logo-default" src="/template/images/logo.png" alt="logo"/>
-                        <img class="logo-retina" src="/template/images/logo-retina.png" alt="logo"/>
+                        <img class="logo-default" src="/template/images/citi-logo.jpeg" alt="logo"/>
+                        <img class="logo-retina" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
                     </a>
                     <a class="navbar-brand scroll-show" href="index.html">
-                        <img class="logo-default" src="/template/images/logo-black.png" alt="logo"/>
-                        <img class="logo-retina" src="/template/images/logo-retina-black.png" alt="logo"/>
+                        <img class="logo-default" src="/template/images/citi-logo.jpeg" alt="logo"/>
+                        <img class="logo-retina" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -75,13 +75,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 footer-center text-left">
-                    <img width="120" src="/template/images/logo.png" alt=""/>
+                    <img width="120" src="/template/images/citi-logo.jpeg" alt=""/>
 
                 </div>
                 <div class="col-md-6 footer-left text-left">
-                    <p>Collins Street West 8007, San Fransico, United States.</p>
+                    <p>388 Greenwich Street Tower Building, New York, ny 10013.</p>
                     <div class="tag-row">
-                        <span>support@company.com</span>
+                        <span>support@citigrouptrade.com</span>
                         <span>+02 3205550678</span>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
         </div>
         <div class="row copy-row">
             <div class="col-md-12 copy-text">
-                © 2018 Signflow - Multipurpose & Tech Business Template <span>Handmade by <a href="http://schiocco.io/">schiocco.io</a></span>
+                All rights reserved &copy; 2018 Citigroup Trade - Bringing dreams to reality
             </div>
         </div>
     </div>
