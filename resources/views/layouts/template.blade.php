@@ -79,7 +79,7 @@
 
                 </div>
                 <div class="col-md-6 footer-left text-left">
-                    <p>388 Greenwich Street Tower Building, New York, ny 10013.</p>
+                    <p>388 Greenwich Street Tower Building, New York, NY 10013.</p>
                     <div class="tag-row">
                         <span>support@citigrouptrade.com</span>
                         <span>+02 3205550678</span>

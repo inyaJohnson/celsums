@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name') }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400|Roboto:300,400,500,700,900|Material+Icons"
-        rel="stylesheet">
+@extends('layouts.auth')
+@section('css')
     <link rel="stylesheet" href="/dashboard/dist/assets/css/plugins/plugins.bundle.css">
     <link rel="stylesheet" href="/dashboard/dist/assets/css/pages/session/session.v2.min.css">
-    <link rel="stylesheet" href="/dashboard/dist/assets/css/main.bundle.min.css">
-</head>
-
-<body>
+@endsection
+@section('custom_content')
     <div class="sign2">
         <div class="section-left">
         </div>
@@ -23,8 +14,11 @@
                     <h3 class="heading">Create an account get unlimited access</h3>
                 </div>
                 <div class="mb-xxl signin-right-image">
-                    <img src="/dashboard/dist/assets/images/illustrations/breaking_barriers.svg" width="200px"
-                        style="height: 100px">
+                    <a href="{{ route('welcome') }}">
+
+                        <img src="/dashboard/dist/assets/images/illustrations/breaking_barriers.svg" width="200px"
+                            style="height: 100px">
+                    </a>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-md">
@@ -79,7 +73,7 @@
                     <div class="col-md-12 mb-sm">
                         <div class="input-group  input-light mb-3">
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                name="password" placeholder="Password" required autocomplete="new-password" >
+                                name="password" placeholder="Password" required autocomplete="new-password">
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -158,6 +152,4 @@
             </form>
         </div>
     </div>
-    <script src="/dashboard/dist/assets/js/vendors.bundle.min.js"></script>
-    <script src="/dashboard/dist/assets/js/main.bundle.min.js"></script>
-</body>
+@endsection
