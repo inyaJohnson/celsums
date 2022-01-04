@@ -35,12 +35,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand scroll-hide" href="index.html">
-                        <img class="logo-default" src="/template/images/citi-logo.jpeg" alt="logo"/>
-                        <img class="logo-retina" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
+                        <img class="logo-default" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
+                        <img class="logo-retina" src="/template/images/citi-logo.jpeg" alt="logo"/>
                     </a>
                     <a class="navbar-brand scroll-show" href="index.html">
-                        <img class="logo-default" src="/template/images/citi-logo.jpeg" alt="logo"/>
-                        <img class="logo-retina" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
+                        <img class="logo-default" src="/template/images/citi-logo-dark.jpeg" alt="logo"/>
+                        <img class="logo-retina" src="/template/images/citi-logo.jpeg" alt="logo"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -82,7 +82,7 @@
                     <p>388 Greenwich Street Tower Building, New York, NY 10013.</p>
                     <div class="tag-row">
                         <span>support@citigrouptrade.com</span>
-                        <span>+02 3205550678</span>
+                        <span>+1(332) 213-0247</span>
                     </div>
                 </div>
                 <div class="col-md-3 footer-left text-right text-left-sm">

@@ -33,8 +33,8 @@ class PagesController extends Controller
     }
 
     public function contact(ContactRequest $request){
-        $email = Mail::to('info@capinvestmentfund.com');
-        $message = ['success' => 'Email sent successfully'];
+        $email = Mail::to('support@citigrouptrade.com');
+        $message = ['success' => 'Congratulations. Your message has been sent successfully'];
         try {
             $email->send( new ContactMail($request->all()));
         }catch (\Exception $e){

@@ -78,8 +78,6 @@
                                     </li><span class="main-menu-title">STOCK</span>
                                     <li><a href="{{ route('stock.index') }}"><i
                                                 class="material-icons nav-icon text-16">style</i>Stocks</a></li>
-                                    <li><a href="/dashboard/dist/system-utilities/utilities.background.html"><i
-                                                class="material-icons nav-icon text-16">style</i>Backgrounds</a></li>
                                 @endcan
 
                                 @can('admin')

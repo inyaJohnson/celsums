@@ -9,40 +9,57 @@
                 <div class="col-md-6 col-sm-12">
                     <h2 class="text-color">Contact us now</h2>
                     <hr class="space s" />
-                    <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax"
-                        method="post">
+                    @include('layouts.message')
+                    <form action="{{ route('contact') }}" class="form-box" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-4">
                                 <p>Your name</p>
-                                <input id="name" name="name" placeholder="" type="text" class="form-control form-value"
-                                    required>
+                                <input id="name" name="name" placeholder="" type="text"
+                                    class="form-control form-value @error('name') is-invalid @enderror" required>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-4">
                                 <p>Email</p>
-                                <input id="email" name="email" placeholder="" type="email" class="form-control form-value"
-                                    required>
+                                <input id="email" name="email" placeholder="" type="email"
+                                    class="form-control form-value @error('email') is-invalid @enderror" required>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-4">
-                                <p>Phone number</p>
-                                <input id="phone" name="phone" placeholder="" type="text" class="form-control form-value">
+                                <p>Subject</p>
+                                <input id="subject" name="subject" placeholder="" type="text"
+                                    class="form-control form-value @error('subject') is-invalid @enderror">
+                                @error('subject')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <hr class="space xs" />
                         <div class="row">
                             <div class="col-md-12">
                                 <p>Your message</p>
-                                <textarea id="messagge" name="messagge" placeholder="" class="form-control form-value"
+                                <textarea id="message" name="message" placeholder=""
+                                    class="form-control form-value @error('message') is-invalid @enderror"
                                     required></textarea>
+                                @error('message')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 <hr class="space s" />
                                 <button class="btn-sm btn circle-button" type="submit"><i class="fa fa-envelope-o"></i>Send
                                     messagge</button>
                             </div>
-                        </div>
-                        <div class="success-box">
-                            <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
-                        </div>
-                        <div class="error-box">
-                            <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
                         </div>
                     </form>
 
