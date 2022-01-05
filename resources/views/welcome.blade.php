@@ -64,7 +64,7 @@
                     <hr class="space" />
                     <h2>About Us</h2>
                     <p>
-                        Capital Investment Fund is the result of the effective work of professionals and leaders
+                        Citigroup Trade is the result of the effective work of professionals and leaders
                         of
                         the financial markets. A regulated broker with the Securities and Exchange Commission
                         (SEC).
@@ -75,8 +75,7 @@
                     <p>
                         Our mission is to provide professional financial trading services through state-of-art
                         trading platform, which is
-                        specially developed for users’ convenience. Trading Experience from Capital Investment
-                        Fund
+                        specially developed for users’ convenience. Trading Experience from Citigroup Trade
                         will surely meet the requirements of both experienced and beginner traders thanks to its
                         simplicity and functionality.
                     </p>
@@ -93,7 +92,7 @@
                 </div>
                 <div class="col-md-4">
                     <hr class="space" />
-                    <img class="abs-image" src="/template/images/mk-1.png" alt="" />
+                    <img class="abs-image" src="/template/images/mk-13.png" alt="" />
                     <hr class="space" />
                 </div>
             </div>
@@ -104,7 +103,7 @@
         <div class="container content">
             <div class="row">
                 <div class="col-md-7">
-                    <img src="/template/images/mk-2.png" alt="" />
+                    <img src="/template/images/mk-2-v2.png" alt="" />
                 </div>
                 <div class="col-md-5">
                     <div class="flexslider slider visible-dir-nav nav-bottom-left"
@@ -124,8 +123,7 @@
 
                             <li>
                                 <h2>Yes To Sucess</h2>
-                                <p> Unlock your financial potential today with trading. At Capital Investment
-                                    Fund
+                                <p> Unlock your financial potential today with trading. At Citigroup Trade
                                     success in trading and wealth growth is assured.</p>
                             </li>
                         </ul>

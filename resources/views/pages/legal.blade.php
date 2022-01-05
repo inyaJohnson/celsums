@@ -22,7 +22,7 @@
 
             <li class="col-xs-12 ">
                 <p class="col-xs-12 legal-body">
-                    This Agreement is entered into by Capital Investment Fund, a private company registered under the
+                    This Agreement is entered into by Citigroup Trade, a private company registered under the
                     laws of The Republic of Cyprus,
                     with registration number HE295102, having its registered office at 6 Ioanni Stylianou, 2nd Floor,
                     Office 202, 2003,

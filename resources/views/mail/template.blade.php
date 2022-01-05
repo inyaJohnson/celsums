@@ -73,7 +73,7 @@
                         font-size: 14px;
                         vertical-align: top;">
                                             <p
-                                                style='text-align: center; display: block; Margin: 0px auto 20px auto; padding: 0px 20px 0px 20px; font-size: 30px; font-weight: bold; color:rgb(51, 122, 183);'>
+                                                style='text-align: center; display: block; Margin: 0px auto 20px auto; padding: 0px 20px 0px 20px; font-size: 30px; font-weight: bold; color:rgb(15,26,54,255);'>
                                                 Citigroup Trade</p>
                                             <h4 style="font-family: Verdana;
                             font-size: 14px;
@@ -106,7 +106,7 @@
                 padding: 30px 0;
                 text-align: center;
                 width: 100%;
-                background:rgb(51, 122, 183);
+                background:rgb(15,26,54,255);
                 border-radius: 3px
                 ;">
                         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;

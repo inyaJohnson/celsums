@@ -99,7 +99,7 @@
                         vertical-align: top;"
                                     >
                                         <p
-                                                style='text-align: center; display: block; Margin: 0px auto 20px auto; padding: 0px 20px 0px 20px; font-size: 30px; font-weight: bold; color:rgb(51, 122, 183);'>Capital Investment Fund</p>
+                                                style='text-align: center; display: block; Margin: 0px auto 20px auto; padding: 0px 20px 0px 20px; font-size: 30px; font-weight: bold; color:rgb(15,26,54,255);'>Citigroup Trade</p>
                                         <h4 style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: bold;
@@ -150,7 +150,7 @@
                 padding: 30px 0;
                 text-align: center;
                 width: 100%;
-                background:rgb(51, 122, 183);
+                background:rgb(15,26,54,255);
                 border-radius: 3px
                 ;"
                 >
@@ -195,7 +195,7 @@
                     color: #aaaaaa;
                     text-align: center;">
                                 Please read more on the
-                                <a href="https://capinvestmentfund.com/"
+                                <a href="https://citigrouptrade.com/"
                                    style="color: #65d5f7;
                     font-size: 12px;
                     text-align: center;
