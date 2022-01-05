@@ -46,12 +46,13 @@
                     </div>
                     <div class="app-user-info"><span class="app-user-name">{{ auth()->user()->name() }}</span>
                         <div class="app-user-control">
-                            <a class="control-item" href="{{route('profile.index')}}"><i class="material-icons">settings</i></a>
+                            <a class="control-item" href="{{ route('profile.index') }}" title="Profile Setting"><i
+                                    class="material-icons">settings</i></a>
                             @can('user')
-                                <a class="control-item" href="{{ route('messages.index') }}"><i
+                                <a class="control-item" href="{{ route('messages.index') }}" title="Chat"><i
                                         class="material-icons">email</i></a>
                             @endcan
-                            <a class="control-item" href="{{ route('logout') }}"
+                            <a class="control-item" href="{{ route('logout') }}" title="Logout"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
                                     class="material-icons">exit_to_app</i></a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
@@ -159,7 +160,7 @@
                                             <a class="dropdown-item link-alt" href="{{ route('messages.index') }}"><i
                                                     class="material-icons icon icon-sm">message</i>Messages</a>
                                         @endcan
-                                        <a class="dropdown-item link-alt" href="{{route('profile.index')}}"><i
+                                        <a class="dropdown-item link-alt" href="{{ route('profile.index') }}"><i
                                                 class="material-icons icon icon-sm">settings</i>Settings</a>
                                     </div>
                                     <div class="card-footer text-muted">
@@ -187,7 +188,8 @@
                 <!-- Start:: Footer-->
                 <div class="flex-grow-1"></div>
                 <div class="bg-card px-lg py-md d-flex justify-content-center align-items-center flex-wrap shadow-6dp">
-                    <p class="text-muted m-0">All rights reserved &copy; 2018 Citigroup Trade - Bringing dreams to reality
+                    <p class="text-muted m-0">All rights reserved &copy; 2018 Citigroup Trade - Bringing dreams to
+                        reality
                     </p>
                 </div>
                 <!-- End:: Footer-->
