@@ -1,4 +1,5 @@
 <html>
+
 <body style="background-color: #f6f6f6;
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -128,7 +129,8 @@
                         font-size: 12px;
                         text-align: center;
                         ">
-                                        Floor 34, 600 Lexington Ave, New York, NY 10022, Amurka
+                                        388 Greenwich Street Tower Building,
+                                        New York, NY 10013.
                                     </span>
                                 </td>
                             </tr>
