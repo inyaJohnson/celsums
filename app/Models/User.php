@@ -62,7 +62,7 @@ class User extends Authenticatable
     }
 
     public function address(){
-        return $this->hasOne(Address::class);
+        return $this->hasOne(Address::class, 'user_id');
     }
 
     public function transactions(){

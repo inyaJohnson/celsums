@@ -2,8 +2,7 @@
 @section('content')
     <div class="section-empty">
         <div class="container content">
-            <div class="google-map row-17" data-marker-pos-top="25" data-coords="40.741895,-73.989308" data-skin=""
-                data-marker="http://templates.framework-y.com/signflow/images/marker-map.png"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.8789030811517!2d-74.01334028517587!3d40.720682245022346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f5c0810ba9%3A0xd3b7d8557176e603!2s388%20Greenwich%20Street%2C%20388%20Greenwich%20St%2C%20New%20York%2C%20NY%2010013%2C%20USA!5e0!3m2!1sen!2sng!4v1641366162185!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <hr class="space" />
             <div class="row proporzional-row">
                 <div class="col-md-6 col-sm-12">
@@ -70,24 +69,16 @@
                             <ul class="fa-ul">
                                 <li>
                                     <i class="fa-li fa fa-home"></i>
-                                    Sturlly Technologies
-                                    PO Box 16122, Collins Street West,
-
-                                </li>
-                                <li>
-                                    <i class="fa-li fa fa-home"></i>
-                                    Studio Massimo
-                                    PO Box 16120, Street
+                                    388 Greenwich Street Tower Building,
+                                    New York, NY 10013.
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-skype"></i> Company.name</li>
-                                <li><i class="fa-li fa fa-headphones"></i> (123) 0 123 455669</li>
-                                <li><i class="fa-li fa fa-fax"></i> (123) 0 123 455600</li>
-                                <li><i class="fa-li fa fa-envelope-o"></i> info@company.com</li>
-                                <li><i class="fa-li fa fa-envelope-o"></i> sales@company.com</li>
+                                <li><i class="fa-li fa fa-phone"></i> +1(332) 213-0247</li>
+                                <li><i class="fa-li fa fa-envelope-o"></i>support@citigrouptrade.com</li>
+                                <li><i class="fa-li fa fa-envelope-o"></i>info@citigrouptrade.com</li>
                             </ul>
                         </div>
                     </div>

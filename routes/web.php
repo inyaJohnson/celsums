@@ -16,6 +16,7 @@ use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -63,6 +64,8 @@ Route::group(['middleware' => ['auth', 'user']], function () {
     Route::post('/stock-deposit/{symbol}', [StockController::class, 'store'])->name('stock_deposit.store');
     Route::get('stock', [StockController::class, 'index'])->name('stock.index');
     Route::resource('messages', MessageController::class);
+    Route::post('/profile', [SettingController::class, 'updateProfile'])->name('profile.update');
+    Route::get('/profile', [SettingController::class, 'profile'])->name('profile.index');
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {

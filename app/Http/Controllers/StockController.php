@@ -29,7 +29,8 @@ class StockController extends Controller
         if($numberOfStocks != 0){
             $totalGain = ($userStockPaymentTotal * $dayChangePercent)/$numberOfStocks;
         }
-        return view('stock.index', compact('stocks','dayChange', 'dayChangePercent', 'totalGain'));
+        $user = auth()->user();
+        return view('stock.index', compact('stocks','dayChange', 'dayChangePercent', 'totalGain', 'user'));
     }
 
 

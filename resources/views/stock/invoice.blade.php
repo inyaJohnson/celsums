@@ -4,18 +4,17 @@
     <div class="subheader px-lg">
         <div class="subheader-container">
             <div class="subheader-main d-none d-lg-flex">
-                <h3 class="subheader-title">Invoice v2</h3>
                 <nav class="ul-breadcrumb" aria-label="breadcrumb">
                     <ol class="ul-breadcrumb-items">
-                        <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
-                        <li class="breadcrumb-item"><a href="#">Apps</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Invoice v2</li>
+                        <li class="breadcrumb-home"><a href="{{route('home')}}"> <i class="material-icons">home</i></a></li>
+                        <li class="breadcrumb-item"><a href="{{route('stock.index')}}">Stock</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Invoice</li>
                     </ol>
                 </nav>
             </div>
             <div class="flex-grow-1"></div>
-            <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm mr-2"
-                                              href="pages/invoice/invoice.edit.v2.html">Create new Invoice</a></div>
+            {{-- <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm mr-2"
+                                              href="pages/invoice/invoice.edit.v2.html">Create new Invoice</a></div> --}}
         </div>
     </div>
     <div class="container my-lg">

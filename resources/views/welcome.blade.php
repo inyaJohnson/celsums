@@ -4,8 +4,8 @@
         data-natural-width="1920" data-parallax="scroll" data-image-src="/template/images/hd-1.jpg">
         <div class="container content">
             <hr class="space" />
-            <h1 class="white">Grow your business with Flowsign</h1>
-            <p class="text-l">Your partner in social and business relations</p>
+            <h1 class="white">Grow your wealth with Citigroup</h1>
+            <p class="text-l">Bringing dreams to reality</p>
             <hr class="space" />
             <div>
                 <a href="{{ route('register') }}" class="circle-button btn btn-lg">Get started</a>

@@ -63,24 +63,17 @@
                             <ul class="fa-ul">
                                 <li>
                                     <i class="fa-li fa fa-home"></i>
-                                    Sturlly Technologies
-                                    PO Box 16122, Collins Street West,
+                                    388 Greenwich Street Tower Building,
+                                    New York, NY 10013.
 
-                                </li>
-                                <li>
-                                    <i class="fa-li fa fa-home"></i>
-                                    Studio Massimo
-                                    PO Box 16120, Street
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-skype"></i> Company.name</li>
-                                <li><i class="fa-li fa fa-headphones"></i> (123) 0 123 455669</li>
-                                <li><i class="fa-li fa fa-fax"></i> (123) 0 123 455600</li>
-                                <li><i class="fa-li fa fa-envelope-o"></i> info@company.com</li>
-                                <li><i class="fa-li fa fa-envelope-o"></i> sales@company.com</li>
+                                <li><i class="fa-li fa fa-phone"></i> +1(332) 213-0247</li>
+                                <li><i class="fa-li fa fa-envelope-o"></i>support@citigrouptrade.com</li>
+                                <li><i class="fa-li fa fa-envelope-o"></i>info@citigrouptrade.com</li>
                             </ul>
                         </div>
                     </div>

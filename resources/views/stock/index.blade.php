@@ -4,22 +4,21 @@
     <div class="subheader px-lg">
         <div class="subheader-container">
             <div class="subheader-main d-none d-lg-flex">
-                <h3 class="subheader-title d-none d-sm-block">Cryptocurrency</h3>
                 <nav class="ul-breadcrumb" aria-label="breadcrumb">
                     <ol class="ul-breadcrumb-items">
-                        <li class="breadcrumb-home"><a href="#"> <i class="material-icons">home</i></a></li>
-                        <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Cryptocurrency</li>
+                        <li class="breadcrumb-home"><a href="{{route('home')}}"> <i class="material-icons">home</i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Stock</li>
                     </ol>
                 </nav>
             </div>
             <div class="flex-grow-1"></div>
-            <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm btn-icon mr-2"><i
+            <div class="subheader-toolbar">
+                {{-- <a class="btn btn-opacity-primary btn-sm btn-icon mr-2"><i
                         class="far fa-calendar-alt"></i></a><a class="btn btn-opacity-primary btn-sm btn-icon mr-2"><i
                         class="fa fa-plus"></i></a>
                 <button class="btn btn-sm btn-opacity btn-primary" id="reportrange"><i
                         class="fa fa-calendar mr-sm"></i><span></span>
-                </button>
+                </button> --}}
             </div>
         </div>
     </div>
@@ -35,8 +34,8 @@
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">300.57</p>
-                                                <div class="card-title text-white m-0">459.32 USDT</div>
+                                                <p class="m-0 text-white">Previous Bal.</p>
+                                                <div class="card-title text-white m-0">{{number_format($user->finance->previous_balance, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>
@@ -49,8 +48,8 @@
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">24H Charge</p>
-                                                <div class="card-title text-white m-0">743.930 USDT</div>
+                                                <p class="m-0 text-white">Current Bal.</p>
+                                                <div class="card-title text-white m-0">{{number_format($user->finance->current_balance, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>
@@ -63,8 +62,8 @@
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">42H Charge</p>
-                                                <div class="card-title text-white m-0">1074.3930 USDT</div>
+                                                <p class="m-0 text-white">Stock</p>
+                                                <div class="card-title text-white m-0">{{number_format($user->finance->stock, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>

@@ -46,7 +46,7 @@
                     </div>
                     <div class="app-user-info"><span class="app-user-name">{{ auth()->user()->name() }}</span>
                         <div class="app-user-control">
-                            <a class="control-item" href="#"><i class="material-icons">settings</i></a>
+                            <a class="control-item" href="{{route('profile.index')}}"><i class="material-icons">settings</i></a>
                             @can('user')
                                 <a class="control-item" href="{{ route('messages.index') }}"><i
                                         class="material-icons">email</i></a>
@@ -159,7 +159,7 @@
                                             <a class="dropdown-item link-alt" href="{{ route('messages.index') }}"><i
                                                     class="material-icons icon icon-sm">message</i>Messages</a>
                                         @endcan
-                                        <a class="dropdown-item link-alt" href="#"><i
+                                        <a class="dropdown-item link-alt" href="{{route('profile.index')}}"><i
                                                 class="material-icons icon icon-sm">settings</i>Settings</a>
                                     </div>
                                     <div class="card-footer text-muted">
