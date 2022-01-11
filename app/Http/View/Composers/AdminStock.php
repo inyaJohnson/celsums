@@ -16,7 +16,7 @@ class AdminStock
 {
     public function compose(View $view){
         $response = Http::get('https://mboum.com/api/v1/tr/trending?apikey=mhHxdqTkLwqMLbuElqRdnTbUE1UTgjzhr8S1fbphNTLMGi2XM7q11xDSdW6d');
-        $stocks = $response->json()[0]['quotes'];
+        $stocks = $response->json()['data'][0]['quotes'];
         return $view->with('stocks', $stocks);
     }
 

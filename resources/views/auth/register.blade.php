@@ -15,7 +15,6 @@
                 </div>
                 <div class="mb-xxl signin-right-image">
                     <a href="{{ route('welcome') }}">
-
                         <img src="/dashboard/dist/assets/images/illustrations/breaking_barriers.svg" width="200px"
                             style="height: 100px">
                     </a>

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/template/HTWF/scripts/flexslider/flexslider.css">
     <link rel="stylesheet" href="/template/HTWF/scripts/magnific-popup.css">
     <link rel="stylesheet" href="/template/HTWF/scripts/php/contact-form.css">
-    <link rel="icon" href="/template/images/favicon.png">
+    <link rel="icon" href="/template/images/favicon2.png">
     <link rel="stylesheet" href="/template/skin.css">
 </head>
 
@@ -37,12 +37,12 @@
                             <i class="fa fa-bars"></i>
                         </button>
                         <a class="navbar-brand scroll-hide" href="{{ route('welcome') }}">
-                            <img class="logo-default" src="/template/images/citi-logo-dark.jpeg" alt="logo" />
-                            <img class="logo-retina" src="/template/images/citi-logo.jpeg" alt="logo" />
+                            <img class="logo-default" src="/template/images/citi-logo.png" alt="logo" />
+                            <img class="logo-retina" src="/template/images/citi-logo.png" alt="logo" />
                         </a>
                         <a class="navbar-brand scroll-show" href="{{ route('welcome') }}">
-                            <img class="logo-default" src="/template/images/citi-logo-dark.jpeg" alt="logo" />
-                            <img class="logo-retina" src="/template/images/citi-logo.jpeg" alt="logo" />
+                            <img class="logo-default" src="/template/images/citi-logo-black.png" alt="logo" />
+                            <img class="logo-retina" src="/template/images/citi-logo-black.png" alt="logo" />
                         </a>
                     </div>
                     <div class="collapse navbar-collapse">
@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-3 footer-center text-left">
                         <a href="{{ route('welcome') }}">
-                            <img width="120" src="/template/images/citi-logo.jpeg" alt="" />
+                            <img width="200" src="/template/images/citi-logo.png" alt="" />
                         </a>
                     </div>
                     <div class="col-md-6 footer-left text-left">

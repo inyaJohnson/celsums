@@ -17,12 +17,12 @@
             <i class="material-icons text-danger mr-md">error</i>
             <div class="error-text">
                 <h1 class="error-title font-weight-bold">401</h1>
-                <div class="error-subtitle">Unauthorized</div>
+                <div class="error-subtitle">Unauthorized Verify Your Account</div>
             </div>
         </div>
         <div class="error-action d-flex justify-content-around mt-xxl">
             <a href="{{route('home')}}" type="button" class="btn btn-opacity btn-primary btn-sm mr-0"> Back to Dashboard </a>
-            <a href="#" type="button" class="btn btn-opacity btn-danger btn-sm"> Report the problem</a>
+            <a href="{{route('messages.index')}}" type="button" class="btn btn-opacity btn-danger btn-sm"> Report the problem</a>
         </div>
     </div>
 </div>

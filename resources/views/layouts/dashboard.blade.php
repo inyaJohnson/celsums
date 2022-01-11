@@ -28,8 +28,8 @@
             </div>
             <div class="brand">
                 <a href="{{ route('welcome') }}">
-                    <img src="/dashboard/dist/assets/images/arctic-admin-circle.svg" alt="" />
-                    <span class="app-logo-text ml-2 text-20">Arctic</span>
+                    <img src="/template/images/favicon2.png" alt="" />
+                    <span class="app-logo-text ml-2 text-20">Citigroup</span>
                 </a>
             </div>
             <!-- Start:: user-->
@@ -46,9 +46,10 @@
                     </div>
                     <div class="app-user-info"><span class="app-user-name">{{ auth()->user()->name() }}</span>
                         <div class="app-user-control">
-                            <a class="control-item" href="{{ route('profile.index') }}" title="Profile Setting"><i
-                                    class="material-icons">settings</i></a>
-                            @can('user')
+                            @cannot('admin')
+                                <a class="control-item" href="{{ route('profile.index') }}" title="Profile Setting"><i
+                                        class="material-icons">settings</i></a>
+
                                 <a class="control-item" href="{{ route('messages.index') }}" title="Chat"><i
                                         class="material-icons">email</i></a>
                             @endcan
@@ -69,7 +70,7 @@
                             <ul class="metismenu show-on-load" id="ul-menu">
                                 <li><a href="{{ route('home') }}"><i
                                             class="material-icons nav-icon text-16">home</i>Home</a></li>
-                                @can('user')
+                                @cannot('admin')
                                     <span class="main-menu-title">PLANS</span>
                                     <li><a href="{{ route('deposit') }}"><i
                                                 class="material-icons nav-icon text-16">input</i>Deposit</a></li>
@@ -102,7 +103,7 @@
             <!-- Start::Mobile header-->
             <div class="ul-mobile-top-header bg-slate">
                 <a href="{{ route('welcome') }}">
-                    <img class="ul-brand-mobile" src="/dashboard/dist/assets/images/arctic-admin-circle.svg" alt="" />
+                    <img class="ul-brand-mobile" src="/template/images/favicon2.png" alt="" />
                 </a>
                 <div class="flex-grow-1"></div>
                 <button class="sidebar-full-toggle btn btn-icon btn-primary rounded-circle text-white"><i
@@ -156,12 +157,13 @@
                                         </div>
                                     </div>
                                     <div class="mt-xl">
-                                        @can('user')
+                                        @cannot('admin')
                                             <a class="dropdown-item link-alt" href="{{ route('messages.index') }}"><i
                                                     class="material-icons icon icon-sm">message</i>Messages</a>
+
+                                            <a class="dropdown-item link-alt" href="{{ route('profile.index') }}"><i
+                                                    class="material-icons icon icon-sm">settings</i>Settings</a>
                                         @endcan
-                                        <a class="dropdown-item link-alt" href="{{ route('profile.index') }}"><i
-                                                class="material-icons icon icon-sm">settings</i>Settings</a>
                                     </div>
                                     <div class="card-footer text-muted">
                                         <a href="{{ route('logout') }}"

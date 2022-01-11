@@ -15,10 +15,10 @@
         <div data-perfect-scrollbar='' data-suppress-scroll-x='true'>
             <div class="d-flex flex-column align-items-center mt-lg mb-xxl">
                 <a href="{{ route('welcome') }}">
-                    <img class="card-img-top signup" src="/dashboard/dist/assets/images/arctic-admin.svg"
+                    <img class="card-img-top signup" src="/template/images/favicon2.png"
                         style="height: 100px" alt="Card image cap">
                 </a>
-                <span class="text-primary text-18 d-block font-weight-bold"> Arctic Admin </span>
+                <span class="text-primary text-18 d-block font-weight-bold"> Citigroup Trade </span>
                 <span class="mb-md text-muted mb-lg d-block">Sign in to your account</span>
             </div>
             <form class="" method="POST" action="{{ route('login') }}">

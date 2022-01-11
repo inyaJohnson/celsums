@@ -15,7 +15,7 @@
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
                         <a href="{{ route('welcome') }}">
-                            <img class="card-img-top signup mb-md" src="/dashboard/dist/assets/images/arctic-admin.svg"
+                            <img class="card-img-top signup mb-md" src="/template/images/favicon2.png"
                                 alt="Card image cap">
                         </a>
                         <p class="text-muted mb-xxl">New password will be sent to your email address</p>

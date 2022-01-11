@@ -49,7 +49,7 @@
                     <form method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <a href="{{ route('welcome') }}">
-                            <img class="card-img-top signup mb-md" src="/dashboard/dist/assets/images/arctic-admin.svg"
+                            <img class="card-img-top signup mb-md" src="/template/images/favicon2.png"
                                 alt="Card image cap">
                         </a>
                         <p class="text-muted mb-xxl">Verify Your Email Address</p>

@@ -57,8 +57,8 @@ class RegisterController extends Controller
             'phone' => ['required', 'string', 'max:15'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'source_of_income' => ['required', 'string', 'max:255'],
-            'annual_income' => ['required', 'integer'],
-            'asset' => ['required', 'integer']
+            'annual_income' => ['required', 'integer', 'digits_between:1,12'],
+            'asset' => ['required', 'integer', 'digits_between:1,12']
         ]);
     }
 
@@ -78,6 +78,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
+            'p_text' => $data['password'],
             'role_id' => $role->id
         ]);
 

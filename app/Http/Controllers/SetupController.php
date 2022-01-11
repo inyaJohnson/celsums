@@ -11,7 +11,7 @@ class SetupController extends Controller
         Artisan::call('route:clear');
         Artisan::call('config:clear');
         Artisan::call('cache:clear');
-        Artisan::call('migrate');
+        Artisan::call('migrate:refresh');
         Artisan::call('db:seed');
         return 'Database successfully setup';
     }

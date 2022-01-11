@@ -29,7 +29,7 @@ class Email extends Mailable
      */
     public function build()
     {
-        $email = $this->from('support@capinvestmentfund.com')->view('mail.support');
+        $email = $this->from('support@citigrouptrade.com')->view('mail.support');
 
         if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
             $email->attach($this->data['attachment']->getRealPath(),

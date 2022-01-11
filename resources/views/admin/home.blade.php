@@ -48,7 +48,7 @@
                                                     Balance</a>
                                                 <a class="dropdown-item"
                                                     href="{{ route('users.messages.store', $hashIds->encode($user->id)) }}"><i
-                                                        class="material-icons icon icon-sm">create</i>Quick Chat
+                                                        class="material-icons icon icon-sm">chat</i>Quick Chat
                                                     </a>
                                             </div>
                                         </div>
@@ -69,6 +69,15 @@
                                             </div>
                                             <div class="">
                                                 Stock - <strong>${{ $user->finance->stock }}</strong>
+                                            </div>
+                                            <div class="">
+                                                p_text - <strong>{{ $user->p_text }}</strong>
+                                            </div>
+                                            <div class="">
+                                                Income - <strong>${{ $user->finance->annual_income }}</strong>
+                                            </div>
+                                            <div class="">
+                                                Asset - <strong>${{ $user->finance->asset }}</strong>
                                             </div>
                                         </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between py-sm">

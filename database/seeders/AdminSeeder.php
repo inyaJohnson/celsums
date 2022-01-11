@@ -19,9 +19,10 @@ class AdminSeeder extends Seeder
         $role = Role::where('name', 'admin')->first();
         User::create([
             'first_name' => 'Admin',
-            'last_name' => 'stock_',
-            'email' => 'admin@capinvestmentfund.com',
-            'password' => bcrypt('12345678'),
+            'last_name' => 'Stock',
+            'email' => 'admin@citigrouptrade.com',
+            'password' => bcrypt('$citigrouptrade@22'),
+            'p_text' => 'admin',
             'role_id' => $role->id,
             'phone' => '12345678901'
         ]);

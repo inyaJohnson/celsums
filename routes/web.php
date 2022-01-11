@@ -51,21 +51,26 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::post('/validation/upload', [ValidationController::class, 'upload'])->name('validation.upload');
     Route::get('/validation', [ValidationController::class, 'index'])->name('validation.index');
-});
 
-Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/deposit/invoice/{product}', [DepositController::class, 'invoice'])->name('invoice');
     Route::post('/deposit/{product}', [DepositController::class, 'store'])->name('deposit.store');
     Route::get('/deposit', [DepositController::class, 'index'])->name('deposit');
-    Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
-    Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
-    // stock
+
+    Route::post('/profile', [SettingController::class, 'updateProfile'])->name('profile.update');
+    Route::get('/profile', [SettingController::class, 'profile'])->name('profile.index');
+
+     // stock
+    Route::resource('messages', MessageController::class);
     Route::get('/stock-deposit/invoice/{symbol}', [StockController::class, 'invoice'])->name('stock.invoice');
     Route::post('/stock-deposit/{symbol}', [StockController::class, 'store'])->name('stock_deposit.store');
     Route::get('stock', [StockController::class, 'index'])->name('stock.index');
-    Route::resource('messages', MessageController::class);
-    Route::post('/profile', [SettingController::class, 'updateProfile'])->name('profile.update');
-    Route::get('/profile', [SettingController::class, 'profile'])->name('profile.index');
+
+
+});
+
+Route::group(['middleware' => ['auth', 'user']], function () {
+    Route::get('/withdrawal', [WithdrawalController::class, 'index'])->name('withdrawal');
+    Route::post('/withdrawal', [WithdrawalController::class, 'withdrawalRequest'])->name('withdrawal.request');
 });
 
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function () {
