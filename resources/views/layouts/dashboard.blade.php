@@ -29,7 +29,7 @@
             <div class="brand">
                 <a href="{{ route('welcome') }}">
                     <img src="/template/images/favicon2.png" alt="" />
-                    <span class="app-logo-text ml-2 text-20">Citigroup</span>
+                    <span class="app-logo-text ml-2 text-20">{{ config('app.name') }}</span>
                 </a>
             </div>
             <!-- Start:: user-->
@@ -84,7 +84,7 @@
 
                                 @can('admin')
                                     <li><a href="{{ route('transactions.index') }}"><i
-                                                class="material-icons nav-icon text-16">input</i>Transactions</a></li>
+                                                class="material-icons nav-icon text-16">comment</i>Transactions</a></li>
                                     <li><a href="{{ route('stock.manage') }}"><i
                                                 class="material-icons nav-icon text-16">monetization_on</i>Stock</a></li>
                                     <li><a href="{{ route('reviews.index') }}"><i
@@ -190,9 +190,7 @@
                 <!-- Start:: Footer-->
                 <div class="flex-grow-1"></div>
                 <div class="bg-card px-lg py-md d-flex justify-content-center align-items-center flex-wrap shadow-6dp">
-                    <p class="text-muted m-0">All rights reserved &copy; 2018 Citigroup Trade - Bringing dreams to
-                        reality
-                    </p>
+                    <p class="text-muted m-0">&copy; {{Carbon\Carbon::now()->format('Y')}} Celsums - All rights reserved.</p>
                 </div>
                 <!-- End:: Footer-->
             </div>
