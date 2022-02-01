@@ -27,6 +27,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Builder::defaultStringLength(191);
         View::composer(['admin.*'], 'App\Http\View\Composers\AdminData');
-        View::composer(['admin.stock.index'], 'App\Http\View\Composers\AdminStock');
     }
 }

@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email' ,'phone', 'password','role_id', 'identification', 'p_text', 'verified'
+        'first_name', 'last_name', 'email' ,'phone', 'password','role_id', 'verified'
     ];
 
     /**
@@ -55,10 +55,6 @@ class User extends Authenticatable
 
     public function hasRole($role){
         return null !== $this->role()->where('name', $role)->first();
-    }
-
-    public function finance(){
-        return $this->hasOne(Finance::class, 'user_id');
     }
 
     public function address(){

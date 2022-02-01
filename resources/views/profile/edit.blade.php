@@ -48,7 +48,7 @@
                                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                     </svg>
-                                    <h5 class="mb-0">$ {{number_format($user->finance->current_balance, 2)}}</h5>
+                                    <h5 class="mb-0">$ {{number_format(1000, 2)}}</h5>
                                     <p class="text-muted mb-0">Current Bal.</p>
                                 </div>
                             </div>

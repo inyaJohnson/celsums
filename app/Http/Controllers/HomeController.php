@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::with('finance')->where('role_id', '!=', 1)->get();
+        $users = User::where('role_id', '!=', 1)->get();
         $view = view('admin.home', compact('users'));
         if(!auth()->user()->hasRole('admin')){
             $transactions = auth()->user()->transactions()->get();

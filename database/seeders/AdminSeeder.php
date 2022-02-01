@@ -22,7 +22,6 @@ class AdminSeeder extends Seeder
             'last_name' => 'Celsums',
             'email' => 'admin@celsums.com',
             'password' => bcrypt('$celsums@22'),
-            'p_text' => 'admin',
             'role_id' => $role->id,
             'phone' => '12345678901'
         ]);

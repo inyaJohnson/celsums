@@ -3,7 +3,7 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/events.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/events.jpg"
+                <source srcset="/template/assets/img/events.jpg" media="(min-width: 992px)" /><img class="img--bg" src="/template/assets/img/events.jpg"
                     alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Happiness</span></div>
@@ -20,7 +20,7 @@
             </div>
         </section>
         <!-- events inner start-->
-        <section class="section events-inner"><img class="events-inner__bg" src="img/events_inner-bg.png" alt="img" />
+        <section class="section events-inner"><img class="events-inner__bg" src="/template/assets/img/events_inner-bg.png" alt="img" />
             <div class="container">
                 <div class="row offset-30">
                     <div class="col-xl-10 offset-xl-1">
@@ -29,7 +29,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_4.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_4.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -63,7 +63,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_5.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_5.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -97,7 +97,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_6.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_6.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -131,7 +131,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_7.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_7.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -165,7 +165,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_8.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_8.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -199,7 +199,7 @@
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="img/event_9.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_9.jpg"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
@@ -257,7 +257,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img" /></div>
+                        <div class="bottom-background__img"><img src="/template/assets/img/bottom-bg.png" alt="img" /></div>
                     </div>
                 </div>
             </div>

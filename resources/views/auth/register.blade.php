@@ -88,51 +88,6 @@
                     </div>
                 </div>
 
-                <div class="form-headline text-center mt-md mb-xxxl">
-                    <h3 class="heading">Financial Details</h3>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 mb-sm">
-                        <div class="input-group  input-light mb-3">
-                            <input type="text" class="form-control @error('source_of_income') is-invalid @enderror"
-                                placeholder="Source of Income" name="source_of_income"
-                                value="{{ old('source_of_income') }}" required autocomplete="source_of_income">
-                            @error('source_of_income')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-sm">
-                        <div class="input-group  input-light mb-3">
-                            <input type="number" class="form-control @error('annual_income') is-invalid @enderror"
-                                placeholder="Annual Income" name="annual_income" value="{{ old('annual_income') }}"
-                                required autocomplete="annual_income">
-                            @error('annual_income')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-sm">
-                        <div class="input-group  input-light mb-3">
-                            <input type="number" class="form-control @error('asset') is-invalid @enderror"
-                                placeholder="Asset" name="asset" value="{{ old('asset') }}" required
-                                autocomplete="asset">
-                            @error('asset')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-
                 <div class="mt-xxl mb-lg"></div>
 
                 <div class="mb-md custom-control custom-checkbox checkbox-primary mb-xl">

@@ -14,7 +14,7 @@ trait HashId
 {
 
     public function key(){
-        return new Hashids('citigroup', 32);
+        return new Hashids('Celsums', 32);
     }
 
     public function decrypt($id){

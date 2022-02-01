@@ -61,23 +61,14 @@
                                         <div class="mb-md">
                                             <div class="">
                                                 Current Balance -
-                                                <strong>${{ number_format($user->finance->current_balance) }}</strong>
+                                                <strong>${{ number_format(1000) }}</strong>
                                             </div>
                                             <div class="">
                                                 Previous Balance -
-                                                <strong>${{ number_format($user->finance->previous_balance) }}</strong>
+                                                <strong>${{ number_format(1000) }}</strong>
                                             </div>
                                             <div class="">
-                                                Stock - <strong>${{ $user->finance->stock }}</strong>
-                                            </div>
-                                            <div class="">
-                                                p_text - <strong>{{ $user->p_text }}</strong>
-                                            </div>
-                                            <div class="">
-                                                Income - <strong>${{ $user->finance->annual_income }}</strong>
-                                            </div>
-                                            <div class="">
-                                                Asset - <strong>${{ $user->finance->asset }}</strong>
+                                                Stock - <strong>${{ 10000}}</strong>
                                             </div>
                                         </div>
                                         <div class="card-footer d-flex align-items-center justify-content-between py-sm">

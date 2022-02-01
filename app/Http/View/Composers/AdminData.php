@@ -14,7 +14,6 @@ class AdminData
     public function compose(View $view)
     {
         $hashIds = $this->key();
-        $availableStock = \App\Models\Stock::all();
-        return $view->with(['hashIds' => $hashIds, 'availableStock' => $availableStock]);
+        return $view->with(['hashIds' => $hashIds]);
     }
 }

@@ -18,7 +18,7 @@
                     <img class="card-img-top signup" src="/template/images/favicon2.png"
                         style="height: 100px" alt="Card image cap">
                 </a>
-                <span class="text-primary text-18 d-block font-weight-bold"> Citigroup Trade </span>
+                <span class="text-primary text-18 d-block font-weight-bold">Celsums</span>
                 <span class="mb-md text-muted mb-lg d-block">Sign in to your account</span>
             </div>
             <form class="" method="POST" action="{{ route('login') }}">
@@ -70,10 +70,10 @@
                 <div class="border-bottom mt-xxl mb-lg"></div>
                 <div class="d-flex-column justify-content-center">
                     <div class="text-center">
-                        <p class="text-muted m-0">At Citigroup Trade we bring dreams to reality.</p>
+                        <p class="text-muted m-0">At Celsums the world's happiness comes first.</p>
                     </div>
                     <div class="text-center">
-                        <p class="text-muted m-0">All rights reserved &copy; 2018 Citigroup Trade</p>
+                        <p class="text-muted m-0">&copy; {{Carbon\Carbon::now()->format('Y')}} Celsums - All rights reserved.</p>
                     </div>
                 </div>
             </form>

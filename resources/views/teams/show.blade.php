@@ -3,8 +3,8 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/volunteer.jpg" media="(min-width: 992px)" /><img class="img--bg"
-                    src="img/volunteer.jpg" alt="img" />
+                <source srcset="/template/assets/img/volunteer.jpg" media="(min-width: 992px)" /><img class="img--bg"
+                    src="/template/assets/img/volunteer.jpg" alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Compassion</span></div>
             <div class="container">
@@ -24,9 +24,9 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-xl-5">
-                        <div class="img-box"><img class="img--layout" src="img/about_layout-reverse.png"
+                        <div class="img-box"><img class="img--layout" src="/template/assets/img/about_layout-reverse.png"
                                 alt="img" />
-                            <div class="img-box__img"><img class="img--bg" src="img/img_box-1.jpg" alt="img" />
+                            <div class="img-box__img"><img class="img--bg" src="/template/assets/img/img_box-1.jpg" alt="img" />
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
             <div class="projects-slider">
                 <div class="projects-slider__item">
                     <div class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
-                        <div class="projects-masonry__img"><img class="img--bg" src="img/projects-slider_1.jpg"
+                        <div class="projects-masonry__img"><img class="img--bg" src="/template/assets/img/projects-slider_1.jpg"
                                 alt="img" />
                             <div class="projects-masonry__inner"><span class="projects-masonry__badge"
                                     style="background: #F36F8F;">Medicine</span>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="projects-slider__item">
                     <div class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
-                        <div class="projects-masonry__img"><img class="img--bg" src="img/projects-slider_2.jpg"
+                        <div class="projects-masonry__img"><img class="img--bg" src="/template/assets/img/projects-slider_2.jpg"
                                 alt="img" />
                             <div class="projects-masonry__inner"><span class="projects-masonry__badge"
                                     style="background: #49C2DF;">Water Delivery</span>
@@ -166,7 +166,7 @@
                 </div>
                 <div class="projects-slider__item">
                     <div class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
-                        <div class="projects-masonry__img"><img class="img--bg" src="img/projects-slider_3.jpg"
+                        <div class="projects-masonry__img"><img class="img--bg" src="/template/assets/img/projects-slider_3.jpg"
                                 alt="img" />
                             <div class="projects-masonry__inner"><span class="projects-masonry__badge"
                                     style="background: #F36F8F;">Medicine</span>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="projects-slider__item">
                     <div class="projects-masonry__item projects-masonry__item--primary projects-masonry__item--height-2">
-                        <div class="projects-masonry__img"><img class="img--bg" src="img/projects-slider_2.jpg"
+                        <div class="projects-masonry__img"><img class="img--bg" src="/template/assets/img/projects-slider_2.jpg"
                                 alt="img" />
                             <div class="projects-masonry__inner"><span class="projects-masonry__badge"
                                     style="background: #F36F8F;">Medicine</span>
@@ -212,7 +212,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img" /></div>
+                        <div class="bottom-background__img"><img src="/template/assets/img/bottom-bg.png" alt="img" /></div>
                     </div>
                 </div>
             </div>

@@ -33,46 +33,62 @@
     <div class="container mt-lg">
         @include('layouts.message')
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-12 mb-md">
                         <div class="row">
-                            <div class="col-lg-4 mb-md">
+                            <div class="col-lg-3 mb-md">
                                 <div class="card bg-warning h-100">
                                     <div class="card-body d-flex align-items-center">
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">Previous Bal.</p>
-                                                <div class="card-title text-white m-0">{{number_format($user->finance->previous_balance, 2)}} USDT</div>
+                                                <p class="m-0 text-white">Statisitics.</p>
+                                                <div class="card-title text-white m-0">{{number_format(1000, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 mb-md">
+                            <div class="col-lg-3 mb-md">
                                 <div class="card bg-primary h-100">
                                     <div class="card-body d-flex align-items-center">
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">Current Bal.</p>
-                                                <div class="card-title text-white m-0">{{number_format($user->finance->current_balance, 2)}} USDT</div>
+                                                <p class="m-0 text-white">Statisitics.</p>
+                                                <div class="card-title text-white m-0">{{number_format(1000, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 mb-md">
+
+                            <div class="col-lg-3 mb-md">
+                                <div class="card bg-success h-100">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div
+                                            class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
+                                            <div>
+                                                <p class="m-0 text-white">Statisitics.</p>
+                                                <div class="card-title text-white m-0">{{number_format(1000, 2)}} USDT</div>
+                                            </div>
+                                            <i class="material-icons">monetization_on</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 mb-md">
                                 <div class="card bg-danger h-100">
                                     <div class="card-body d-flex align-items-center">
                                         <div
                                             class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center">
                                             <div>
-                                                <p class="m-0 text-white">Stock</p>
-                                                <div class="card-title text-white m-0">{{number_format($user->finance->stock, 2)}} USDT</div>
+                                                <p class="m-0 text-white">Statisitics</p>
+                                                <div class="card-title text-white m-0">{{number_format(1000, 2)}} USDT</div>
                                             </div>
                                             <i class="material-icons">monetization_on</i>
                                         </div>
@@ -88,35 +104,13 @@
                                 <div id="cryptoCurrencyOne">
                                     <div
                                         style="height:560px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin: 0px; width: 100%;">
-                                        <div style="height:540px; padding:0px; margin:0px; width: 100%;">
-                                            <iframe
-                                                src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505"
-                                                width="100%" height="536px" scrolling="auto" marginwidth="0"
-                                                marginheight="0" frameborder="0" border="0"
-                                                style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
+                                        <div style="height:540px; padding:0px; margin:0px; width: 100%; background-color:#FFF">
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-md">
-                <div class="ul-cryptocurrency-tab">
-                    <div class="nav-pills-primary">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item mb-2"><a class="nav-link active" id="pills-home-tab" data-toggle="pill"
-                                    href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">USDT</a>
-                            </li>
-                            <li class="nav-item mb-2"><a class="nav-link" id="pills-profile-tab" data-toggle="pill"
-                                    href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                    aria-selected="false">Market Trading</a></li>
-                        </ul>
-                        <script type="text/javascript" src="https://widget.coinlore.com/widgets/coinlore-list-widget.js"></script>
-                        <div class="coinlore-list-widget" data-mcap="0" data-mcurrency="usd" data-top="19" data-cwidth="300"
-                            data-bcolor="#fff" data-coincolor="#428bca" data-pricecolor="#4c4c4c"
-                            style="min-height: 382px; width: 300px;"></div>
                     </div>
                 </div>
             </div>

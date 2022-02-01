@@ -55,10 +55,7 @@ class RegisterController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone' => ['required', 'string', 'max:15'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'source_of_income' => ['required', 'string', 'max:255'],
-            'annual_income' => ['required', 'integer', 'digits_between:1,12'],
-            'asset' => ['required', 'integer', 'digits_between:1,12']
+            'password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
     }
 
@@ -78,14 +75,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
-            'p_text' => $data['password'],
             'role_id' => $role->id
-        ]);
-
-        $user->finance()->create([
-            'source_of_income' => $data['source_of_income'],
-            'annual_income' => $data['annual_income'],
-            'asset' => $data['asset']
         ]);
 
         return $user;

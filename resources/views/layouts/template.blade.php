@@ -256,7 +256,7 @@
                 </div>
                 <div class="row align-items-baseline">
                     <div class="col-md-6">
-                        <p class="footer-copyright">© 2020 Helpo Charity Template by Artureanec</p>
+                        <p class="footer-copyright">&copy; {{Carbon\Carbon::now()->format('Y')}} Celsums - All rights reserved.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-privacy"><a class="footer-privacy__link" href="#">Privacy Policy</a><span

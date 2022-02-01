@@ -3,8 +3,8 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/volunteer.jpg" media="(min-width: 992px)" /><img class="img--bg"
-                    src="img/volunteer.jpg" alt="img" />
+                <source srcset="/template/assets/img/volunteer.jpg" media="(min-width: 992px)" /><img class="img--bg"
+                    src="/template/assets/img/volunteer.jpg" alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Compassion</span></div>
             <div class="container">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-xl-3">
-                        <div class="faq-aside"><img class="img--bg" src="img/about-us.jpg" alt="img" />
+                        <div class="faq-aside"><img class="img--bg" src="/template/assets/img/about-us.jpg" alt="img" />
                             <h5 class="faq-aside__title">Any Question?</h5>
                             <p>Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn</p><a
                                 class="faq-aside__link" href="#">ASk Question</a>
@@ -130,7 +130,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img" /></div>
+                        <div class="bottom-background__img"><img src="/template/assets/img/bottom-bg.png" alt="img" /></div>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/blog.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/blog.jpg"
+                <source srcset="/template/assets/img/blog.jpg" media="(min-width: 992px)" /><img class="img--bg" src="/template/assets/img/blog.jpg"
                     alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Compassion</span></div>
@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-md-8 col-lg-9">
                         <div class="blog-post__top">
-                            <div class="blog-post__img"><img class="img--bg" src="img/blog-post.jpg" alt="img" />
+                            <div class="blog-post__img"><img class="img--bg" src="/template/assets/img/blog-post.jpg" alt="img" />
                             </div>
                             <div class="blog-post__description">
                                 <div class="row">
@@ -92,7 +92,7 @@
                         <h6 class="blog-post__title">Comments</h6>
                         <div class="comments">
                             <div class="comments__item">
-                                <div class="comments__item-img"><img class="img--bg" src="img/comment_1.jpg"
+                                <div class="comments__item-img"><img class="img--bg" src="/template/assets/img/comment_1.jpg"
                                         alt="img" /></div>
                                 <div class="comments__item-description">
                                     <div class="row align-items-center">
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                             <div class="comments__item">
-                                <div class="comments__item-img"><img class="img--bg" src="img/comment_2.jpg"
+                                <div class="comments__item-img"><img class="img--bg" src="/template/assets/img/comment_2.jpg"
                                         alt="img" /></div>
                                 <div class="comments__item-description">
                                     <div class="row align-items-center">
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                                 <div class="comments__item comments__item--sub">
-                                    <div class="comments__item-img"><img class="img--bg" src="img/comment_3.jpg"
+                                    <div class="comments__item-img"><img class="img--bg" src="/template/assets/img/comment_3.jpg"
                                             alt="img" /></div>
                                     <div class="comments__item-description">
                                         <div class="row align-items-center">
@@ -194,21 +194,21 @@
                         <h6 class="blog-post__title">Recent Posts</h6>
                         <div class="recent-posts">
                             <div class="recent-posts__item">
-                                <div class="recent-posts__item-img"><img class="img--bg" src="img/recent_1.jpg"
+                                <div class="recent-posts__item-img"><img class="img--bg" src="/template/assets/img/recent_1.jpg"
                                         alt="img" /></div>
                                 <div class="recent-posts__item-description"><a class="recent-posts__item-link"
                                         href="blog-post.html">Back to the future: Quality education</a><span
                                         class="recent-posts__item-value">23 Jan'19</span></div>
                             </div>
                             <div class="recent-posts__item">
-                                <div class="recent-posts__item-img"><img class="img--bg" src="img/recent_2.jpg"
+                                <div class="recent-posts__item-img"><img class="img--bg" src="/template/assets/img/recent_2.jpg"
                                         alt="img" /></div>
                                 <div class="recent-posts__item-description"><a class="recent-posts__item-link"
                                         href="blog-post.html">Back to the future: Quality education</a><span
                                         class="recent-posts__item-value">23 Jan'19</span></div>
                             </div>
                             <div class="recent-posts__item">
-                                <div class="recent-posts__item-img"><img class="img--bg" src="img/recent_3.jpg"
+                                <div class="recent-posts__item-img"><img class="img--bg" src="/template/assets/img/recent_3.jpg"
                                         alt="img" /></div>
                                 <div class="recent-posts__item-description"><a class="recent-posts__item-link"
                                         href="blog-post.html">Back to the future: Quality education</a><span
@@ -245,7 +245,7 @@
                 <div class="row offset-margin">
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_5.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_5.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #F36F8F;">Medicine</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Share HHAPI-NeSS this Mother’s Day
@@ -261,7 +261,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_6.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_6.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #49C2DF;">Water Delivery</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Save the Children's Role in Fight
@@ -277,7 +277,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_7.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_7.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #F8AC3A;">Food</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Back to the future: Quality education
@@ -300,7 +300,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img" /></div>
+                        <div class="bottom-background__img"><img src="/template/assets/img/bottom-bg.png" alt="img" /></div>
                     </div>
                 </div>
             </div>

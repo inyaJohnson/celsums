@@ -77,16 +77,11 @@
                                     <li><a href="{{ route('withdrawal') }}"><i
                                                 class="material-icons nav-icon text-16">account_balance_wallet</i>Withdraw</a>
                                     </li>
-                                    </li><span class="main-menu-title">STOCK</span>
-                                    <li><a href="{{ route('stock.index') }}"><i
-                                                class="material-icons nav-icon text-16">style</i>Stocks</a></li>
                                 @endcan
 
                                 @can('admin')
                                     <li><a href="{{ route('transactions.index') }}"><i
                                                 class="material-icons nav-icon text-16">comment</i>Transactions</a></li>
-                                    <li><a href="{{ route('stock.manage') }}"><i
-                                                class="material-icons nav-icon text-16">monetization_on</i>Stock</a></li>
                                     <li><a href="{{ route('reviews.index') }}"><i
                                                 class="material-icons nav-icon text-16">comment</i>Review</a></li>
                                     <li><a href="{{ route('users.index') }}"><i

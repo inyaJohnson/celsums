@@ -3,7 +3,7 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/blog.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/blog.jpg"
+                <source srcset="/template/assets/img/blog.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/blog.jpg"
                     alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Compassion</span></div>
@@ -20,13 +20,13 @@
             </div>
         </section>
         <!-- blog start-->
-        <section class="section blog background--brown"><img class="blog__bg" src="img/events_inner-bg.png"
+        <section class="section blog background--brown"><img class="blog__bg" src="/template/assets/img/events_inner-bg.png"
                 alt="img" />
             <div class="container">
                 <div class="row offset-margin">
                     <div class="col-md-6 col-lg-5 col-xl-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_1.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_1.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #49C2DF;">Water Delivery</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Save the Children's Role in Fight
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-7 col-xl-8">
-                        <div class="blog-item blog-item--style-2"><img class="img--bg" src="img/blog_2.png"
+                        <div class="blog-item blog-item--style-2"><img class="img--bg" src="/template/assets/img/blog_2.png"
                                 alt="img" />
                             <div class="blog-item__content"><span class="blog-item__badge"
                                     style="background-color: #2EC774;">Education</span>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-7 col-xl-8">
-                        <div class="blog-item blog-item--style-2"><img class="img--bg" src="img/blog_3.png"
+                        <div class="blog-item blog-item--style-2"><img class="img--bg" src="/template/assets/img/blog_3.png"
                                 alt="img" />
                             <div class="blog-item__content"><span class="blog-item__badge"
                                     style="background-color: #F8AC3A;">Food</span>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="col-md-6 col-lg-5 col-xl-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_4.png" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_4.png" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #F36F8F;">Medicine</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Save the Children's Role in Fight
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_5.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_5.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #F36F8F;">Medicine</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Share HHAPI-NeSS this Mother’s Day
@@ -106,7 +106,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_6.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_6.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #49C2DF;">Water Delivery</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Save the Children's Role in Fight
@@ -122,7 +122,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="img/blog_7.jpg" alt="img" /><span
+                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_7.jpg" alt="img" /><span
                                     class="blog-item__badge" style="background-color: #F8AC3A;">Food</span></div>
                             <div class="blog-item__content">
                                 <h6 class="blog-item__title"><a href="blog-post.html">Back to the future: Quality education
@@ -166,7 +166,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="bottom-background__img"><img src="img/bottom-bg.png" alt="img" /></div>
+                        <div class="bottom-background__img"><img src="/template/assets/img/bottom-bg.png" alt="img" /></div>
                     </div>
                 </div>
             </div>

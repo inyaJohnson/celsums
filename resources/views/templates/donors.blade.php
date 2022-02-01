@@ -3,7 +3,7 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/donors.jpg" media="(min-width: 992px)" /><img class="img--bg" src="img/donors.jpg"
+                <source srcset="/template/assets/img/donors.jpg" media="(min-width: 992px)" /><img class="img--bg" src="/template/assets/img/donors.jpg"
                     alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Mercy</span></div>
@@ -20,7 +20,7 @@
             </div>
         </section>
         <!-- donors inner start-->
-        <section class="section donors-inner"><img class="donors-inner__bg" src="img/donors_inner.png" alt="img" />
+        <section class="section donors-inner"><img class="donors-inner__bg" src="/template/assets/img/donors_inner.png" alt="img" />
             <div class="container">
                 <div class="row margin-bottom">
                     <div class="col-12">
@@ -38,28 +38,28 @@
                         <div class="slider-holder">
                             <div class="donors-slider donors-slider--style-2 offset-margin">
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_1.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_1.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_2.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_2.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_3.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_3.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_4.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_4.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_5.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_5.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_6.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_6.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_7.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_7.png" alt="donor" /></div>
                                 </div>
                                 <div class="donors-slider__item">
-                                    <div class="donors-slider__img"><img src="img/donor_8.png" alt="donor" /></div>
+                                    <div class="donors-slider__img"><img src="/template/assets/img/donor_8.png" alt="donor" /></div>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="info__img"><img class="img--layout" src="img/info_img-layout.png"
+                        <div class="info__img"><img class="img--layout" src="/template/assets/img/info_img-layout.png"
                                 alt="img" /><img src="img/info_img.png" alt="img" /></div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="info-banner"><img class="img--layout" src="img/info-banner_layout.png"
+                        <div class="info-banner"><img class="img--layout" src="/template/assets/img/info-banner_layout.png"
                                 alt="img" />
                             <div class="row margin-bottom">
                                 <div class="col-12">
@@ -155,7 +155,7 @@
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-lg-5">
-                                    <div class="info-banner__img"><img src="img/info-banner_img.png" alt="img" /></div>
+                                    <div class="info-banner__img"><img src="/template/assets/img/info-banner_img.png" alt="img" /></div>
                                 </div>
                                 <div class="col-lg-6">
                                     <p><strong>Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion,
@@ -177,8 +177,8 @@
         <!-- info banner end-->
         <!-- text section start-->
         <section class="section text-section text-section--style-2"><img class="text-section__bg-left"
-                src="img/text-section_left.png" alt="img" /><img class="text-section__bg-right"
-                src="img/text-section_right.png" alt="img" />
+                src="/template/assets/img/text-section_left.png" alt="img" /><img class="text-section__bg-right"
+                src="/template/assets/img/text-section_right.png" alt="img" />
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">

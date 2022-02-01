@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Citigroup Trade'),
+    'name' => env('APP_NAME', 'Celsums'),
 
     /*
     |--------------------------------------------------------------------------

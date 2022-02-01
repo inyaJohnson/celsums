@@ -3,8 +3,8 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="img/event-details.jpg" media="(min-width: 992px)" /><img class="img--bg"
-                    src="img/event-details.jpg" alt="img" />
+                <source srcset="/template/assets/img/event-details.jpg" media="(min-width: 992px)" /><img class="img--bg"
+                    src="/template/assets/img/event-details.jpg" alt="img" />
             </picture>
             <div class="promo-primary__description"> <span>Happiness</span></div>
             <div class="container">
@@ -20,11 +20,11 @@
             </div>
         </section>
         <!-- article start-->
-        <section class="section article"><img class="article__bg" src="img/events_inner-bg.png" alt="img" />
+        <section class="section article"><img class="article__bg" src="/template/assets/img/events_inner-bg.png" alt="img" />
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                        <div class="article__img"><img src="img/article.jpg" alt="img" /></div>
+                        <div class="article__img"><img src="/template/assets/img/article.jpg" alt="img" /></div>
                         <p><strong>Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike
                                 zebra danio king-of-the-salmon banjo catfish. Sea chub demoiselle whalefish zebra lionfish
                                 mud cat pelican eel.</strong></p>
@@ -108,14 +108,14 @@
             <div class="row no-gutters">
                 <div class="col-md-6">
                     <div class="additional-event"><a class="additional-event__img" href="event-details.html"><img
-                                class="img--bg" src="img/additional_1.jpg" alt="img" />
+                                class="img--bg" src="/template/assets/img/additional_1.jpg" alt="img" />
                             <div class="additional-event__text"><span>The Culture of</span><span>India. Volunteer</span>
                             </div>
                         </a></div>
                 </div>
                 <div class="col-md-6">
                     <div class="additional-event"><a class="additional-event__img" href="event-details.html"><img
-                                class="img--bg" src="img/additional_2.jpg" alt="img" />
+                                class="img--bg" src="/template/assets/img/additional_2.jpg" alt="img" />
                             <div class="additional-event__text"><span>Trinity</span><span>Trash Bash</span></div>
                         </a></div>
                 </div>
