@@ -12,27 +12,22 @@ class PagesController extends Controller
 {
 
     public function welcome() {
-        $reviews = Review::inRandomOrder()->take(5)->get();
-        return view('welcome', compact('reviews'));
+        return view('welcome');
     }
 
     public function about(){
-        return view('pages.about');
+        return view('templates.about');
     }
 
     public function investment(){
         return view('pages.investment');
     }
 
-    public function legal(){
-        return view('pages.legal');
+    public function contact(){
+        return view('templates.contact');
     }
 
-    public function contactUs(){
-        return view('contact_us');
-    }
-
-    public function contact(ContactRequest $request){
+    public function sendContactMessage(ContactRequest $request){
         $email = Mail::to('support@citigrouptrade.com');
         $message = ['success' => 'Congratulations. Your message has been sent successfully'];
         try {
@@ -41,6 +36,14 @@ class PagesController extends Controller
             $message = ['error' => $e->getMessage()];
         }
         return redirect()->back()->with($message);
+    }
+
+    public function volunteer(){
+        return view('templates.volunteer');
+    }
+
+    public function donorsAndPartners(){
+        return view('templates.donors');
     }
 
 }

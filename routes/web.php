@@ -15,8 +15,13 @@ use App\Http\Controllers\Admin\MessageController as AdminMessageController;
 use \App\Http\Controllers\Admin\TransactionController;
 use \App\Http\Controllers\Admin\StockController as  AdminStockController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -38,10 +43,22 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/setup', [SetupController::class, 'index'])->name('setup');
-Route::get('/legal', [PagesController::class, 'legal'])->name('legal');
 Route::resource('/reviews', ReviewController::class);
-Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact-us');
-Route::post('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::post('/contact', [PagesController::class, 'sendContactMessage'])->name('contactMessage');
+Route::resource('events', EventsController::class);
+Route::resource('blogs', BlogController::class);
+Route::resource('faqs', FAQController::class);
+Route::resource('galleries', GalleryController::class);
+Route::resource('/teams', TeamController::class);
+Route::get('/donors-partners', [PagesController::class, 'donorsAndPartners'])->name('donorsAndPartners');
+Route::get('/voluteers', [PagesController::class, 'voluteers'])->name('voluteers');
+
+
+
+
 
 
 

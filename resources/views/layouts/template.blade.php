@@ -53,21 +53,20 @@
                 <div class="aside-dropdown__item d-lg-none d-block">
                     <ul class="aside-menu">
                         <li class="aside-menu__item  aside-menu__item--active"><a
-                                class="aside-menu__link"><span>Home</span></a>
+                               href="{{route('welcome')}}" class="aside-menu__link"><span>Home</span></a>
                         </li>
                         <li class="aside-menu__item"><a class="aside-menu__link"
-                                href="/template/assets/about.html"><span>About</span></a></li>
+                                href="{{route('about')}}"><span>About</span></a></li>
                         <li class="aside-menu__item aside-menu__item--has-child"><a class="aside-menu__link"
                                 href="javascript:void(0);"><span>Pages</span></a>
                             <!-- sub menu start-->
                             <ul class="aside-menu__sub-list">
-                                <li><a href="/template/assets/about.html"><span>About</span></a></li>
-                                <li><a href="/template/assets/donors.html"><span>Donors & Partners</span></a></li>
-                                <li><a href="/template/assets/volunteer.html"><span>Become a Volunteer</span></a></li>
-                                <li><a href="/template/assets/events.html"><span>Events</span></a></li>
-                                <li><a href="/template/assets/blog.html"><span>Blog</span></a></li>
-                                <li><a href="/template/assets/gallery.html"><span>Gallery</span></a></li>
-                                <li><a href="/template/assets/faq.html"><span>FAQ</span></a></li>
+                                <li><a href="{{ route('donorsAndPartners') }}"><span>Donors & Partners</span></a></li>
+                                <li><a href="{{ route('voluteers') }}"><span>Become a Volunteer</span></a></li>
+                                <li><a href="{{ route('events.index') }}"><span>Events</span></a></li>
+                                <li><a href="{{ route('blogs.index') }}"><span>Blog</span></a></li>
+                                <li><a href="{{ route('galleries.index') }}"><span>Gallery</span></a></li>
+                                <li><a href="{{ route('faqs.index') }}"><span>FAQ</span></a></li>
                             </ul>
                             <!-- sub menu end-->
                         </li>
@@ -84,7 +83,7 @@
                         </li>
 
                         <li class="aside-menu__item"><a class="aside-menu__link"
-                                href="/template/assets/contacts.html"><span>Contacts</span></a></li>
+                                href="{{ route('contact') }}"><span>Contacts</span></a></li>
                     </ul>
                 </div>
                 <div class="aside-dropdown__item">
@@ -136,27 +135,22 @@
                         <nav>
                             <ul class="main-menu">
                                 <li class="main-menu__item main-menu__item--active"><a
-                                        class="main-menu__link" ><span>Home</span></a>
+                                    href="{{route('welcome')}}" class="main-menu__link"><span>Home</span></a>
 
                                 </li>
                                 <li class="main-menu__item"><a class="main-menu__link"
-                                        href="/template/assets/about.html"><span>About</span></a></li>
+                                        href="{{route('about')}}"><span>About</span></a></li>
                                 <li class="main-menu__item main-menu__item--has-child"><a class="main-menu__link"
                                         href="javascript:void(0);"><span>Pages</span></a>
                                     <!-- sub menu start-->
                                     <ul class="main-menu__sub-list sub-list--style-2">
-                                        <li><a href="/template/assets/about.html"><span>About</span></a></li>
-                                        <li><a href="/template/assets/donors.html"><span>Donors & Partners</span></a>
-                                        </li>
-                                        <li><a href="/template/assets/volunteer.html"><span>Become a
-                                                    Volunteer</span></a></li>
-                                        <li><a href="/template/assets/team-member.html"><span>Team Member</span></a>
-                                        </li>
-                                        <li><a href="/template/assets/events.html"><span>Events</span></a></li>
-                                        </li>
-                                        <li><a href="/template/assets/blog.html"><span>Blog</span></a></li>
-                                        <li><a href="/template/assets/gallery.html"><span>Gallery</span></a></li>
-                                        <li><a href="/template/assets/faq.html"><span>FAQ</span></a></li>
+                                        <li><a href="{{ route('donorsAndPartners') }}"><span>Donors &
+                                                    Partners</span></a></li>
+                                        <li><a href="{{ route('voluteers') }}"><span>Become a Volunteer</span></a></li>
+                                        <li><a href="{{ route('events.index') }}"><span>Events</span></a></li>
+                                        <li><a href="{{ route('blogs.index') }}"><span>Blog</span></a></li>
+                                        <li><a href="{{ route('galleries.index') }}"><span>Gallery</span></a></li>
+                                        <li><a href="{{ route('faqs.index') }}"><span>FAQ</span></a></li>
                                     </ul>
                                     <!-- sub menu end-->
                                 </li>
@@ -173,7 +167,7 @@
                                     <!-- sub menu end-->
                                 </li>
                                 <li class="main-menu__item"><a class="main-menu__link"
-                                        href="/template/assets/contacts.html"><span>Contacts</span></a></li>
+                                        href="{{route('contact')}}"><span>Contacts</span></a></li>
                             </ul>
                         </nav>
                         <!-- main menu end-->
@@ -241,13 +235,13 @@
                         <nav>
                             <ul class="footer-menu">
                                 <li class="footer-menu__item footer-menu__item--active"><a class="footer-menu__link"
-                                        href="/template/assets/index.html">Home</a></li>
-                                <li class="footer-menu__item"><a class="footer-menu__link" href="#">Blog</a></li>
+                                        href="{{route('welcome')}}">Home</a></li>
+                                <li class="footer-menu__item"><a class="footer-menu__link" href="{{route('blogs.index')}}">Blog</a></li>
                                 <li class="footer-menu__item"><a class="footer-menu__link"
-                                        href="/template/assets/about.html">About</a></li>
-                                <li class="footer-menu__item"><a class="footer-menu__link" href="#">Contacts</a></li>
-                                <li class="footer-menu__item"><a class="footer-menu__link" href="#">Pages</a></li>
-                                <li class="footer-menu__item"><a class="footer-menu__link" href="#">Elements</a></li>
+                                        href="{{route('about')}}">About</a></li>
+                                <li class="footer-menu__item"><a class="footer-menu__link" href="{{route('contact')}}">Contacts</a></li>
+                                <li class="footer-menu__item"><a class="footer-menu__link" href="{{route('voluteers')}}">Volunteers</a></li>
+                                <li class="footer-menu__item"><a class="footer-menu__link" href="{{route('events.index')}}">Events</a></li>
                                 <li class="footer-menu__item"><a class="footer-menu__link"
                                         href="/template/assets/causes.html">Causes</a></li>
                             </ul>
@@ -436,4 +430,5 @@
         </svg>
     </div>
 </body>
+
 </html>

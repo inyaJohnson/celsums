@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{config('app.name')}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400|Roboto:300,400,500,700,900|Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/dashboard/dist/assets/css/pages/session/error.min.css">
-    <link rel="stylesheet" href="/dashboard/dist/assets/css/main.bundle.min.css">
-</head>
-
-<body>
-<div class="page-wrap height-100">
-    <div class="app-error">
-        <div class="fix d-flex align-items-center">
-            <i class="material-icons text-danger mr-md">error</i>
-            <div class="error-text">
-                <h1 class="error-title font-weight-bold">404</h1>
-                <div class="error-subtitle">Page not found</div>
+@extends('layouts.template')
+@section('content')
+    <main class="main"><img class="img--bg" src="/template/assets/img/404.jpg" alt="img" />
+        <section class="section error">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="align-container">
+                            <div class="align-container__item">
+                                <h1 class="error__title">404</h1>
+                                <h3 class="error__subtitle">Page not found</h3>
+                                <p class="error__text">Gray eel-catfish longnose whiptail catfish smalleye squaretail
+                                    longnose whiptail catfish smalleye squaretail Lorem, ipsum dolor.</p>
+                                @if (auth()->check())
+                                    <a class="button button--primary" href="{{ route('home') }}">Home Page</a>
+                                @else
+                                    <a class="button button--primary" href="{{ route('welcome') }}">Welcome Page</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="error-action d-flex justify-content-around mt-xxl">
-            <a href="{{route('home')}}" type="button" class="btn btn-opacity btn-primary btn-sm mr-0"> Back to Dashboard </a>
-            <a href="{{route('contact')}}" type="button" class="btn btn-opacity btn-danger btn-sm"> Report the problem</a>
-        </div>
-    </div>
-</div>
-</body>
+        </section>
+    </main>
+@endsection
