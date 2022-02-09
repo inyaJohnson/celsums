@@ -70,20 +70,19 @@
                             <ul class="metismenu show-on-load" id="ul-menu">
                                 <li><a href="{{ route('home') }}"><i
                                             class="material-icons nav-icon text-16">home</i>Home</a></li>
-                                @cannot('admin')
-                                    <span class="main-menu-title">PLANS</span>
-                                    <li><a href="{{ route('deposit') }}"><i
-                                                class="material-icons nav-icon text-16">input</i>Deposit</a></li>
-                                    <li><a href="{{ route('withdrawal') }}"><i
-                                                class="material-icons nav-icon text-16">account_balance_wallet</i>Withdraw</a>
-                                    </li>
-                                @endcan
-
+                                <span class="main-menu-title">ACTION</span>
+                                <li><a href="{{ route('admin.blogs.index') }}"><i
+                                            class="material-icons nav-icon text-16">comment</i>Blogs</a></li>
+                                <li><a href="{{ route('admin.events.index') }}"><i
+                                            class="material-icons nav-icon text-16">event</i>Events</a>
+                                </li>
+                                <li><a href="{{ route('admin.galleries.index') }}"><i
+                                            class="material-icons nav-icon text-16">photo</i>Gallery</a>
+                                </li>
+                                <li><a href="{{ route('admin.faqs.index') }}"><i
+                                            class="material-icons nav-icon text-16">help</i>FAQs</a>
+                                </li>
                                 @can('admin')
-                                    <li><a href="{{ route('transactions.index') }}"><i
-                                                class="material-icons nav-icon text-16">comment</i>Transactions</a></li>
-                                    <li><a href="{{ route('reviews.index') }}"><i
-                                                class="material-icons nav-icon text-16">comment</i>Review</a></li>
                                     <li><a href="{{ route('users.index') }}"><i
                                                 class="material-icons nav-icon text-16">people</i>Users</a></li>
 
@@ -185,7 +184,8 @@
                 <!-- Start:: Footer-->
                 <div class="flex-grow-1"></div>
                 <div class="bg-card px-lg py-md d-flex justify-content-center align-items-center flex-wrap shadow-6dp">
-                    <p class="text-muted m-0">&copy; {{Carbon\Carbon::now()->format('Y')}} Celsums - All rights reserved.</p>
+                    <p class="text-muted m-0">&copy; {{ Carbon\Carbon::now()->format('Y') }} Celsums - All rights
+                        reserved.</p>
                 </div>
                 <!-- End:: Footer-->
             </div>

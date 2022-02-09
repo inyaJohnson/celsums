@@ -14,7 +14,7 @@ class FAQController extends Controller
      */
     public function index()
     {
-        return view('templates.faq');
+        return view('faqs.index');
     }
 
     /**
@@ -81,5 +81,10 @@ class FAQController extends Controller
     public function destroy(FAQ $fAQ)
     {
         //
+    }
+
+    public function adminIndex(){
+        $faqs = FAQ::all();
+        return view('faqs.admin_index', compact($faqs));
     }
 }

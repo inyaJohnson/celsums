@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 
-class EventsController extends Controller
+class BlogCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('events.index');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class EventsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(BlogCategory $blogCategory)
     {
         //
     }
@@ -52,10 +52,10 @@ class EventsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(BlogCategory $blogCategory)
     {
         //
     }
@@ -64,10 +64,10 @@ class EventsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, BlogCategory $blogCategory)
     {
         //
     }
@@ -75,17 +75,11 @@ class EventsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $events
+     * @param  \App\Models\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(BlogCategory $blogCategory)
     {
         //
     }
-
-    public function adminIndex(){
-        $events = Event::all();
-        return view('events.admin_index', compact($events));
-    }
-
 }

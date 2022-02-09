@@ -43,10 +43,6 @@
                                                     href="{{ route('email.create', $hashIds->encode($user->id)) }}"><i
                                                         class="material-icons icon icon-sm">email</i>Send Email</a>
                                                 <a class="dropdown-item"
-                                                    href="{{ route('balance.edit', $hashIds->encode($user->id)) }}"><i
-                                                        class="material-icons icon icon-sm">create</i>Edit
-                                                    Balance</a>
-                                                <a class="dropdown-item"
                                                     href="{{ route('users.messages.store', $hashIds->encode($user->id)) }}"><i
                                                         class="material-icons icon icon-sm">chat</i>Quick Chat
                                                     </a>
