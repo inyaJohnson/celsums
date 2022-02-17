@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Team extends Model
+class Category extends Model
 {
     use HasFactory, SoftDeletes;
-    
-    protected $fillable = ['first_name','last_name','skill','description','image','position'];
+
+    protected $fillable = ['name', 'description'];
 }

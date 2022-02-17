@@ -23,6 +23,8 @@ class CreateEventsTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('venue');
+            $table->unsignedInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

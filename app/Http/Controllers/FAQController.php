@@ -24,7 +24,7 @@ class FAQController extends Controller
      */
     public function create()
     {
-        //
+        return view('faqs.create');
     }
 
     /**
@@ -85,6 +85,6 @@ class FAQController extends Controller
 
     public function adminIndex(){
         $faqs = FAQ::all();
-        return view('faqs.admin_index', compact($faqs));
+        return view('faqs.admin_index', compact('faqs'));
     }
 }

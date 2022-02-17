@@ -18,6 +18,7 @@ class CreateReviewsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->text('message');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

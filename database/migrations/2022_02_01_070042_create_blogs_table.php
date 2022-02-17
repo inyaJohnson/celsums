@@ -18,6 +18,8 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('caption')->nullable();
+            $table->unsignedInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
