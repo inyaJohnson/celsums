@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('css')
-    {{-- <link rel="stylesheet" href="dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" /> --}}
+    <link rel="stylesheet" href="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" />
     <link rel="stylesheet" href="/dashboard/dist/assets/vendors/quill/dist/quill.snow.css" />
 @endsection
 @section('custom_content')
@@ -27,15 +27,24 @@
                 @include('layouts.message')
             </div>
         </div>
-        
-        <h2 class="doc-section-title" id="examples">Quill Editor<a class="section-link" href="#examples"></a></h2>
-        <div class="doc-example">
-            <div id="quill-container">
-                <p>Hello World!</p>
-                <p>Some initial <strong>bold</strong> text</p>
-                <p><br /></p>
+        <form id="faq-form" action="{{ route('faqs.store') }}" method="post">
+            @csrf
+            <div class="doc-example">
+                <div class="form-group ">
+                    <input class="form-control" id="question" name="question" required placeholder="Enter Question" />
+                </div>
+                <div class="quill-container">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-opacity-primary btn-sm mr-2">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
     <!-- Start:: content (Your custom content)-->
 @endsection
@@ -43,25 +52,65 @@
 @section('script')
     <script src="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.js"></script>
     <script src="/dashboard/dist/assets/vendors/quill/dist/quill.min.js"></script>
-    <script type="text/javascript">
-        var toolbarOptions = [
-            [{
-                'header': [1, 2, 3, 4, 5, 6, false]
-            }],
-            [{
-                'list': 'ordered'
-            }, {
-                'list': 'bullet'
-            }],
-            ['blockquote', 'code-block'],
-            ['bold', 'italic', 'underline'],
-            ['image', 'code-block']
-        ]
-        var quill = new Quill('#quill-container', {
-            modules: {
-                toolbar: toolbarOptions
-            },
-            theme: 'snow' // or 'bubble'
-        });
+    <script>
+        $(document).ready(function() {
+            var toolbarOptions = [
+                [{
+                    'header': [1, 2, 3, 4, 5, 6, false]
+                }],
+                [{
+                    'list': 'ordered'
+                }, {
+                    'list': 'bullet'
+                }],
+                ['blockquote', 'code-block'],
+                ['bold', 'italic', 'underline'],
+                ['image', 'code-block']
+            ]
+            var quill = new Quill('.quill-container', {
+                modules: {
+                    toolbar: toolbarOptions
+                },
+                theme: 'snow', // or 'bubble'
+                placeholder: 'Enter Answer to Question...'
+            });
+
+            $('#faq-form').on('submit', function(e) {
+                e.preventDefault();
+                var myEditor = document.querySelector('.quill-container');
+                var answer = myEditor.children[0].innerHTML;
+                $.ajax({
+                    'type': 'POST',
+                    'data': $(this).serialize() + '&answer=' + answer,
+                    'url': $(this).attr('action'),
+                    'success': function(response) {
+                        if (response.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success...',
+                                text: response.message
+                            }).then(function(result) {
+                                if (result.value) {
+                                    window.location = "/admin/faqs";
+                                }
+                            })
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Ooops...',
+                                text: response.message
+                            })
+                        }
+                    },
+                    'error': function() {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ooops...',
+                            text: response.error
+                        })
+                    }
+                });
+            });
+        })
     </script>
 @endsection

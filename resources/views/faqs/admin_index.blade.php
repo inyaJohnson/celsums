@@ -45,7 +45,7 @@
                                         <div class="collapse {{($key == 0)?'show':''}}" id="collapse{{$faq->id}}" aria-labelledby="heading{{$faq->id}}"
                                             data-parent="#accordion1">
                                             <div class="card-body">
-                                                {{$faq->answer}}
+                                                {!!$faq->answer !!}
                                             </div>
                                         </div>
                                     </div>

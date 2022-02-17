@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FAQRequest;
 use App\Models\FAQ;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,10 @@ class FAQController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FAQRequest $request)
     {
-        //
+        FAQ::create($request->all());
+        return response()->json(['success' => true, 'message' => 'FAQ Created Successfully.']);
     }
 
     /**
