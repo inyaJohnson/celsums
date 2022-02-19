@@ -23,18 +23,22 @@
     <div class="container my-lg">
         <div class="row mb-md">
             <div class="col-12 text-center pt-l">
-                <h1 class="mb-xl"> Create Frequently Asked Questions</h1>
+                <h1 class="mb-xl"> Edit Frequently Asked Questions</h1>
                 @include('layouts.message')
             </div>
         </div>
-        <form id="faq-form" action="{{ route('faqs.store') }}" method="post">
+        <form id="faq-form" action="{{ route('faqs.update', $faq->id) }}" method="post">
+            @method('PUT')
             @csrf
             <div class="doc-example">
                 <div class="form-group ">
-                    <input class="form-control" id="question" name="question" required value="{{old('question')}}" placeholder="Enter Question" />
+                    <input class="form-control" id="question" name="question" required placeholder="Enter Question"
+                        value="{{ $faq->question }}" />
                 </div>
-                <textarea id="summernote" name="answer" required>{{old('answer')}}</textarea>
-                <div class="form-group">
+
+                <textarea id="summernote" name="answer">{!! $faq->answer !!}</textarea>
+
+                <div class="form-group d-flex justify-content-end">
                     <button type="submit" class="btn btn-opacity-primary btn-sm mr-2">
                         <i class="fa fa-dot-circle-o"></i> Submit
                     </button>

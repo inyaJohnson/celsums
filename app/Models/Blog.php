@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Blog extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $fillable = ['title','description','caption','category_id'];
+    protected $fillable = ['title','description','caption','category_id','slug'];
 }

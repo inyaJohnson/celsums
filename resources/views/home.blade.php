@@ -133,7 +133,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($transactions as $transaction)
+                                {{-- @foreach ($transactions as $transaction)
                                     <tr>
                                         <td>{{ $transaction->created_at->format('M d Y') }}</td>
                                         <td>{{ $transaction->user->name() }}</td>
@@ -142,7 +142,7 @@
                                         <td>{!! $transaction->status ? "<span class='badge badge-success'>Completed</span>" : "<span class='badge badge-warning'>Pending</span>" !!} </td>
                                         <td>${{ $transaction->amount }}</td>
                                     </tr>
-                                @endforeach
+                                @endforeach --}}
                             </tbody>
                         </table>
                     </div>
