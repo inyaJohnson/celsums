@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class BlogController extends Controller
 {
@@ -24,7 +28,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::get(['id','name']);
+        return view('blogs.create', compact('categories'));
     }
 
     /**
@@ -33,9 +38,15 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $request)
     {
-        //
+        if(isset($request->image)){
+            $image = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('store'), $image);
+        }
+        $data = ['image' => $image ?? null, 'user_id' => auth()->id(), 'slug' => strtolower(Str::slug($request->title, '-'))];
+        Blog::create($request->except('image') + $data);
+        return response()->json(['success' => true, 'message' => 'Blog Created Successfully.']);
     }
 
     /**
@@ -57,7 +68,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit', $blog);
     }
 
     /**

@@ -42,7 +42,7 @@ Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::post('/contact', [PagesController::class, 'sendContactMessage'])->name('contactMessage');
 
 Route::resource('events', EventsController::class);
-Route::resource('blogs', BlogController::class);
+// Route::resource('blogs', BlogController::class);
 Route::resource('faqs', FAQController::class);
 Route::resource('galleries', GalleryController::class);
 Route::resource('/teams', TeamController::class);
@@ -82,3 +82,6 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
         Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
     });
 });
+
+Route::resource('blogs', BlogController::class);
+

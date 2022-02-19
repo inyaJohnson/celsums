@@ -14,18 +14,30 @@
                 </nav>
             </div>
             <div class="flex-grow-1"></div>
-            <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm mr-2" href="#">Add new User </a>
+            <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm mr-2" href="{{ route('blogs.create') }}">Add new Blog </a>
             </div>
         </div>
     </div>
-    <div class="container pt-lg">
+    <div class="container">
+        <div class="row pt-l">
+            <div class="col-md-12 text-center pt-l">
+                <h1 class="mb-xl">Blogs</h1>
+            </div>
+        </div>
         @include('layouts.message')
         <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    @foreach ($blogs as $blog)
+            <div class="col-md-12 py-xl mb-lg">
+                    @if ($blogs->count() > 0)
+                        @foreach ($blogs as $blog)
 
-                    @endforeach
+                        @endforeach
+                    @else
+                        <div class="row pt-l">
+                            <div class="col-md-12 text-center pt-l">
+                                <h4 class="mb-xl">No Blogs Yet</h1>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -17,9 +17,12 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('description');
-            $table->string('caption')->nullable();
+            $table->text('caption')->nullable();
+            $table->string('image')->nullable();
             $table->unsignedInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('slug');
             $table->softDeletes();
             $table->timestamps();
