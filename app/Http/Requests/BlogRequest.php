@@ -28,10 +28,10 @@ class BlogRequest extends FormRequest
     {
         return [
             'title'=> 'required|string',
-            'description' => 'required|string',
+            'content' => 'required|string',
             'caption' => 'nullable|string',
             'category_id' => 'required|integer',
-            'image' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,svg'
+            'image' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,svg,gif'
         ];
     }
 
@@ -56,7 +56,9 @@ class BlogRequest extends FormRequest
     public function messages()
     {
         return [
-            'category_id.required' => 'Category is required'
+            'category_id.required' => 'Category is required',
+            'image.max' => 'Image can not be more than 2MB',
+            'image.mimes' => 'Only jpg, jpeg, png, svg, gif image formats are supported',
         ];
     }
 }

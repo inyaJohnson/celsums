@@ -45,8 +45,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="description" >Story</label>
-                    <textarea id="description" name="description" required> {{ old('description') }}</textarea>
+                    <label for="content" >Story</label>
+                    <textarea id="content" name="content" required> {{ old('content') }}</textarea>
                 </div>
 
                 <div class="form-group">

@@ -59,7 +59,6 @@
                                                             class="btn btn-opacity btn-danger btn-sm my-sm mr-sm delete-faq"
                                                             data-id="{{ $faq->id }}">Delete
                                                         </button>
-
                                                     </div>
                                                 </div>
                                             </div>

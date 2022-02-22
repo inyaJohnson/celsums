@@ -64,6 +64,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
     Route::get('events', [EventsController::class, 'adminIndex'])->name('admin.events.index');
+    Route::get('blogs/{blog}', [BlogController::class, 'adminShow'])->name('admin.blogs.show');
     Route::get('blogs', [BlogController::class, 'adminIndex'])->name('admin.blogs.index');
     Route::get('faqs', [FAQController::class, 'adminIndex'])->name('admin.faqs.index');
     Route::get('galleries', [GalleryController::class, 'adminIndex'])->name('admin.galleries.index');
