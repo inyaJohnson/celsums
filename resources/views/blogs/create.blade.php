@@ -24,7 +24,7 @@
     <div class="container my-lg">
         <div class="row mb-md">
             <div class="col-12 text-center pt-l">
-                <h1 class="mb-xl"> Create Frequently Asked Questions</h1>
+                <h1 class="mb-xl"> Create Blog</h1>
                 @include('layouts.message')
             </div>
         </div>
@@ -55,9 +55,9 @@
                 </div>
 
                 <div class="form-group">
-                    <h2 class="doc-section-title" id="examples"> Upload Blog Image <small class="text-danger">(Optional)</small></h2>
+                    <h2 class="doc-section-title" id="examples"> Upload Image <small class="text-danger">(Optional)</small></h2>
                     <div class="doc-example">
-                        <input name='image' type="file" />
+                        <input id='image' name='image' type="file" />
                     </div>
                 </div>
 

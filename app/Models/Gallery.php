@@ -10,5 +10,5 @@ class Gallery extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['image', 'title', 'category_id'];
+    protected $fillable = ['image', 'title', 'category_id','user_id'];
 }

@@ -15,7 +15,7 @@
             </div>
             <div class="flex-grow-1"></div>
             <div class="subheader-toolbar"><a class="btn btn-opacity-primary btn-sm mr-2"
-                    href="{{ route('blogs.create') }}">Add new Blog </a>
+                    href="{{ route('admin.blogs.index') }}">Back</a>
             </div>
         </div>
     </div>
