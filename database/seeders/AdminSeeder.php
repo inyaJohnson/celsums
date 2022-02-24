@@ -23,7 +23,8 @@ class AdminSeeder extends Seeder
             'email' => 'admin@celsums.com',
             'password' => bcrypt('$celsums@22'),
             'role_id' => $role->id,
-            'phone' => '12345678901'
+            'phone' => '12345678901',
+            'verified' => 1
         ]);
 
     }

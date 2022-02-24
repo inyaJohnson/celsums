@@ -65,7 +65,8 @@ class EventsController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        $categories = Category::get(['id', 'name']);
+        return view('events.edit', compact('event', 'categories'));
     }
 
     /**

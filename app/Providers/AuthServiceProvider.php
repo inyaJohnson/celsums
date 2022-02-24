@@ -30,7 +30,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('user', function ($user){
-            return ($user->hasRole('user') && $user->verified == 1 && $user->identification !== null ) ? true : false;
+            return ($user->anyRole(['user', 'admin']) && $user->verified == 1) ? true : false;
         });
     }
 }

@@ -40,16 +40,12 @@
                     </div>
                 </div>
                 <div class="card my-lg">
-                    <div class="card-body d-flex align-items-center justify-content-between">
-                        <div class="card-title m-0">Starts
-                            <button class="btn btn-opacity btn-primary rounded">{{ $event->start_date }}<div
-                                    class="ripple-container"></div>
-                            </button>
+                    <div class="card-body ">
+                        <div class="card-title">
+                            <small class="badge badge-success">Starts - {{ Carbon\Carbon::parse($event->start_date)->format('g:ia D jS M Y')}} </small>
                         </div>
-                        <div class="card-title m-0">End
-                            <button class="btn btn-opacity btn-primary rounded">{{ $event->end_date }}<div
-                                    class="ripple-container"></div>
-                            </button>
+                        <div class="card-title">
+                            <small class="badge badge-danger">Ends - {{  Carbon\Carbon::parse($event->end_date)->format('g:ia D jS M Y') }} </small>
                         </div>
                     </div>
                 </div>
@@ -57,7 +53,7 @@
                     <div class="card-body d-flex align-items-center justify-content-between">
                         <a class="btn btn-opacity btn-primary btn-sm my-sm mr-sm "
                             href="{{ route('events.edit', $event->id) }}" title="Edit">Edit</a>
-                        <button type="button" class="btn btn-opacity btn-danger btn-sm my-sm mr-sm delete-blog"
+                        <button type="button" class="btn btn-opacity btn-danger btn-sm my-sm mr-sm delete-event"
                             data-id="{{ $event->id }}">Delete
                         </button>
                     </div>

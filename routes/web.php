@@ -57,20 +57,21 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/profile', [SettingController::class, 'updateProfile'])->name('profile.update');
     Route::get('/profile', [SettingController::class, 'profile'])->name('profile.index');
-
     Route::resource('messages', MessageController::class);
+
+    Route::group(['middleware' => ['user'], 'prefix' => 'admin'], function () {
+        Route::get('events', [EventsController::class, 'adminIndex'])->name('admin.events.index');
+        Route::get('events/{event}', [EventsController::class, 'adminShow'])->name('admin.events.show');
+        Route::get('blogs/{blog}', [BlogController::class, 'adminShow'])->name('admin.blogs.show');
+        Route::get('blogs', [BlogController::class, 'adminIndex'])->name('admin.blogs.index');
+        Route::get('faqs', [FAQController::class, 'adminIndex'])->name('admin.faqs.index');
+        Route::get('galleries', [GalleryController::class, 'adminIndex'])->name('admin.galleries.index');
+        Route::get('teams', [TeamController::class, 'adminIndex'])->name('admin.teams.index');
+    });
 });
 
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
-    Route::get('events', [EventsController::class, 'adminIndex'])->name('admin.events.index');
-    Route::get('events/{event}', [EventsController::class, 'adminShow'])->name('admin.events.show');
-    Route::get('blogs/{blog}', [BlogController::class, 'adminShow'])->name('admin.blogs.show');
-    Route::get('blogs', [BlogController::class, 'adminIndex'])->name('admin.blogs.index');
-    Route::get('faqs', [FAQController::class, 'adminIndex'])->name('admin.faqs.index');
-    Route::get('galleries', [GalleryController::class, 'adminIndex'])->name('admin.galleries.index');
-    Route::get('teams', [TeamController::class, 'adminIndex'])->name('admin.teams.index');
-
     Route::group(['namespace' => 'Admin'], function () {
         Route::get('/email-create/{id}', [EmailController::class, 'createEmail'])->name('email.create');
         Route::post('/email-send', [EmailController::class, 'sendEmail'])->name('email.send');
@@ -81,9 +82,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
         Route::get('/users/{id}/verify', [AdminUserController::class, 'verify'])->name('users.verify');
         Route::get('/users/{id}/unverify', [AdminUserController::class, 'unverify'])->name('users.unverify');
         Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.delete');
+        Route::get('/users/create', [AdminUserController::class, 'create'])->name('users.create');
+        Route::post('/users', [AdminUserController::class, 'store'])->name('users.store');
         Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
     });
 });
-
-// Route::resource('blogs', BlogController::class);
 

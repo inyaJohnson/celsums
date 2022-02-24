@@ -57,6 +57,10 @@ class User extends Authenticatable
         return null !== $this->role()->where('name', $role)->first();
     }
 
+    public function anyRole($roles){
+        return null !== $this->role()->whereIn('name', $roles)->first();
+    }
+
     public function address(){
         return $this->hasOne(Address::class, 'user_id');
     }
