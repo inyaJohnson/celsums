@@ -42,7 +42,7 @@ Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::post('/contact', [PagesController::class, 'sendContactMessage'])->name('contactMessage');
 
 Route::resource('events', EventsController::class);
-// Route::resource('blogs', BlogController::class);
+Route::resource('blogs', BlogController::class);
 Route::resource('faqs', FAQController::class);
 Route::resource('galleries', GalleryController::class);
 Route::resource('/teams', TeamController::class);
@@ -64,6 +64,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
     Route::get('events', [EventsController::class, 'adminIndex'])->name('admin.events.index');
+    Route::get('events/{event}', [EventsController::class, 'adminShow'])->name('admin.events.show');
     Route::get('blogs/{blog}', [BlogController::class, 'adminShow'])->name('admin.blogs.show');
     Route::get('blogs', [BlogController::class, 'adminIndex'])->name('admin.blogs.index');
     Route::get('faqs', [FAQController::class, 'adminIndex'])->name('admin.faqs.index');
@@ -84,5 +85,5 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
     });
 });
 
-Route::resource('blogs', BlogController::class);
+// Route::resource('blogs', BlogController::class);
 

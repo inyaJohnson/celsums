@@ -31,7 +31,7 @@ class BlogRequest extends FormRequest
             'content' => 'required|string',
             'caption' => 'nullable|string',
             'category_id' => 'required|integer',
-            'image' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,svg,gif'
+            'image' => 'required|file|max:2048|mimes:jpg,jpeg,png,svg,gif'
         ];
     }
 

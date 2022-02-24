@@ -28,7 +28,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = Category::get(['id','name']);
+        $categories = Category::get(['id', 'name']);
         return view('blogs.create', compact('categories'));
     }
 
@@ -40,11 +40,10 @@ class BlogController extends Controller
      */
     public function store(BlogRequest $request)
     {
-        if(isset($request->image)){
-            $image = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('store'), $image);
-        }
-        $data = ['image' => $image ?? null, 'user_id' => auth()->id(), 'slug' => strtolower(Str::slug($request->title, '-'))];
+        $image = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('store'), $image);
+
+        $data = ['image' => $image, 'user_id' => auth()->id(), 'slug' => strtolower(Str::slug($request->title, '-'))];
         Blog::create($request->except('image') + $data);
         return response()->json(['success' => true, 'message' => 'Blog Created Successfully.']);
     }
@@ -57,7 +56,6 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-
     }
 
     /**
@@ -81,11 +79,11 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        if(isset($request->image)){
+        if (isset($request->image)) {
             $image = time() . '.' . $request->image->extension();
             $request->image->move(public_path('store'), $image);
         }
-        $data = ['image' => $image ?? null, 'user_id' => auth()->id(), 'slug' => strtolower(Str::slug($request->title, '-'))];
+        $data = ['image' => $image ?? $blog->image, 'user_id' => auth()->id(), 'slug' => strtolower(Str::slug($request->title, '-'))];
         $blog->update($request->except('image') + $data);
         return response()->json(['success' => true, 'message' => 'Blog Updated Successfully.']);
     }
@@ -102,12 +100,14 @@ class BlogController extends Controller
         return response()->json(['success' => true, 'message' => 'Blog Deleted Successfully.']);
     }
 
-    public function adminIndex(){
-        $blogs = Blog::with('creator','comments')->get();
+    public function adminIndex()
+    {
+        $blogs = Blog::with('creator', 'comments')->get();
         return view('blogs.admin_index', compact('blogs'));
     }
 
-    public function adminShow(Blog $blog){
+    public function adminShow(Blog $blog)
+    {
         return view('blogs.admin_show', compact('blog'));
     }
 }

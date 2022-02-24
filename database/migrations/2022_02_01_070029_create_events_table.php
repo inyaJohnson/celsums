@@ -17,12 +17,14 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->string('caption')->nullable();
+            $table->text('caption')->nullable();
             $table->string('start_date');
             $table->string('end_date');
-            $table->string('phone');
-            $table->string('email');
+            $table->string('image');
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
             $table->string('venue');
+            $table->string('slug');
             $table->unsignedInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->unsignedInteger('user_id')->nullable();

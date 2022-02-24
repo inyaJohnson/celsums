@@ -51,7 +51,7 @@
 
                 <div class="form-group">
                     <label for="caption">Summary <span class="text-danger">(Optional)</span></label>
-                    <textarea id="caption" name="caption">{!! $blog->caption !!}}</textarea>
+                    <textarea id="caption" name="caption">{!! $blog->caption !!}</textarea>
                 </div>
 
                 <div class="form-group">

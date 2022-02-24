@@ -10,6 +10,10 @@ class Event extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['name','description','caption','start_date','end_date','phone','email','venue','user_id'];
+    protected $fillable = ['name','description','caption','start_date','end_date','phone','email','venue','user_id', 'image', 'slug'];
+
+    public function creator(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
 }
