@@ -18,7 +18,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs.index');
+        $blogs = Blog::get();
+        return view('blogs.index', compact('blogs'));
     }
 
     /**
@@ -56,6 +57,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
+        return view('blogs.show', compact('blog'));
     }
 
     /**
@@ -102,7 +104,7 @@ class BlogController extends Controller
 
     public function adminIndex()
     {
-        $blogs = Blog::with('creator', 'comments')->get();
+        $blogs = Blog::with('creator', 'comments')->latest()->get();
         return view('blogs.admin_index', compact('blogs'));
     }
 

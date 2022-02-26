@@ -40,7 +40,7 @@
                     <select class="form-control js-example-basic-single" id="category_id" name="category_id">
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}"
-                                {{ $category->id == $event->category_id ? 'selceted' : '' }}>{{ $category->name }}
+                                {{ $category->id == $event->category_id ? 'selected' : '' }}>{{ $category->name }}
                             </option>
                         @endforeach
                     </select>
