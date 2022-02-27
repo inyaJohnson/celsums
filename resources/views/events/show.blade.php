@@ -47,7 +47,7 @@
                                         <div class="article-information__details">
                                             <div class="article-information__details-item"><span>Phone:</span><a
                                                 href="tel:{{$event->phone}}">{{$event->phone}}</a></div>
-                                            <div class="article-information__details-item"><span class="fas fa-envelop"></span><a
+                                            <div class="article-information__details-item"><a
                                                     href="mailto:{{$event->email}}">{{$event->email}}</a></div>
                                         </div>
                                     </div>
