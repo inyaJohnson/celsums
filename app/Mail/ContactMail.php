@@ -17,6 +17,7 @@ class ContactMail extends Mailable
      * @return void
      */
     public $data;
+    
     public function __construct($data)
     {
         $this->data = $data;
@@ -29,7 +30,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('support@citigrouptrade.com')->view('mail.contact');
+        $email = $this->from('support@celsums.com')->view('mail.contact');
         return $email;
     }
 }

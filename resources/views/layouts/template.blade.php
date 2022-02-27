@@ -11,6 +11,7 @@
     <title>{{ config('app.name') }}</title>
     <!-- styles-->
     <link rel="stylesheet" href="/template/assets/css/styles.min.css" />
+    @yield('css')
     <!-- web-font loader-->
     <script>
         WebFontConfig = {
@@ -430,5 +431,5 @@
         </svg>
     </div>
 </body>
-
+@yield('script')
 </html>

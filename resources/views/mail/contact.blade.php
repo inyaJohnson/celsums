@@ -75,7 +75,7 @@
                         vertical-align: top;">
                                             <p
                                                 style='text-align: center; display: block; Margin: 0px auto 20px auto; padding: 0px 20px 0px 20px; font-size: 30px; font-weight: bold; color:rgb(15,26,54,255);'>
-                                                Citigroup Trade</p>
+                                                Celsums</p>
                                             <h4 style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: bold;
@@ -85,7 +85,7 @@
     text-decoration: underline;
 
 
-">{{ $data['subject'] }}</h4>
+">Message from {{ $data['first_name'] .' '. $data['last_name'] }}</h4>
                                             <p style="font-family: Verdana;
                             font-size: 14px;
                             font-weight: normal;
@@ -95,7 +95,7 @@
                             font-size: 14px;
                             font-weight: normal;
                             margin: 0;
-                            margin-bottom: 15px;"> I'm {{ $data['name'] }}, Contact me on {{ $data['email'] }}</p>
+                            margin-bottom: 15px;"> I'm {{ $data['first_name'] .' '. $data['last_name'] }}, Contact me on {{ $data['email'] }}</p>
 
                                         </td>
                                     </tr>
@@ -135,7 +135,7 @@
                         text-align: center;
                         ">
                                         388 Greenwich Street Tower Building,
-                                        New York, NY 10013.
+                                       Lagos.
                                     </span>
                                 </td>
                             </tr>
@@ -148,7 +148,7 @@
                     color: #aaaaaa;
                     text-align: center;">
                                     Please read more on the
-                                    <a href="https://citigrouptrade.com/" style="color: #65d5f7;
+                                    <a href="https://celsums.com/" style="color: #65d5f7;
                     font-size: 12px;
                     text-align: center;
                     text-decoration: none;">Home Page</a>.

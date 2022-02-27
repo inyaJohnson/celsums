@@ -32,7 +32,7 @@ class TemplateMail extends Mailable
      */
     public function build()
     {
-        $email = $this->from('support@citigrouptrade.com', 'Citigroup Trade')->subject($this->title)->view('mail.template');
+        $email = $this->from('support@celsums.com', 'Citigroup Trade')->subject($this->title)->view('mail.template');
 
         if (isset($this->data['attachment']) && !is_string($this->data['attachment'])) {
             $email->attach($this->data['attachment']->getRealPath(),

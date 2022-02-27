@@ -83,9 +83,11 @@
                                             class="material-icons nav-icon text-16">help</i>FAQs</a>
                                 </li>
                                 @can('admin')
-                                    <li><a href="{{ route('users.index') }}"><i
-                                                class="material-icons nav-icon text-16">people</i>Users</a></li>
+                                    <li><a href="{{ route('admin.teams.index') }}"><i
+                                                class="material-icons nav-icon text-16">people</i>Team Members</a></li>
 
+                                    <li><a href="{{ route('users.index') }}"><i
+                                                class="material-icons nav-icon text-16">group</i>Users</a></li>
                                 @endcan
                             </ul>
                         </nav>

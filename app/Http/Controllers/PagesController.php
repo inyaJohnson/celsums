@@ -28,14 +28,14 @@ class PagesController extends Controller
     }
 
     public function sendContactMessage(ContactRequest $request){
-        $email = Mail::to('support@citigrouptrade.com');
+        $email = Mail::to('support@celsum.com');
         $message = ['success' => 'Congratulations. Your message has been sent successfully'];
         try {
             $email->send( new ContactMail($request->all()));
         }catch (\Exception $e){
             $message = ['error' => $e->getMessage()];
         }
-        return redirect()->back()->with($message);
+        return response()->json($message);
     }
 
     public function volunteer(){

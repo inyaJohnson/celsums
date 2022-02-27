@@ -1,4 +1,7 @@
 @extends('layouts.template')
+@section('css')
+    <link rel="stylesheet" href="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" />
+@endsection
 @section('content')
     <main class="main">
         <section class="promo-primary">
@@ -11,7 +14,7 @@
                 <div class="row">
                     <div class="col-auto">
                         <div class="align-container">
-                            <div class="align-container__item"><span class="promo-primary__pre-title">Helpo</span>
+                            <div class="align-container__item"><span class="promo-primary__pre-title">{{config('app.name')}}</span>
                                 <h1 class="promo-primary__title"><span>Contacts</span></h1>
                             </div>
                         </div>
@@ -94,16 +97,17 @@
                 <div class="container">
                     <div class="row justify-content-end">
                         <div class="col-xl-6">
-                            <form class="form message-form" action="javascript:void(0);">
+                            <form id='contact-form' class="form message-form"  method="POST" action="{{route('contactMessage')}}">
+                                @csrf
                                 <h6 class="form__title">Send Message</h6><span class="form__text">* The following
                                     info is required</span>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input class="form__field" type="text" name="first-name"
+                                        <input class="form__field" type="text" name="first_name"
                                             placeholder="First Name *" required="required" />
                                     </div>
                                     <div class="col-lg-6">
-                                        <input class="form__field" type="text" name="last-name" placeholder="Last Name *"
+                                        <input class="form__field" type="text" name="last_name" placeholder="Last Name *"
                                             required="required" />
                                     </div>
                                     <div class="col-lg-6">
@@ -111,7 +115,7 @@
                                             required="required" />
                                     </div>
                                     <div class="col-lg-6">
-                                        <input class="form__field" type="tel" name="phone-number" placeholder="Phone" />
+                                        <input class="form__field" type="tel" name="phone_number" placeholder="Phone" />
                                     </div>
                                     <div class="col-12">
                                         <textarea class="form__message form__field" name="message"
@@ -143,3 +147,8 @@
         <!-- bottom bg end-->
     </main>
 @endsection
+@section('script')
+    <script src="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="/template/assets/js/custom/contact.js"></script>
+@endsection
+

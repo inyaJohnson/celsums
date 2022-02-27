@@ -90,6 +90,21 @@
                 </div>
             </div>
 
+            <div class="col-lg-6 mb-md">
+                <div class="card bg-secondary h-100">
+                    <div class="card-body d-flex align-items-center">
+                        <a href="{{ route('admin.teams.index') }}"
+                            class="ul-cryptocurrency-card d-flex flex-grow-1 justify-content-between align-items-center p-4">
+                            <div>
+                                <p class="m-0 text-white">Team</p>
+                                <div class="card-title text-white m-0">{{ number_format($teamMemberCount) }} Members</div>
+                            </div>
+                            <i class="material-icons">people</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Start:: content (Your custom content)-->

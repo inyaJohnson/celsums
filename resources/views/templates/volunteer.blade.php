@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-auto">
                         <div class="align-container">
-                            <div class="align-container__item"><span class="promo-primary__pre-title">Helpo</span>
+                            <div class="align-container__item"><span class="promo-primary__pre-title">{{config('app.name')}}</span>
                                 <h1 class="promo-primary__title"><span>Become</span> <span>a Volunteer</span></h1>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-auto">
                         <div class="align-container">
-                            <div class="align-container__item"><span class="promo-primary__pre-title">Helpo</span>
+                            <div class="align-container__item"><span class="promo-primary__pre-title">{{config('app.name')}}</span>
                                 <h1 class="promo-primary__title"><span>Gallery</span> <span>Masonry</span></h1>
                             </div>
                         </div>
@@ -26,58 +26,26 @@
                     <div class="col-12">
                         <!-- filter panel start-->
                         <ul class="filter-panel">
-                            <li class="filter-panel__item filter-panel__item--active" data-filter="*"><span>All
-                                    Causes</span></li>
-                            <li class="filter-panel__item" data-filter=".category_1"><span>Water Delivery</span></li>
-                            <li class="filter-panel__item" data-filter=".category_2"><span>Medicine</span></li>
-                            <li class="filter-panel__item" data-filter=".category_3"><span>Education</span></li>
-                            <li class="filter-panel__item" data-filter=".category_4"><span>Food</span></li>
+                            <li class="filter-panel__item filter-panel__item--active" data-filter="*"><span>All</span></li>
+                            @foreach ($categories as $category)
+                                <li class="filter-panel__item" data-filter=".category_{{ $category->id }}">
+                                    <span>{{ $category->name }}</span></li>
+                            @endforeach
                         </ul>
                         <!-- filter panel end-->
                     </div>
                 </div>
             </div>
             <div class="row no-gutters gallery-masonry">
-                <div class="col-6 col-md-4 gallery-masonry__item category_1"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_1.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_1.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-4 gallery-masonry__item category_1"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_2.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_2.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-4 gallery-masonry__item category_2"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_3.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_3.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-4 gallery-masonry__item category_2"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_4.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_4.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-8 gallery-masonry__item category_3"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-1" href="/template/assets/img/gallery_5.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_5.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-4 gallery-masonry__item category_3"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_6.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_6.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-8 gallery-masonry__item category_4"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-3" href="/template/assets/img/gallery_7.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_7.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
-                <div class="col-6 col-md-4 gallery-masonry__item category_4"><a
-                        class="gallery-masonry__img gallery-masonry__item--height-2" href="/template/assets/img/gallery_8.jpg"
-                        data-fancybox="gallery"><img class="img--bg" src="/template/assets/img/gallery_8.jpg" alt="img" />
-                        <h6 class="gallery-masonry__description">He Need Your Protection</h6>
-                    </a></div>
+
+                @foreach ($photos as $photo)
+                    <div class="col-6 col-md-4 gallery-masonry__item category_{{$photo->id}}"><a
+                            class="gallery-masonry__img gallery-masonry__item--height-2"
+                            href="/store/{{$photo->image}}" data-fancybox="gallery"><img class="img--bg"
+                                src="/store/{{$photo->image}}" alt="img" />
+                            <h6 class="gallery-masonry__description">{{$photo->title}}</h6>
+                        </a></div>
+                @endforeach
             </div>
             <div class="container">
                 <div class="row">

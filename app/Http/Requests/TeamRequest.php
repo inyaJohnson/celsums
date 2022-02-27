@@ -5,8 +5,9 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Support\Facades\Gate;
 
-class ContactRequest extends FormRequest
+class TeamRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -15,7 +16,7 @@ class ContactRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return Gate::allows('user');
     }
 
     /**
@@ -26,11 +27,13 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email'  => 'required|email',
-            'phone_number'  => 'nullable|max:15',
-            'message'  => 'required|string'
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'image' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,svg,gif',
+            'position' => 'required|string|max:255',
+            'facebook' => 'nullable|string|max:255',
+            'youtube' => 'nullable|string|max:255',
+            'twitter' => 'nullable|string|max:255'
         ];
     }
 
