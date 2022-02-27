@@ -57,7 +57,10 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return view('blogs.show', compact('blog'));
+        $similarBlogs = Blog::where('category_id', $blog->category_id)->latest()->take(3)->get();
+        $recentBlogs = Blog::latest()->take(3)->get();
+        $categories = Category::get(['id', 'name']);
+        return view('blogs.show', compact('blog', 'recentBlogs', 'categories', 'similarBlogs'));
     }
 
     /**

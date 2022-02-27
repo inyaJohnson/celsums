@@ -31,88 +31,17 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-xl-9">
+                        @foreach ($faqs as $faq)
                         <div class="accordion accordion--primary">
                             <div class="accordion__title-block">
-                                <h6 class="accordion__title">Health in other Countries?</h6><span
+                                <h6 class="accordion__title">{{$faq->question}}</h6><span
                                     class="accordion__close"></span>
                             </div>
                             <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
+                                <p>{!! $faq->answer !!}</p>
                             </div>
                         </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">Water Delivery in Africa?</h6><span
-                                    class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">We Build and Create?</h6><span class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">How to became a volounteer?</h6><span
-                                    class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">Health in other Countries?</h6><span
-                                    class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">We Build and Create?</h6><span class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
-                        <div class="accordion accordion--primary">
-                            <div class="accordion__title-block">
-                                <h6 class="accordion__title">How to became a volounteer?</h6><span
-                                    class="accordion__close"></span>
-                            </div>
-                            <div class="accordion__text-block">
-                                <p>Burma danio black bass straptail southern Dolly Varden orbicular velvetfish trumpetfish;
-                                    bluntnose minnow. Hatchetfish pricklefish sixgill ray sawfish scaly dragonfish! Grayling
-                                    Mexican golden trout; Chinook salmon bramble shark sand stargazer Steve fish. Scat zebra
-                                    pleco graveldiver river shark tripod fish; flagtail bala shark warbonnet.</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="col-lg-4 col-xl-3">
                         <div class="faq-aside"><img class="img--bg" src="/template/assets/img/about-us.jpg" alt="img" />

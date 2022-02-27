@@ -23,32 +23,31 @@
         <section class="section events-inner"><img class="events-inner__bg" src="/template/assets/img/events_inner-bg.png" alt="img" />
             <div class="container">
                 <div class="row offset-30">
+                    @foreach ( $events as $event )
                     <div class="col-xl-10 offset-xl-1">
                         <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>30</span><span>Oct, 19</span></div>
+                            <div class="upcoming-item__date"><span>{{\Carbon\Carbon::parse($event->start_date)->format('d')}}</span><span>{{\Carbon\Carbon::parse($event->start_date)->format('M, y')}}</span></div>
                             <div class="upcoming-item__body">
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_4.jpg"
+                                        <div class="upcoming-item__img"><img class="img--bg" src="/store/{{$event->image}}"
                                                 alt="img" /></div>
                                     </div>
                                     <div class="col-lg-7 col-xl-8">
                                         <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">The Culture of
-                                                    India. Rebirth</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
+                                            <h6 class="upcoming-item__title"><a href="{{route('events.show', $event->id)}}">{{$event->name}}</a></h6>
+                                            <p>{!!$event->caption!!}</p>
                                             <div class="upcoming-item__details">
                                                 <p>
                                                     <svg class="icon">
                                                         <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
+                                                    </svg> <strong>{{\Carbon\Carbon::parse($event->start_date)->format('F d,')}}</strong> {{\Carbon\Carbon::parse($event->start_date)->format('h:i A')}} - <strong>{{\Carbon\Carbon::parse($event->end_date)->format('F d,')}}
+                                                        </strong> {{\Carbon\Carbon::parse($event->end_date)->format('h:i A')}}
                                                 </p>
                                                 <p>
                                                     <svg class="icon">
                                                         <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
+                                                    </svg> <strong>{{$event->venue}}</strong>
                                                 </p>
                                             </div>
                                         </div>
@@ -57,176 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>31</span><span>Oct, 19</span></div>
-                            <div class="upcoming-item__body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_5.jpg"
-                                                alt="img" /></div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-8">
-                                        <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">Help for Language.
-                                                    Voluanteer</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
-                                            <div class="upcoming-item__details">
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
-                                                </p>
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>15</span><span>Nov, 19</span></div>
-                            <div class="upcoming-item__body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_6.jpg"
-                                                alt="img" /></div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-8">
-                                        <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">Bike Racing
-                                                    Charity Event 2019</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
-                                            <div class="upcoming-item__details">
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
-                                                </p>
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>21</span><span>Nov, 19</span></div>
-                            <div class="upcoming-item__body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_7.jpg"
-                                                alt="img" /></div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-8">
-                                        <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">Trinity Trash
-                                                    Bash</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
-                                            <div class="upcoming-item__details">
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
-                                                </p>
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>25</span><span>Nov, 19</span></div>
-                            <div class="upcoming-item__body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_8.jpg"
-                                                alt="img" /></div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-8">
-                                        <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">Snowdon by
-                                                    Night</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
-                                            <div class="upcoming-item__details">
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
-                                                </p>
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="upcoming-item">
-                            <div class="upcoming-item__date"><span>01</span><span>Dec, 19</span></div>
-                            <div class="upcoming-item__body">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-5 col-xl-4">
-                                        <div class="upcoming-item__img"><img class="img--bg" src="/template/assets/img/event_9.jpg"
-                                                alt="img" /></div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-8">
-                                        <div class="upcoming-item__description">
-                                            <h6 class="upcoming-item__title"><a href="event-details.html">The Big Sleep
-                                                    Out</a></h6>
-                                            <p>Minnow snoek icefish velvet-belly shark, California halibut round stingray
-                                                northern sea robin. Southern grayling trout-perch.</p>
-                                            <div class="upcoming-item__details">
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#clock"></use>
-                                                    </svg> <strong>September 30,</strong> 10:00 AM - <strong>October
-                                                        31,</strong> 18:00 PM
-                                                </p>
-                                                <p>
-                                                    <svg class="icon">
-                                                        <use xlink:href="#placeholder"></use>
-                                                    </svg> <strong>Dark Spurt,</strong> San Francisco, CA 94528, USA
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="row">
                     <div class="col-12">

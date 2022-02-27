@@ -16,7 +16,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('events.index');
+        $events = Event::latest()->get();
+        return view('events.index', compact('events'));
     }
 
     /**
@@ -54,7 +55,8 @@ class EventsController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $categories = Category::all();
+        return view('events.show', compact('categories', 'event'));
     }
 
     /**
