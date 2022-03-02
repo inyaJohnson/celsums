@@ -37,7 +37,12 @@
                                     @foreach ($teams as $member)
                                         <div class="col-md-4 p-0">
                                             <img src="/store/{{ $member->image }}" width="100%" height="248" />
-                                            <button type="button" style="position: absolute; top:0px; right:0px;"
+                                            <a href="{{ route('teams.edit', $member->id) }}" type="button"
+                                                style="position: absolute; top:0px; right:0px;"
+                                                class="btn btn-opacity btn-primary btn-sm edit-member" title="Edit"><i
+                                                    class="material-icons icon icon-sm">edit</i>
+                                            </a>
+                                            <button type="button" style="position: absolute; bottom:0px; right:0px;"
                                                 class="btn btn-opacity btn-danger btn-sm delete-member" title="Delete"
                                                 data-id="{{ $member->id }}"><i
                                                     class="material-icons icon icon-sm">delete</i>

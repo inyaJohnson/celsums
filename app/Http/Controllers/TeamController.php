@@ -63,7 +63,7 @@ class TeamController extends Controller
      */
     public function edit(Team $team)
     {
-        //
+        return view('teams.edit', compact('team'));
     }
 
     /**
@@ -73,9 +73,15 @@ class TeamController extends Controller
      * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Team $team)
+    public function update(TeamRequest $request, Team $team)
     {
-        //
+        if (isset($request->image)) {
+            $image = time() . '.' . $request->image->extension();
+            $request->image->move(public_path('store'), $image);
+        }
+        $data = ['image' => $image ?? $team->image];
+        $team->update($request->except('image') + $data);
+        return response()->json(['success' => true, 'message' => 'Info Updated Successfully.']);
     }
 
     /**

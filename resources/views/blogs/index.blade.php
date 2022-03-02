@@ -1,4 +1,7 @@
 @extends('layouts.template')
+@section('css')
+    <link rel="stylesheet" href="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" />
+@endsection
 @section('content')
     <main class="main">
         <section class="promo-primary">
@@ -37,7 +40,7 @@
                                     </div>
                                     <div class="blog-item__details"><span class="blog-item__date">
                                             {{ \Carbon\Carbon::parse($blog->created_at)->format("d M' y") }}</span><span>
-                                            <svg class="icon">
+                                            <svg type="button" class="icon comment">
                                                 <use xlink:href="#comment"></use>
                                             </svg> 501</span></div>
                                 </div>
@@ -55,7 +58,7 @@
                                         <p>{!! $blog->caption !!}</p>
                                         <div class="blog-item__details"><span
                                                 class="blog-item__date">{{ \Carbon\Carbon::parse($blog->created_at)->format("d M' y") }}</span><span>
-                                                <svg class="icon">
+                                                <svg type="button" class="icon comment" >
                                                     <use xlink:href="#comment"></use>
                                                 </svg> 501</span></div>
                                     </div>
@@ -101,3 +104,9 @@
         <!-- bottom bg end-->
     </main>
 @endsection
+@section('script')
+<script src="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.js"></script>
+<script src="/dashboard/dist/assets/js/custom/comment.js"></script>
+
+@endsection
+

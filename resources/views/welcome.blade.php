@@ -141,15 +141,20 @@
                         <div class="heading heading--primary"><span class="heading__pre-title">About Us</span>
                             <h2 class="heading__title"><span>Help is Our</span> <span>Main Goal</span></h2>
                         </div>
-                        <p><strong>Thresher shark rudd African lungfish silverside, Red salmon rockfish grunion, garpike
-                                zebra danio king-of-the-salmon banjo catfish."</strong></p>
-                        <p>Sea chub demoiselle whalefish zebra lionfish mud cat pelican eel. Minnow snoek icefish
-                            velvet-belly shark, California halibut round stingray northern sea robin. Southern grayling
-                            trout-perch</p>
-                        <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-                            splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish basslet.
-                            Buri chimaera triplespine northern sea robin zingel lancetfish galjoen fish, catla wolffish,
-                            mosshead warbonnet</p><a class="button button--primary" href="about.html">More About</a>
+                        <p><strong>To support women, vulnerable children and youths who are at the receiving end of societal
+                                problems to live quality life</strong></p>
+                        <p>Centre for Life Support Mission (CELSUM) is a non-governmental, non-profit organization and
+                            registered with Corporate Affair Commission (CAC) in Nigeria. We are also variously registered
+                            with different units of government, organizations and coalitions in many states in Nigeria.
+                        </p>
+                        <p>
+                            Our
+                            vision is ‘empowering rural community members
+                            especially women, vulnerable children, orphans and youths with information, education, training,
+                            counseling and skill acquisition that will reduce the vulnerability to easily avoidable health
+                            and development problems, to live quality life’.
+                        </p>
+                        <a class="button button--primary" href="{{ route('about') }}">More About</a>
                     </div>
                     <div class="col-lg-6 col-xl-5 offset-xl-1">
                         <div class="info-box"><img class="img--layout" src="/template/assets/img/about_layout.png"
@@ -531,62 +536,52 @@
             </div>
         </section>
         <!-- projects end-->
+
         <!-- events start-->
-        <section class="section events"><img class="events__bg" src="/template/assets/img/events_bg.png" alt="img" />
-            <div class="container">
-                <div class="row margin-bottom">
-                    <div class="col-12">
-                        <div class="heading heading--primary heading--center"><span
-                                class="heading__pre-title">Events</span>
-                            <h2 class="heading__title"><span>Helpo Holds</span> <span>for You</span></h2>
-                            <p class="no-margin-bottom">Sharksucker sea toad candiru rocket danio tilefish stingray
-                                deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="event-item">
-                            <div class="event-item__img"><img class="img--bg"
-                                    src="/template/assets/img/event_1.jpg" alt="img" /></div>
-                            <div class="event-item__content">
-                                <h6 class="event-item__title"><a href="#">Help for Language. Voluanteer</a></h6>
-                                <p><b>Dark Spurt,</b> San Francisco, CA 94528, USA</p>
-                                <p><b>September 30 - October 31,</b> 2019</p>
-                                <p><b>10:00 AM - 18:00 PM,</b> Everyday</p>
+        @isset($events)
+            <section class="section events"><img class="events__bg" src="/template/assets/img/events_bg.png" alt="img" />
+                <div class="container">
+                    <div class="row margin-bottom">
+                        <div class="col-12">
+                            <div class="heading heading--primary heading--center"><span
+                                    class="heading__pre-title">Events</span>
+                                <h2 class="heading__title"><span>{{ config('app.name') }} Holds</span> <span>for You</span>
+                                </h2>
+                                <p class="no-margin-bottom">Sharksucker sea toad candiru rocket danio tilefish stingray
+                                    deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="event-item">
-                            <div class="event-item__img"><img class="img--bg"
-                                    src="/template/assets/img/event_2.jpg" alt="img" /></div>
-                            <div class="event-item__content">
-                                <h6 class="event-item__title"><a href="#">The Culture of Africa. Rebirth</a></h6>
-                                <p><b>Dark Spurt,</b> San Francisco, CA 94528, USA</p>
-                                <p><b>September 30 - October 31,</b> 2019</p>
-                                <p><b>10:00 AM - 18:00 PM,</b> Everyday</p>
+                    <div class="row">
+                        @foreach ($events as $event)
+                            <div class="col-md-6 col-lg-4">
+                                <div class="event-item">
+                                    <div class="event-item__img"><img class="img--bg"
+                                            src="/store/{{ $event->image }}" alt="img" /></div>
+                                    <div class="event-item__content">
+                                        <h6 class="event-item__title"><a
+                                                href="{{ route('events.show', $event->id) }}">{{ $event->name }}</a></h6>
+                                        <p><b>{{ $event->venue }}</b> </p>
+                                        <p><strong>{{ \Carbon\Carbon::parse($event->start_date)->format('F d,') }}</strong>
+                                            {{ \Carbon\Carbon::parse($event->start_date)->format('h:i A') }} -
+                                            <strong>{{ \Carbon\Carbon::parse($event->end_date)->format('F d,') }}
+                                            </strong> {{ \Carbon\Carbon::parse($event->end_date)->format('h:i A') }}
+                                        </p>
+                                        @if ($event->email != null)
+                                            <p><b>Email</b> - {{ $event->email }}</p>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="event-item">
-                            <div class="event-item__img"><img class="img--bg"
-                                    src="/template/assets/img/event_3.jpg" alt="img" /></div>
-                            <div class="event-item__content">
-                                <h6 class="event-item__title"><a href="#">Help for Language. Voluanteer</a></h6>
-                                <p><b>Dark Spurt,</b> San Francisco, CA 94528, USA</p>
-                                <p><b>April 15 - April 20,</b> 2019</p>
-                                <p><b>10:00 AM - 15:00 PM,</b> Everyday</p>
-                            </div>
-                        </div>
+                    <div class="row">
+                        <div class="col-12 text-center"><a class="button button--primary"
+                                href="{{ route('events.index') }}">View all events</a></div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 text-center"><a class="button button--primary" href="#">View all events</a></div>
-                </div>
-            </div>
-        </section>
+            </section>
+        @endisset
         <!-- events end-->
         <!-- text section start-->
         <section class="section text-section"><img class="text-section__bg" src="/template/assets/img/text-section.png"
@@ -691,85 +686,64 @@
         </section>
         <!-- testimonials style-2 end-->
         <!-- blog start-->
-        <section class="section blog"><img class="blog__bg" src="/template/assets/img/blog_bg.png" alt="img" />
-            <div class="container">
-                <div class="row margin-bottom">
-                    <div class="col-12">
-                        <div class="heading heading--primary heading--center"><span class="heading__pre-title">News</span>
-                            <h2 class="heading__title no-margin-bottom"><span>Helpo</span> <span>Blog</span></h2>
+        @isset($blogs)
+            <section class="section blog"><img class="blog__bg" src="/template/assets/img/blog_bg.png" alt="img" />
+                <div class="container">
+                    <div class="row margin-bottom">
+                        <div class="col-12">
+                            <div class="heading heading--primary heading--center"><span class="heading__pre-title">News</span>
+                                <h2 class="heading__title no-margin-bottom"><span>{{ config('app.name') }}</span>
+                                    <span>Blog</span>
+                                </h2>
+                            </div>
                         </div>
+                    </div>
+                    <div class="row offset-margin">
+                        @foreach ($blogs as $blog)
+                            @if ($blog->category->name != 'Food' && $blog->category->name != 'Education')
+                                <div class="col-md-6 col-lg-5 col-xl-4" >
+                                    <div class="blog-item blog-item--style-1">
+                                        <div class="blog-item__img"><img class="img--bg"
+                                                src="/store/{{ $blog->image }}" alt="img" /><span class="blog-item__badge"
+                                                style="background-color: {{ categoryLabelColor($blog->category->name) }};">{{ $blog->category->name }}</span>
+                                        </div>
+                                        <div class="blog-item__content">
+                                            <h6 class="blog-item__title"><a
+                                                    href="{{ route('blogs.show', $blog->id) }}">{{ $blog->title }}</a>
+                                            </h6>
+                                            <p>{!! $blog->caption !!}</p>
+                                            <div class="blog-item__details"><span
+                                                    class="blog-item__date">{{ \Carbon\Carbon::parse($blog->created_at)->format("d M' y") }}</span><span>
+                                                    <svg class="icon">
+                                                        <use xlink:href="#comment"></use>
+                                                    </svg> 501</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="col-md-6 col-lg-7 col-xl-8" >
+                                    <div class="blog-item blog-item--style-2"><img class="img--bg"
+                                            src="/store/{{ $blog->image }}" alt="img" />
+                                        <div class="blog-item__content"><span class="blog-item__badge"
+                                                style="background-color:{{ categoryLabelColor($blog->category->name) }} ;">{{ $blog->category->name }}</span>
+                                            <h6 class="blog-item__title"><a
+                                                    href="{{ route('blogs.show', $blog->id) }}">{{ $blog->title }}</a>
+                                            </h6>
+                                            <p>{!! $blog->caption !!}</p>
+                                        </div>
+                                        <div class="blog-item__details"><span class="blog-item__date">
+                                                {{ \Carbon\Carbon::parse($blog->created_at)->format("d M' y") }}</span><span>
+                                                <svg class="icon">
+                                                    <use xlink:href="#comment"></use>
+                                                </svg> 501</span></div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
-                <div class="row offset-margin">
-                    <div class="col-md-6 col-lg-5 col-xl-4">
-                        <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_1.jpg"
-                                    alt="img" /><span class="blog-item__badge" style="background-color: #49C2DF;">Water
-                                    Delivery</span></div>
-                            <div class="blog-item__content">
-                                <h6 class="blog-item__title"><a href="#">Save the Children's Role in Fight Against
-                                        Malnutrition Hailed</a></h6>
-                                <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-                                    splittail canthigaster</p>
-                                <div class="blog-item__details"><span class="blog-item__date">23 Jan' 19</span><span>
-                                        <svg class="icon">
-                                            <use xlink:href="#comment"></use>
-                                        </svg> 501</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-7 col-xl-8">
-                        <div class="blog-item blog-item--style-2"><img class="img--bg"
-                                src="/template/assets/img/blog_2.png" alt="img" />
-                            <div class="blog-item__content"><span class="blog-item__badge"
-                                    style="background-color: #2EC774;">Education</span>
-                                <h6 class="blog-item__title"><a href="#">Back to the future: Quality education through
-                                        respect, commitment and accountability</a></h6>
-                                <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-                                    splittail canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail</p>
-                            </div>
-                            <div class="blog-item__details"><span class="blog-item__date">23 Jan' 19</span><span>
-                                    <svg class="icon">
-                                        <use xlink:href="#comment"></use>
-                                    </svg> 501</span></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-7 col-xl-8">
-                        <div class="blog-item blog-item--style-2"><img class="img--bg"
-                                src="/template/assets/img/blog_3.png" alt="img" />
-                            <div class="blog-item__content"><span class="blog-item__badge"
-                                    style="background-color: #F8AC3A;">Food</span>
-                                <h6 class="blog-item__title"><a href="#">Condolences to Families Effected By Flash Floods
-                                        in Setswetla, Alexandra Township, Johannesburg</a></h6>
-                                <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-                                    splittail canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail</p>
-                            </div>
-                            <div class="blog-item__details"><span class="blog-item__date">23 Jan' 19</span><span>
-                                    <svg class="icon">
-                                        <use xlink:href="#comment"></use>
-                                    </svg> 501</span></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5 col-xl-4">
-                        <div class="blog-item blog-item--style-1">
-                            <div class="blog-item__img"><img class="img--bg" src="/template/assets/img/blog_4.png"
-                                    alt="img" /><span class="blog-item__badge"
-                                    style="background-color: #F36F8F;">Medicine</span></div>
-                            <div class="blog-item__content">
-                                <h6 class="blog-item__title"><a href="#">Save the Children's Role in Fight Against
-                                        Malnutrition Hailed</a></h6>
-                                <p>Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento
-                                    splittail canthigaster</p>
-                                <div class="blog-item__details"><span class="blog-item__date">23 Jan' 19</span><span>
-                                        <svg class="icon">
-                                            <use xlink:href="#comment"></use>
-                                        </svg> 501</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        @endisset
         <!-- blog end-->
         <!-- donors start-->
         <section class="section donors no-padding-top">
