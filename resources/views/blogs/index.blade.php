@@ -1,5 +1,6 @@
 @extends('layouts.template')
 @section('css')
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" />
 @endsection
 @section('content')
@@ -58,7 +59,7 @@
                                         <p>{!! $blog->caption !!}</p>
                                         <div class="blog-item__details"><span
                                                 class="blog-item__date">{{ \Carbon\Carbon::parse($blog->created_at)->format("d M' y") }}</span><span>
-                                                <svg type="button" class="icon comment" >
+                                                <svg type="button" class="icon comment" data-id="{{$blog->id}}" >
                                                     <use xlink:href="#comment"></use>
                                                 </svg> 501</span></div>
                                     </div>
@@ -107,6 +108,5 @@
 @section('script')
 <script src="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.js"></script>
 <script src="/dashboard/dist/assets/js/custom/comment.js"></script>
-
 @endsection
 

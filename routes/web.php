@@ -5,17 +5,17 @@ use \App\Http\Controllers\PagesController;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\SetupController;
 use \App\Http\Controllers\ReviewController;
-use \App\Http\Controllers\ValidationController;
 use \App\Http\Controllers\Admin\EmailController;
-use App\Http\Controllers\Admin\MessageController as AdminMessageController;
+use \App\Http\Controllers\Admin\MessageController as AdminMessageController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\EventsController;
-use App\Http\Controllers\FAQController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\MessageController;
-use App\Http\Controllers\SettingController;
-use App\Http\Controllers\TeamController;
+use App\Http\Controllers\BlogCommentController;
+use \App\Http\Controllers\BlogController;
+use \App\Http\Controllers\EventsController;
+use \App\Http\Controllers\FAQController;
+use \App\Http\Controllers\GalleryController;
+use \App\Http\Controllers\MessageController;
+use \App\Http\Controllers\SettingController;
+use \App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -43,6 +43,7 @@ Route::post('/contact', [PagesController::class, 'sendContactMessage'])->name('c
 
 Route::resource('events', EventsController::class);
 Route::resource('blogs', BlogController::class);
+Route::resource('comments', BlogCommentController::class);
 Route::resource('faqs', FAQController::class);
 Route::resource('galleries', GalleryController::class);
 Route::resource('/teams', TeamController::class);
@@ -52,9 +53,6 @@ Route::get('/voluteers', [PagesController::class, 'voluteers'])->name('voluteers
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::post('/validation/upload', [ValidationController::class, 'upload'])->name('validation.upload');
-    Route::get('/validation', [ValidationController::class, 'index'])->name('validation.index');
-
     Route::post('/profile', [SettingController::class, 'updateProfile'])->name('profile.update');
     Route::get('/profile', [SettingController::class, 'profile'])->name('profile.index');
     Route::resource('messages', MessageController::class);

@@ -37,7 +37,7 @@
                                             class="blog-post__date">{{ $blog->created_at->format("d M' y") }}</span><span>
                                             <svg class="icon">
                                                 <use xlink:href="#comment"></use>
-                                            </svg> 5</span></div>
+                                            </svg>{{ $blog->comments_count }}</span></div>
                                 </div>
                             </div>
                         </div>
@@ -66,56 +66,34 @@
                         </div>
                         <h6 class="blog-post__title">Comments</h6>
                         <div class="comments">
-                            <div class="comments__item">
-                                <div class="comments__item-img"><img class="img--bg"
-                                        src="/template/assets/img/comment_1.jpg" alt="img" /></div>
-                                <div class="comments__item-description">
-                                    <div class="row align-items-center">
-                                        <div class="col-9 d-flex flex-wrap align-items-baseline"><span
-                                                class="comments__item-name">Ann Miller</span><span
-                                                class="comments__item-date">23 Jan'19 02:15PM</span></div>
-                                        <div class="col-3 text-right"><span class="comments__item-action">
-                                                <svg class="icon">
-                                                    <use xlink:href="#previous"></use>
-                                                </svg></span></div>
-                                        <div class="col-12">
-                                            <div class="comments__item-text">
-                                                <p>Asian carps sailback scorpionfish; dragon goby lemon sole triplefin
-                                                    blenny hog sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow
-                                                    shark herring smelt trout-perch</p>
+                            @foreach ($blog->comments as $comment)
+                                <div class="comments__item">
+                                    <div class="comments__item-img"><img class="img--bg"
+                                            src="/template/assets/img/comment_2.jpg" alt="img" /></div>
+                                    <div class="comments__item-description">
+                                        <div class="row align-items-center">
+                                            <div class="col-9 d-flex flex-wrap align-items-baseline">
+                                                    {{-- <span class="comments__item-name">John Walker</span> --}}
+                                                    <span class="comments__item-date"> {{ $comment->created_at->format("d M' y H:ia") }}</span></div>
+                                            <div class="col-3 text-right"><span class="comments__item-action">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#previous"></use>
+                                                    </svg></span></div>
+                                            <div class="col-12">
+                                                <div class="comments__item-text">
+                                                    <p>{{$comment->comment}}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="comments__item">
-                                <div class="comments__item-img"><img class="img--bg"
-                                        src="/template/assets/img/comment_2.jpg" alt="img" /></div>
-                                <div class="comments__item-description">
-                                    <div class="row align-items-center">
-                                        <div class="col-9 d-flex flex-wrap align-items-baseline"><span
-                                                class="comments__item-name">John Walker</span><span
-                                                class="comments__item-date">23 Jan'19 02:15PM</span></div>
-                                        <div class="col-3 text-right"><span class="comments__item-action">
-                                                <svg class="icon">
-                                                    <use xlink:href="#previous"></use>
-                                                </svg></span></div>
-                                        <div class="col-12">
-                                            <div class="comments__item-text">
-                                                <p>Dragon goby lemon sole triplefin blenny hog sucker. Smelt sleeper
-                                                    shovelnose sturgeon merluccid hake cow shark herring smelt trout-perch
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comments__item comments__item--sub">
+                                    {{-- <div class="comments__item comments__item--sub">
                                     <div class="comments__item-img"><img class="img--bg"
                                             src="/template/assets/img/comment_3.jpg" alt="img" /></div>
                                     <div class="comments__item-description">
                                         <div class="row align-items-center">
-                                            <div class="col-9 d-flex flex-wrap align-items-baseline"><span
-                                                    class="comments__item-name">Helen Dollens</span><span
+                                            <div class="col-9 d-flex flex-wrap align-items-baseline">
+                                                <span class="comments__item-name">Helen Dollens</span>
+                                                <span
                                                     class="comments__item-date">23 Jan'19 02:15PM</span></div>
                                             <div class="col-3 text-right"><span class="comments__item-action">
                                                     <svg class="icon">
@@ -130,30 +108,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                        <h6 class="blog-post__title">Send Message</h6>
-                        <form class="form comments-form" action="javascript:void(0);">
-                            <div class="row">
-                                <div class="col-xl-4">
-                                    <input class="form__field" type="text" name="first-name" placeholder="First Name" />
-                                </div>
-                                <div class="col-xl-4">
-                                    <input class="form__field" type="text" name="last-name" placeholder="Last Name" />
-                                </div>
-                                <div class="col-xl-4">
-                                    <input class="form__field" type="email" name="email" placeholder="Email" />
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form__field form__message" name="message"
-                                        placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="form__submit button button--primary" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+
                     </div>
                     <div class="col-md-4 col-lg-3">
                         <div class="blog-post__category-holder">

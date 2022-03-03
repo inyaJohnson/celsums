@@ -57,6 +57,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
+        $blog = Blog::where('id', $blog->id)->with('comments')->withCount('comments')->first();
         $similarBlogs = Blog::where('category_id', $blog->category_id)->latest()->take(3)->get();
         $recentBlogs = Blog::latest()->take(3)->get();
         $categories = Category::get(['id', 'name']);
