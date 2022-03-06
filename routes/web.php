@@ -10,6 +10,7 @@ use \App\Http\Controllers\Admin\MessageController as AdminMessageController;
 use \App\Http\Controllers\Admin\UserController as  AdminUserController;
 use App\Http\Controllers\BlogCommentController;
 use \App\Http\Controllers\BlogController;
+use App\Http\Controllers\DonationController;
 use \App\Http\Controllers\EventsController;
 use \App\Http\Controllers\FAQController;
 use \App\Http\Controllers\GalleryController;
@@ -48,6 +49,7 @@ Route::resource('faqs', FAQController::class);
 Route::resource('galleries', GalleryController::class);
 Route::resource('/teams', TeamController::class);
 Route::get('/donors-partners', [PagesController::class, 'donorsAndPartners'])->name('donorsAndPartners');
+Route::resource('/donations', DonationController::class);
 Route::get('/voluteers', [PagesController::class, 'voluteers'])->name('voluteers');
 
 

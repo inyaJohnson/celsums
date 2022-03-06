@@ -47,12 +47,21 @@
                         </a></div>
                 @endforeach
             </div>
-            <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- pagination start-->
+                    {{ $photos->links('layouts.pagination-links') }}
+                    <!-- pagination end-->
+                </div>
+            </div>
+
+            {{-- <div class="container">
                 <div class="row">
                     <div class="col-12 text-center"><a class="button gallery__button button--primary" href="#">More
                             Images</a></div>
                 </div>
-            </div>
+            </div> --}}
         </section>
         <!-- gallery end-->
         <!-- bottom bg start-->

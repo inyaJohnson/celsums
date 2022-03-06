@@ -1,4 +1,8 @@
 @extends('layouts.template')
+@section('css')
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="stylesheet" href="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.css" />
+@endsection
 @section('content')
     <main class="main">
         <section class="promo-primary">
@@ -31,11 +35,11 @@
                             <div class="blog-post__description">
                                 <div class="row">
                                     <div class="col-6"><span
-                                            class="blog-post__name">{{ $blog->creator->first_name . ' ' . $blog->creator->last_name }}</span>
+                                            class="blog-post__name">Posted By - {{ $blog->creator->first_name . ' ' . $blog->creator->last_name }}</span>
                                     </div>
                                     <div class="col-6 text-right"><span
                                             class="blog-post__date">{{ $blog->created_at->format("d M' y") }}</span><span>
-                                            <svg class="icon">
+                                            <svg type="button" class="icon comment">
                                                 <use xlink:href="#comment"></use>
                                             </svg>{{ $blog->comments_count }}</span></div>
                                 </div>
@@ -191,4 +195,8 @@
         </section>
         <!-- bottom bg end-->
     </main>
+@endsection
+@section('script')
+<script src="/dashboard/dist/assets/vendors/sweetalert2/dist/sweetalert2.js"></script>
+<script src="/dashboard/dist/assets/js/custom/comment.js"></script>
 @endsection

@@ -34,7 +34,8 @@
                                 </svg>
                             </div>
                             <div class="icon-item__text">
-                                <p>Adress: Elliott Ave, Parkville VIC 3052, Melbourne Canada</p>
+                                <p>Adress: No 2, Ayoola street Olonkoro, Osogbo</p>
+                                <p>Alt. Adress: 15 Gowers street Rochdale OL162LN, Manchester</p>
                             </div>
                         </div>
                     </div>
@@ -46,8 +47,12 @@
                                 </svg>
                             </div>
                             <div class="icon-item__text">
-                                <p>Phone: <a class="icon-item__link" href="tel:+31859644725">+ 31 85 964 47 25</a> <a
-                                        class="icon-item__link" href="tel:+31859644725">+ 31 85 964 47 25</a></p>
+                                <p>Phone: <a class="icon-item__link" href="tel:+2348033487828">+ 234 803 3487 828</a> <a
+                                        class="icon-item__link" href="tel:+2347401407122">+234 740 1407 122</a>
+                                        <a
+                                        class="icon-item__link" href="tel:+2348033890408">+234 803 3890 408</a>
+                                    </p>
+
                             </div>
                         </div>
                     </div>
@@ -59,7 +64,7 @@
                                 </svg>
                             </div>
                             <div class="icon-item__text">
-                                <p>Email: <a class="icon-item__link" href="mailto:support@helpo.org">support@helpo.org</a>
+                                <p>Email: <a class="icon-item__link" href="mailto:support@celsum.com">support@celsum.com</a>
                                 </p>
                             </div>
                         </div>
@@ -129,8 +134,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="contacts-wrapper__map" id="map" data-api-key="AIzaSyD5ES8GFHrarPhIVpDhFDea6fPtga0Wy4Y"
-                    data-longitude="-73.935242" data-latitude="40.730610" data-marker="/template/assets/img/marker.png"></div>
+                <div class="contacts-wrapper__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0885017886685!2d4.552599814154516!3d7.780440709434628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787e707c1f9a7%3A0x34150d316472e717!2s2%20Ayoola%20St%2C%20230103%2C%20Osogbo!5e0!3m2!1sen!2sng!4v1646371999757!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </section>
         <!-- contacts end-->

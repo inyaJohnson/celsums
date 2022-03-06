@@ -16,7 +16,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $photos = Gallery::all();
+        $photos = Gallery::latest()->paginate(12);
         $categories = Category::get(['id', 'name']);
         return view('galleries.index', compact('photos', 'categories'));
     }
@@ -96,7 +96,7 @@ class GalleryController extends Controller
 
     public function adminIndex()
     {
-        $photos = Gallery::all();
+        $photos = Gallery::latest()->paginate(12);
         return view('galleries.admin_index', compact('photos'));
     }
 }

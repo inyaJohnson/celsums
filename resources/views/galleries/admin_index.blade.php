@@ -43,6 +43,11 @@
                                             </button>
                                         </div>
                                     @endforeach
+                                    <div class="col-12">
+                                        <!-- pagination start-->
+                                        {{ $photos->links('pagination::bootstrap-4') }}
+                                        <!-- pagination end-->
+                                    </div>
                                 @else
                                     <div class="col-md-12 text-center pt-l">
                                         <h4 class="mb-xl">No Photos Yet</h1>

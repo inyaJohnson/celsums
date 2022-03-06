@@ -65,6 +65,11 @@
 
                                         </div>
                                     @endforeach
+                                    <div class="col-12">
+                                        <!-- pagination start-->
+                                        {{ $faqs->links('pagination::bootstrap-4') }}
+                                        <!-- pagination end-->
+                                    </div>
                                 @else
                                     <div class="row pt-l">
                                         <div class="col-md-12 text-center pt-l">

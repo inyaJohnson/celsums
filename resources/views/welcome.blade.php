@@ -6,9 +6,9 @@
             <div class="promo-slider">
                 <div class="promo-slider__item promo-slider__item--style-1">
                     <picture>
-                        <source srcset="/template/assets/img/promo_1.jpg" media="(min-width: 835px)" />
-                        <source srcset="/template/assets/img/834promo_1.jpg" media="(min-width: 376px)" /><img
-                            class="img--bg" src="/template/assets/img/375promo_1.jpg" alt="img" />
+                        <source srcset="/template/assets/img/celsum/promo_1.jpg" media="(min-width: 835px)" />
+                        <source srcset="/template/assets/img/celsum/834promo_1.jpg" media="(min-width: 376px)" /><img
+                            class="img--bg" src="/template/assets/img/celsum/375promo_1.jpg" alt="img" />
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -36,9 +36,9 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-2">
                     <picture>
-                        <source srcset="/template/assets/img/promo_2.jpg" media="(min-width: 835px)" />
-                        <source srcset="/template/assets/img/834promo_2.jpg" media="(min-width: 376px)" /><img
-                            class="img--bg" src="/template/assets/img/375promo_2.jpg" alt="img" />
+                        <source srcset="/template/assets/img/celsum/promo_2.jpg" media="(min-width: 835px)" />
+                        <source srcset="/template/assets/img/celsum/834promo_2.jpg" media="(min-width: 376px)" /><img
+                            class="img--bg" src="/template/assets/img/celsum/375promo_2.jpg" alt="img" />
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -65,9 +65,9 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-3">
                     <picture>
-                        <source srcset="/template/assets/img/promo_3.jpg" media="(min-width: 835px)" />
-                        <source srcset="/template/assets/img/834promo_3.jpg" media="(min-width: 376px)" /><img
-                            class="img--bg" src="/template/assets/img/375promo_3.jpg" alt="img" />
+                        <source srcset="/template/assets/img/celsum/promo_3.jpg" media="(min-width: 835px)" />
+                        <source srcset="/template/assets/img/celsum/834promo_3.jpg" media="(min-width: 376px)" /><img
+                            class="img--bg" src="/template/assets/img/celsum/375promo_3.jpg" alt="img" />
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -111,12 +111,13 @@
                         class="video-trigger" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span>Watch our
                             video</span><i class="fa fa-play" aria-hidden="true"></i></a></div>
                 <div class="promo-pannel__phones">
-                    <p class="promo-pannel__title">Phone numbers</p><a class="promo-pannel__link" href="tel:+180012345678">+
-                        1800 - 123 456 78</a><a class="promo-pannel__link" href="tel:+18009756511">+ 1800 - 975 65 11</a>
+                    <p class="promo-pannel__title">Phone numbers</p><a class="promo-pannel__link"
+                        href="tel:+2348033487828">+
+                        234 803 3487 828</a><a class="promo-pannel__link" href="tel:+2347401407122">+ 234 740 1407 122</a>
                 </div>
                 <div class="promo-pannel__email">
                     <p class="promo-pannel__title">Email</p><a class="promo-pannel__link"
-                        href="mailto:support@helpo.org">support@helpo.org</a>
+                        href="mailto:support@celsum.com">support@celsum.com</a>
                 </div>
             </div>
             <!-- promo pannel end-->
@@ -158,7 +159,8 @@
                     </div>
                     <div class="col-lg-6 col-xl-5 offset-xl-1">
                         <div class="info-box"><img class="img--layout" src="/template/assets/img/about_layout.png"
-                                alt="img" /><img class="img--bg" src="/template/assets/img/about-us.jpg" alt="img" />
+                                alt="img" /><img class="img--bg" src="/template/assets/img/celsum/about-us.jpg"
+                                alt="img" />
                             <h4 class="info-box__title">We are Awesome Volounteer Team</h4>
                             <p>Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish
                                 shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish</p>
@@ -608,8 +610,8 @@
         <section class="section testimonials--style-2">
             <div class="testimonials--style-2__bg jarallax">
                 <picture>
-                    <source srcset="/template/assets/img/testimonials_2.jpg" media="(min-width: 992px)" /><img
-                        class="jarallax-img" src="/template/assets/img/testimonials_2.jpg" alt="img" />
+                    <source srcset="/template/assets/img/celsum/testimonials_2.jpg" media="(min-width: 992px)" /><img
+                        class="jarallax-img" src="/template/assets/img/celsum/testimonials_2.jpg" alt="img" />
                 </picture>
             </div>
             <div class="container">
@@ -634,48 +636,39 @@
                             <div class="testimonials-slider__item">
                                 <div class="testimonials-slider__icon">“</div>
                                 <div class="testimonials-slider__text">
-                                    <p>Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout loach
-                                        summer flounder European minnow black dragonfish orbicular batfish stingray
-                                        tenpounder! Flying characin herring, Moses sole sea snail grouper discus. European
-                                        eel slender snipe eel. Gulper eel dealfish ocean sunfish; rohu yellow-and-black
-                                        triplefin Atlantic saury swordfish southern sandfish Rudderfish long-finned
-                                        pikerazorfish menhaden paradise fish, barramundi oceanic flyingfish. Fangtooth
-                                        yellowtail banded killifish seamoth triplefin blenny desert pupfish crocodile shark
-                                        catfish cutlassfish broadband dogfish whalefish.</p>
-                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">Jack
-                                            Wolfskin, </span><span class="testimonials-slider__position">Volunteer</span>
+                                    <p>My experience of associating with Centre for Life Support Mission has been excellent
+                                        and I feel it is a privilege too. The approach to work is outstanding and I really
+                                        do appreciate the work they are doing, including uplifting under- privileged
+                                        children. By providing opportunities to deprived children, CELSUM is investing in a
+                                        better future for Nigeria and Africa. </p>
+                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">
+                                            Abi, </span><span class="testimonials-slider__position">Volunteer</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="testimonials-slider__item">
                                 <div class="testimonials-slider__icon">“</div>
                                 <div class="testimonials-slider__text">
-                                    <p>Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout loach
-                                        summer flounder European minnow black dragonfish orbicular batfish stingray
-                                        tenpounder! Flying characin herring, Moses sole sea snail grouper discus. European
-                                        eel slender snipe eel. Gulper eel dealfish ocean sunfish; rohu yellow-and-black
-                                        triplefin Atlantic saury swordfish southern sandfish Rudderfish long-finned
-                                        pikerazorfish menhaden paradise fish, barramundi oceanic flyingfish. Fangtooth
-                                        yellowtail banded killifish seamoth triplefin blenny desert pupfish crocodile shark
-                                        catfish cutlassfish broadband dogfish whalefish.</p>
-                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">Jack
-                                            Wolfskin, </span><span class="testimonials-slider__position">Volunteer</span>
+                                    <p>After having the opportunity to work with the Centre for Life Support Mission, I
+                                        would like to express what a great job they are doing. From the orphanage support to
+                                        the mid-day meals to the old age persons, the team is definitely a blessing for the
+                                        people of Nigeria. I wish the team all the best and success in their future
+                                        endeavours. </p>
+                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">
+                                            Dr Femi Aluko, </span><span
+                                            class="testimonials-slider__position">Volunteer</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="testimonials-slider__item">
                                 <div class="testimonials-slider__icon">“</div>
                                 <div class="testimonials-slider__text">
-                                    <p>Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout loach
-                                        summer flounder European minnow black dragonfish orbicular batfish stingray
-                                        tenpounder! Flying characin herring, Moses sole sea snail grouper discus. European
-                                        eel slender snipe eel. Gulper eel dealfish ocean sunfish; rohu yellow-and-black
-                                        triplefin Atlantic saury swordfish southern sandfish Rudderfish long-finned
-                                        pikerazorfish menhaden paradise fish, barramundi oceanic flyingfish. Fangtooth
-                                        yellowtail banded killifish seamoth triplefin blenny desert pupfish crocodile shark
-                                        catfish cutlassfish broadband dogfish whalefish.</p>
-                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">Jack
-                                            Wolfskin, </span><span class="testimonials-slider__position">Volunteer</span>
+                                    <p>Centre for Life Support Mission is one of the leading NGO in Nigeria, and we are very
+                                        proud to work with this NGO with complete transparency, accountability, and
+                                        dedication to supporting and empowering vulnerable women.</p>
+                                    <div class="testimonials-slider__author"><span class="testimonials-slider__name">
+                                            Society for Family Health, </span><span
+                                            class="testimonials-slider__position">Sponsors</span>
                                     </div>
                                 </div>
                             </div>
@@ -701,7 +694,7 @@
                     <div class="row offset-margin">
                         @foreach ($blogs as $blog)
                             @if ($blog->category->name != 'Food' && $blog->category->name != 'Education')
-                                <div class="col-md-6 col-lg-5 col-xl-4" >
+                                <div class="col-md-6 col-lg-5 col-xl-4">
                                     <div class="blog-item blog-item--style-1">
                                         <div class="blog-item__img"><img class="img--bg"
                                                 src="/store/{{ $blog->image }}" alt="img" /><span class="blog-item__badge"
@@ -721,7 +714,7 @@
                                     </div>
                                 </div>
                             @else
-                                <div class="col-md-6 col-lg-7 col-xl-8" >
+                                <div class="col-md-6 col-lg-7 col-xl-8">
                                     <div class="blog-item blog-item--style-2"><img class="img--bg"
                                             src="/store/{{ $blog->image }}" alt="img" />
                                         <div class="blog-item__content"><span class="blog-item__badge"
@@ -791,7 +784,7 @@
                 <div class="row align-items-end margin-bottom">
                     <div class="col-md-7 col-lg-8">
                         <div class="heading heading--primary"><span class="heading__pre-title">Testimonials</span>
-                            <h2 class="heading__title no-margin-bottom"><span># helpocharity</span></h2>
+                            <h2 class="heading__title no-margin-bottom"><span># celsumcharity</span></h2>
                         </div>
                     </div>
                     <div class="col-md-5 col-lg-4 text-md-right">
@@ -809,34 +802,34 @@
                 </div>
             </div>
             <div class="instagram-slider">
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_1.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_2.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_3.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_4.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_5.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_6.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                <a class="instagram-slider__item" href="#"><img class="img--bg" src="/template/assets/img/ig_4.jpg"
-                        alt="img" /><span class="instagram-slider__icon"><i class="fa fa-instagram"
-                            aria-hidden="true"></i></span><span class="instagram-slider__icon-hover"><i
-                            class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_1.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_2.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_3.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_4.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_5.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_6.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                <a class="instagram-slider__item" href="#"><img class="img--bg"
+                        src="/template/assets/img/celsum/img_7.jpg" alt="img" /><span class="instagram-slider__icon"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></span><span
+                        class="instagram-slider__icon-hover"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
             </div>
         </section>
         <!-- instagram end-->

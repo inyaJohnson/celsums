@@ -98,10 +98,10 @@
                     </ul>
                     <!-- aside menu end-->
                     <div class="aside-inner"><span class="aside-inner__title">Email</span><a
-                            class="aside-inner__link" href="mailto:support@helpo.org">support@helpo.org</a></div>
+                            class="aside-inner__link" href="mailto:support@support@celsum.com">support@celsum.com</a></div>
                     <div class="aside-inner"><span class="aside-inner__title">Phone numbers</span><a
-                            class="aside-inner__link" href="tel:+180012345678">+ 1800 - 123 456 78</a><a
-                            class="aside-inner__link" href="tel:+18009756511">+ 1800 - 975 65 11</a></div>
+                            class="aside-inner__link" href="tel:+2348033487828">+ 234 803 3487 828</a><a
+                            class="aside-inner__link" href="tel:+2347401407122">+ 234 740 1407 122</a></div>
                     <ul class="aside-socials">
                         <li class="aside-socials__item"><a class="aside-socials__link" href="#"><i
                                     class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -113,7 +113,7 @@
                                     class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="aside-dropdown__item"><a class="button button--squared" href="#"><span>Donate</span></a>
+                <div class="aside-dropdown__item"><a class="button button--squared" href="{{ route('donations.index') }}"><span>Donate</span></a>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                     <div class="col-auto d-flex align-items-center">
                         <div class="dropdown-trigger d-block d-sm-none">
                             <div class="dropdown-trigger__item"></div>
-                        </div><a class="button button--squared" href="#"><span>Donate</span></a>
+                        </div><a class="button button--squared" href="{{ route('donations.index') }}"><span>Donate</span></a>
                     </div>
                 </div>
             </div>
@@ -211,11 +211,13 @@
                     <div class="col-sm-6 col-lg-3">
                         <h4 class="footer__title">Contacts</h4>
                         <div class="footer-contacts">
-                            <p class="footer-contacts__address">Elliott Ave, Parkville VIC 3052, Melbourne Canada</p>
-                            <p class="footer-contacts__phone">Phone: <a href="tel:+31859644725">+31 85 964 47 25</a>
+                            <p class="footer-contacts__address">Address: No 2, Ayoola street Olonkoro, Osogbo</p>
+                            <p class="footer-contacts__address">Alt. Adress: 15 Gowers street Rochdale OL162LN, Manchester</p>
+                            <p class="footer-contacts__phone">Phone: <a href="tel:+2348033487828">+ 234 803 3487 828</a>
+                            <p class="footer-contacts__phone">Alt. Phone: <a href="tel:+2347401407122">+ 234 740 1407 122</a>
                             </p>
                             <p class="footer-contacts__mail">Email: <a
-                                    href="mailto:support@helpo.org">support@helpo.org</a></p>
+                                    href="mailto:support@helpo.org">support@celsum.com</a></p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
@@ -240,7 +242,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <h4 class="footer__title">Donate</h4>
                         <p>Help Us Change the Lives of Children in World</p><a
-                            class="button footer__button button--filled" href="#">Donate</a>
+                            class="button footer__button button--filled" href="{{ route('donations.index') }}">Donate</a>
                     </div>
                 </div>
                 <div class="row align-items-baseline">
@@ -249,8 +251,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="footer-privacy"><a class="footer-privacy__link" href="#">Privacy Policy</a><span
-                                class="footer-privacy__divider">|</span><a class="footer-privacy__link" href="#">Term
-                                and Condision</a></div>
+                                class="footer-privacy__divider">|</span><a class="footer-privacy__link" href="#">Terms
+                                and Conditions</a></div>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::latest()->get();
+        $events = Event::latest()->paginate(5);
         return view('events.index', compact('events'));
     }
 
@@ -103,7 +103,7 @@ class EventsController extends Controller
 
     public function adminIndex()
     {
-        $events = Event::all();
+        $events = Event::latest()->paginate(5);
         return view('events.admin_index', compact('events'));
     }
 

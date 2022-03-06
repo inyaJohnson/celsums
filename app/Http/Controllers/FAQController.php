@@ -14,7 +14,7 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $faqs = Faq::all();
+        $faqs = Faq::latest()->paginate(10);
         return view('faqs.index', compact('faqs'));
     }
 
@@ -88,7 +88,7 @@ class FaqController extends Controller
     }
 
     public function adminIndex(){
-        $faqs = Faq::all();
+        $faqs = Faq::latest()->paginate(5);
         return view('faqs.admin_index', compact('faqs'));
     }
 }

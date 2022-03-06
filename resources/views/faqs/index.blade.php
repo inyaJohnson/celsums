@@ -51,6 +51,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- pagination start-->
+                        {{ $faqs->links('layouts.pagination-links') }}
+                        <!-- pagination end-->
+                    </div>
+                </div>
             </div>
         </section>
         <!-- faq end-->

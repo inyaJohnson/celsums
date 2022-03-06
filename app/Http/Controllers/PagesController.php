@@ -21,7 +21,7 @@ class PagesController extends Controller
     }
 
     public function about(){
-        $team = Team::select('first_name','last_name','image','position','facebook','youtube','twitter')->get();
+        $team = Team::select('first_name','last_name','image','position','facebook','youtube','twitter')->latest()->paginate(8);
         return view('templates.about', compact('team'));
     }
 

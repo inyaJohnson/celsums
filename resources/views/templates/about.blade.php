@@ -189,11 +189,22 @@
                         </div>
                     @endforeach
                 </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <!-- pagination start-->
+                        {{ $team->links('layouts.pagination-links') }}
+                        <!-- pagination end-->
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-12 text-center"><a class="button button--primary"
-                            href="{{ route('validation.index') }}">Become our
+                            href="#">Become our
                             volunteer</a></div>
                 </div>
+
+
             </div>
         </section>
         <!-- team end-->
